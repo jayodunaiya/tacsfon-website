@@ -8,6 +8,7 @@ export interface Sermon {
   audio_path: string | null;
 
   image_url: string | null;
+  image_path: string | null;
 
   featured: boolean;
   created_at: string;
