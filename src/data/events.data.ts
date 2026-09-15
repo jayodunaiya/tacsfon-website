@@ -1,0 +1,48 @@
+import { EventItem } from "@/types/event.types";
+
+export const upcomingEvents: EventItem[] = [
+  {
+    id: 1,
+    day: "14",
+    weekday: "Sunday",
+    month: "SEP",
+    title: "Sunday Worship Service",
+    category: "Worship",
+    time: "9:00 AM",
+    location: "Church Auditorium",
+    href: "/events/sunday-worship-service",
+  },
+  {
+    id: 2,
+    day: "18",
+    weekday: "Wednesday",
+    month: "SEP",
+    title: "Midweek Bible Study",
+    category: "Word",
+    time: "6:00 PM",
+    location: "Church Auditorium",
+    href: "/events/midweek-bible-study",
+  },
+  {
+    id: 3,
+    day: "21",
+    weekday: "Thursday",
+    month: "SEP",
+    title: "Prayer Night",
+    category: "Prayer",
+    time: "6:00 PM",
+    location: "Main Auditorium",
+    href: "/events/prayer-night",
+  },
+  {
+    id: 4,
+    day: "22",
+    weekday: "Friday",
+    month: "SEP",
+    title: "Foundation School",
+    category: "Word",
+    time: "1:00 PM",
+    location: "Main Auditorium",
+    href: "/events/foundation-school",
+  },
+];
