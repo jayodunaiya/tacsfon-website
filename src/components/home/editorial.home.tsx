@@ -7,22 +7,65 @@ import {
   FiArrowUpRight,
 } from "react-icons/fi";
 
-import { editorialPosts } from "@/data/editorial.data";
+import { Editorial } from "@/types/editorial.types";
 
 import FadeUp from "@/components/motion/fade-up.motion";
 import Stagger from "@/components/motion/stagger.motion";
 import StaggerItem from "@/components/motion/stagger-item.motion";
 
-const EditorialHome = () => {
-  const featuredPost = editorialPosts[0];
-  const remainingPosts = editorialPosts.slice(1);
+interface EditorialHomeProps {
+  editorials: Editorial[];
+}
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat("en-NG", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(value));
+
+const EditorialHome = ({
+  editorials,
+}: EditorialHomeProps) => {
+  if (editorials.length === 0) {
+    return null;
+  }
+
+  const featuredPost =
+    editorials.find((post) => post.featured) ??
+    editorials[0];
+
+  const remainingPosts = editorials
+    .filter((post) => post.id !== featuredPost.id)
+    .slice(0, 3);
+
+  const totalVisiblePosts = 1 + remainingPosts.length;
+
+  /*
+   * Adaptive layout
+   *
+   * 1 article  → full width
+   * 2 articles → balanced 60 / 40
+   * 3 articles → featured + two stacked
+   * 4 articles → original featured + three stacked
+   */
+  const editorialGrid =
+    totalVisiblePosts === 1
+      ? "grid-cols-1"
+      : totalVisiblePosts === 2
+        ? "lg:grid-cols-[1.15fr_0.85fr]"
+        : "lg:grid-cols-[1.25fr_0.75fr]";
 
   return (
     <section className="overflow-hidden bg-[#F7F7F3] px-6 py-24 text-black md:py-32 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-[1400px]">
 
-        {/* Section Heading */}
+        {/* ==========================================
+            SECTION HEADING
+        ========================================== */}
+
         <div className="mb-16 grid gap-10 lg:grid-cols-[0.65fr_1.35fr] lg:items-end">
+
           <FadeUp>
             <p className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-green-700">
               <span className="h-px w-10 bg-green-700" />
@@ -31,6 +74,7 @@ const EditorialHome = () => {
           </FadeUp>
 
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
+
             <FadeUp delay={0.1}>
               <h2 className="max-w-4xl text-5xl font-medium leading-[0.92] tracking-[-0.055em] sm:text-6xl lg:text-[5.5rem]">
                 Thoughts for
@@ -52,13 +96,20 @@ const EditorialHome = () => {
                 </span>
               </Link>
             </FadeUp>
+
           </div>
         </div>
 
-        {/* Editorial Layout */}
-        <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
+        {/* ==========================================
+            EDITORIAL LAYOUT
+        ========================================== */}
 
-          {/* Featured Article */}
+        <div className={`grid gap-8 ${editorialGrid}`}>
+
+          {/* ======================================
+              FEATURED ARTICLE
+          ====================================== */}
+
           <motion.div
             initial={{
               opacity: 0,
@@ -80,33 +131,41 @@ const EditorialHome = () => {
             }}
           >
             <Link
-              href={featuredPost.href}
-              className="group relative block min-h-[620px] overflow-hidden bg-black"
+              href={`/editorial/${featuredPost.slug}`}
+              className={`group relative block overflow-hidden bg-black ${
+                totalVisiblePosts === 1
+                  ? "min-h-[520px] md:min-h-[650px]"
+                  : "min-h-[560px] lg:min-h-[620px]"
+              }`}
             >
-              <motion.img
-                src={featuredPost.image}
-                alt={featuredPost.title}
-                initial={{
-                  scale: 1.07,
-                }}
-                whileInView={{
-                  scale: 1,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 1.4,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
-              />
+
+              {featuredPost.image_url && (
+                <motion.img
+                  src={featuredPost.image_url}
+                  alt={featuredPost.title}
+                  initial={{
+                    scale: 1.07,
+                  }}
+                  whileInView={{
+                    scale: 1,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 1.4,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.04]"
+                />
+              )}
 
               <div className="absolute inset-0 bg-black/15" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
 
-              {/* Top Meta */}
+              {/* TOP META */}
+
               <motion.div
                 initial={{
                   opacity: 0,
@@ -134,7 +193,8 @@ const EditorialHome = () => {
                 </span>
               </motion.div>
 
-              {/* Bottom Content */}
+              {/* BOTTOM CONTENT */}
+
               <motion.div
                 initial={{
                   opacity: 0,
@@ -144,9 +204,7 @@ const EditorialHome = () => {
                   opacity: 1,
                   y: 0,
                 }}
-                viewport={{
-                  once: true,
-                }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.75,
                   delay: 0.3,
@@ -154,107 +212,275 @@ const EditorialHome = () => {
                 className="absolute bottom-0 left-0 z-10 w-full p-6 md:p-8 lg:p-10"
               >
                 <p className="mb-4 text-[10px] font-medium uppercase tracking-[0.2em] text-white/50">
-                  {featuredPost.date}
+                  {formatDate(featuredPost.published_at)}
                 </p>
 
-                <h3 className="max-w-3xl text-4xl font-medium leading-[0.95] tracking-[-0.045em] text-white sm:text-5xl lg:text-6xl">
+                <h3
+                  className={`font-medium leading-[0.95] tracking-[-0.045em] text-white ${
+                    totalVisiblePosts === 1
+                      ? "max-w-4xl text-4xl sm:text-5xl lg:text-7xl"
+                      : "max-w-3xl text-4xl sm:text-5xl lg:text-6xl"
+                  }`}
+                >
                   {featuredPost.title}
                 </h3>
 
                 <div className="mt-7 flex flex-col justify-between gap-6 border-t border-white/15 pt-6 md:flex-row md:items-end">
-                  <p className="max-w-xl text-sm leading-6 text-white/60 md:text-base">
-                    {featuredPost.excerpt}
-                  </p>
+
+                  {featuredPost.excerpt && (
+                    <p className="max-w-xl text-sm leading-6 text-white/60 md:text-base">
+                      {featuredPost.excerpt}
+                    </p>
+                  )}
 
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 group-hover:-rotate-45 group-hover:border-green-500 group-hover:bg-green-700">
                     <FiArrowRight />
                   </span>
+
                 </div>
               </motion.div>
+
             </Link>
           </motion.div>
 
-          {/* Smaller Editorials */}
-          <Stagger className="flex flex-col border-t border-black/10">
-            {remainingPosts.map((post, index) => (
-              <StaggerItem
-                key={post.id}
-                className="flex-1"
-              >
-                <motion.div
-                  whileHover={{
-                    x: 4,
-                  }}
-                  transition={{
-                    duration: 0.25,
-                  }}
-                  className="h-full"
-                >
-                  <Link
-                    href={post.href}
-                    className="group grid h-full gap-6 border-b border-black/10 py-8 sm:grid-cols-[150px_1fr] lg:grid-cols-[135px_1fr]"
-                  >
-                    {/* Thumbnail */}
-                    <div className="relative min-h-[150px] overflow-hidden bg-black sm:min-h-full">
-                      <motion.img
-                        src={post.image}
-                        alt={post.title}
+          {/* ======================================
+              SECONDARY ARTICLES
+          ====================================== */}
+
+          {remainingPosts.length > 0 && (
+            <Stagger
+              className={`flex flex-col ${
+                totalVisiblePosts > 2
+                  ? "border-t border-black/10"
+                  : ""
+              }`}
+            >
+
+              {remainingPosts.map((post, index) => {
+                /*
+                 * With exactly two total articles,
+                 * the secondary article gets a larger
+                 * visual treatment rather than looking
+                 * like one item from a three-item list.
+                 */
+                const isTwoArticleLayout =
+                  totalVisiblePosts === 2;
+
+                if (isTwoArticleLayout) {
+                  return (
+                    <StaggerItem
+                      key={post.id}
+                      className="h-full flex-1"
+                    >
+                      <motion.div
                         initial={{
-                          scale: 1.05,
+                          opacity: 0,
+                          y: 30,
                         }}
                         whileInView={{
-                          scale: 1,
+                          opacity: 1,
+                          y: 0,
                         }}
                         viewport={{
                           once: true,
+                          amount: 0.15,
                         }}
                         transition={{
-                          duration: 0.8,
+                          duration: 0.75,
                         }}
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
+                        className="h-full"
+                      >
+                        <Link
+                          href={`/editorial/${post.slug}`}
+                          className="group flex min-h-[480px] h-full flex-col bg-white lg:min-h-[620px]"
+                        >
 
-                      <div className="absolute inset-0 bg-black/10" />
+                          {/* LARGE SECONDARY IMAGE */}
 
-                      <span className="absolute left-4 top-4 text-[9px] font-semibold tracking-[0.2em] text-white/60">
-                        0{index + 2}
-                      </span>
-                    </div>
+                          <div className="relative min-h-[280px] flex-1 overflow-hidden bg-black">
 
-                    {/* Content */}
-                    <div className="flex flex-col justify-between">
-                      <div>
-                        <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-green-700">
-                          {post.category}
-                        </p>
+                            {post.image_url && (
+                              <motion.img
+                                src={post.image_url}
+                                alt={post.title}
+                                initial={{
+                                  scale: 1.05,
+                                }}
+                                whileInView={{
+                                  scale: 1,
+                                }}
+                                viewport={{
+                                  once: true,
+                                }}
+                                transition={{
+                                  duration: 1,
+                                }}
+                                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                              />
+                            )}
 
-                        <h3 className="mt-4 text-2xl font-medium leading-[1] tracking-[-0.035em] transition-all duration-300 group-hover:translate-x-1 group-hover:text-green-700 lg:text-3xl">
-                          {post.title}
-                        </h3>
+                            <div className="absolute inset-0 bg-black/10" />
 
-                        <p className="mt-4 line-clamp-3 text-sm leading-6 text-black/50">
-                          {post.excerpt}
-                        </p>
-                      </div>
+                            <span className="absolute left-5 top-5 text-[9px] font-semibold tracking-[0.2em] text-white/70">
+                              02
+                            </span>
 
-                      <div className="mt-6 flex items-center justify-between border-t border-black/10 pt-4">
-                        <span className="text-[9px] uppercase tracking-[0.17em] text-black/35">
-                          {post.date}
-                        </span>
+                          </div>
 
-                        <FiArrowRight className="transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-green-700" />
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </Stagger>
+                          {/* SECONDARY CONTENT */}
+
+                          <div className="p-6 md:p-7">
+
+                            <div className="flex items-center justify-between gap-4">
+
+                              <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-green-700">
+                                {post.category}
+                              </p>
+
+                              <span className="text-[9px] uppercase tracking-[0.17em] text-black/35">
+                                {formatDate(
+                                  post.published_at
+                                )}
+                              </span>
+
+                            </div>
+
+                            <h3 className="mt-5 text-3xl font-medium leading-[0.98] tracking-[-0.04em] transition-colors duration-300 group-hover:text-green-700 lg:text-4xl">
+                              {post.title}
+                            </h3>
+
+                            <div className="mt-6 flex items-end justify-between gap-6 border-t border-black/10 pt-5">
+
+                              {post.excerpt && (
+                                <p className="line-clamp-2 max-w-sm text-sm leading-6 text-black/50">
+                                  {post.excerpt}
+                                </p>
+                              )}
+
+                              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-black/10 transition-all duration-300 group-hover:-rotate-45 group-hover:border-green-700 group-hover:bg-green-700 group-hover:text-white">
+                                <FiArrowRight />
+                              </span>
+
+                            </div>
+
+                          </div>
+
+                        </Link>
+                      </motion.div>
+                    </StaggerItem>
+                  );
+                }
+
+                /*
+                 * Three or four total articles:
+                 * preserve the original stacked layout.
+                 */
+                return (
+                  <StaggerItem
+                    key={post.id}
+                    className="flex-1"
+                  >
+                    <motion.div
+                      whileHover={{
+                        x: 4,
+                      }}
+                      transition={{
+                        duration: 0.25,
+                      }}
+                      className="h-full"
+                    >
+                      <Link
+                        href={`/editorial/${post.slug}`}
+                        className="group grid h-full gap-6 border-b border-black/10 py-8 sm:grid-cols-[150px_1fr] lg:grid-cols-[135px_1fr]"
+                      >
+
+                        {/* THUMBNAIL */}
+
+                        <div className="relative min-h-[150px] overflow-hidden bg-black sm:min-h-full">
+
+                          {post.image_url && (
+                            <motion.img
+                              src={post.image_url}
+                              alt={post.title}
+                              initial={{
+                                scale: 1.05,
+                              }}
+                              whileInView={{
+                                scale: 1,
+                              }}
+                              viewport={{
+                                once: true,
+                              }}
+                              transition={{
+                                duration: 0.8,
+                              }}
+                              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                          )}
+
+                          <div className="absolute inset-0 bg-black/10" />
+
+                          <span className="absolute left-4 top-4 text-[9px] font-semibold tracking-[0.2em] text-white/60">
+                            {String(index + 2).padStart(
+                              2,
+                              "0"
+                            )}
+                          </span>
+
+                        </div>
+
+                        {/* CONTENT */}
+
+                        <div className="flex flex-col justify-between">
+
+                          <div>
+                            <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-green-700">
+                              {post.category}
+                            </p>
+
+                            <h3 className="mt-4 text-2xl font-medium leading-[1] tracking-[-0.035em] transition-all duration-300 group-hover:translate-x-1 group-hover:text-green-700 lg:text-3xl">
+                              {post.title}
+                            </h3>
+
+                            {post.excerpt && (
+                              <p className="mt-4 line-clamp-3 text-sm leading-6 text-black/50">
+                                {post.excerpt}
+                              </p>
+                            )}
+                          </div>
+
+                          <div className="mt-6 flex items-center justify-between border-t border-black/10 pt-4">
+
+                            <span className="text-[9px] uppercase tracking-[0.17em] text-black/35">
+                              {formatDate(
+                                post.published_at
+                              )}
+                            </span>
+
+                            <FiArrowRight className="transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-green-700" />
+
+                          </div>
+
+                        </div>
+
+                      </Link>
+                    </motion.div>
+                  </StaggerItem>
+                );
+              })}
+
+            </Stagger>
+          )}
+
         </div>
 
-        {/* Bottom Statement */}
+        {/* ==========================================
+            BOTTOM STATEMENT
+        ========================================== */}
+
         <FadeUp delay={0.15}>
           <div className="mt-16 border-t border-black/10 pt-8 md:flex md:items-end md:justify-between">
+
             <p className="max-w-2xl text-2xl font-medium leading-snug tracking-[-0.03em] md:text-3xl">
               Words that encourage,
               <span className="text-black/35">
@@ -271,8 +497,10 @@ const EditorialHome = () => {
 
               <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1.5" />
             </Link>
+
           </div>
         </FadeUp>
+
       </div>
     </section>
   );

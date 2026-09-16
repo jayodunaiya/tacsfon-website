@@ -1,9 +1,13 @@
-export interface EditorialItem {
-  id: number;
+export interface Editorial {
+  id: string;
   title: string;
-  excerpt: string;
+  slug: string;
   category: string;
-  date: string;
-  image: string;
-  href: string;
+  excerpt: string | null;
+  content: string;
+  image_url: string | null;
+  image_path: string | null;
+  published_at: string;
+  featured: boolean;
+  created_at: string;
 }

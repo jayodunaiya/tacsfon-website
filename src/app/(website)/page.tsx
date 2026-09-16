@@ -10,8 +10,11 @@ import ScrollProgress from "@/components/home/scroll-progress.home";
 import ScriptureHome from "@/components/home/scripture.home";
 import GalleryHome from "@/components/home/gallery.home";
 import VisitCtaHome from "@/components/home/visit-cta.home";
+import { getEditorials } from "@/lib/editorials";
 
-export default function Home() {
+export default async function Home() {
+  const editorials = await getEditorials();
+
   return (
     <main>
       <NavbarCommon />
@@ -22,7 +25,7 @@ export default function Home() {
       <LatestSermonHome />
       <UpcomingEventsHome />
       <MinistriesHome />
-      <EditorialHome />
+      <EditorialHome editorials={editorials} />
       <ScrollProgress />
       <ScriptureHome />
       <GalleryHome />
