@@ -14,7 +14,10 @@ import {
 } from "react-icons/fi";
 
 import { navLinks } from "@/data/navigation.data";
-import { ministryGroups } from "@/data/ministries.data";
+import {
+  ministryUnits,
+  ministrySubgroups,
+} from "@/data/ministries.data";
 
 interface LiveStream {
   isLive: boolean;
@@ -58,6 +61,29 @@ const NavbarCommon = () => {
     canUseTransparentNavbar && !isScrolled;
 
   const isSolid = !isTransparent;
+
+  /*
+   * Ministry navigation
+   *
+   * Units and subgroups now point directly
+   * to their dedicated ministry pages.
+   */
+  const ministryGroups = [
+    {
+      title: "Units",
+      items: ministryUnits.map((unit) => ({
+        label: unit.name,
+        href: `/ministries/${unit.id}`,
+      })),
+    },
+    {
+      title: "Subgroups",
+      items: ministrySubgroups.map((subgroup) => ({
+        label: subgroup.name,
+        href: `/ministries/${subgroup.id}`,
+      })),
+    },
+  ];
 
   /*
    * Scroll detection
