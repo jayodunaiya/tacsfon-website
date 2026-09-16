@@ -373,7 +373,7 @@ const MinistriesHome = () => {
               >
 
                 <Link
-                  href="/contact"
+                  href="/ministries"
                   className="group inline-flex items-center gap-4 bg-white px-6 py-4 text-xs font-semibold uppercase tracking-[0.15em] text-black transition-all duration-300 hover:bg-black hover:text-white"
                 >
                   Find Your Ministry

@@ -11,9 +11,13 @@ import ScriptureHome from "@/components/home/scripture.home";
 import GalleryHome from "@/components/home/gallery.home";
 import VisitCtaHome from "@/components/home/visit-cta.home";
 import { getEditorials } from "@/lib/editorials";
+import { getGalleryImages } from "@/lib/gallery";
 
 export default async function Home() {
-  const editorials = await getEditorials();
+  const [editorials, galleryImages] = await Promise.all([
+  getEditorials(),
+  getGalleryImages(),
+]);
 
   return (
     <main>
@@ -28,7 +32,7 @@ export default async function Home() {
       <EditorialHome editorials={editorials} />
       <ScrollProgress />
       <ScriptureHome />
-      <GalleryHome />
+      <GalleryHome images={galleryImages} />
       <VisitCtaHome />
     </main>
   );
