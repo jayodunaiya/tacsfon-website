@@ -866,32 +866,6 @@ if (editAudioFile) {
     <main className="min-h-screen bg-[#F7F7F3] px-6 py-24 text-black lg:px-10">
       <div className="mx-auto max-w-[1400px]">
 
-        {/* HEADER */}
-        <div className="flex flex-col gap-6 border-b border-black/10 pb-10 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-green-700">
-              TACSFON Admin
-            </p>
-
-            <h1 className="mt-4 text-5xl font-medium tracking-[-0.05em] md:text-6xl">
-              Sermons.
-            </h1>
-
-            <p className="mt-4 max-w-xl text-sm leading-7 text-black/50">
-              Upload and manage sermons published
-              on the TACSFON website.
-            </p>
-          </div>
-
-          <button
-            type="button"
-            onClick={handleLogout}
-            className="w-fit border border-black/10 px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] transition-colors duration-300 hover:border-black hover:bg-black hover:text-white"
-          >
-            Sign Out
-          </button>
-        </div>
-
 
         {/* UPLOAD FORM */}
         <section className="mt-14">

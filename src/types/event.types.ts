@@ -1,11 +1,21 @@
-export interface EventItem {
-  id: number;
-  day: string;
-  weekday: string;
-  month: string;
+export interface Event {
+  id: string;
+
   title: string;
   category: string;
-  time: string;
+
+  event_date: string;
+  start_time: string | null;
+
   location: string;
-  href: string;
+  description: string | null;
+
+  image_url: string | null;
+  image_path: string | null;
+
+  registration_url: string | null;
+
+  featured: boolean;
+
+  created_at: string;
 }
