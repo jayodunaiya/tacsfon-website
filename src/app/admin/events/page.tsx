@@ -24,6 +24,7 @@ import {
   FiPlus,
   FiTrash2,
   FiX,
+  FiMail,
 } from "react-icons/fi";
 
 import { supabase } from "@/lib/supabase/client";
@@ -64,6 +65,16 @@ const AdminEventsPage = () => {
     customCategory,
     setCustomCategory,
   ] = useState("");
+
+const [
+  eventToSend,
+  setEventToSend,
+] = useState<Event | null>(null);
+
+const [
+  isSendingAnnouncement,
+  setIsSendingAnnouncement,
+] = useState(false);
 
   const [eventDate, setEventDate] =
     useState("");
@@ -362,11 +373,13 @@ const AdminEventsPage = () => {
   // ==========================================
   useEffect(() => {
     if (
-      !editingEvent &&
-      !eventToDelete
-    ) {
-      return;
-    }
+  !editingEvent &&
+  !eventToDelete &&
+  !eventToSend &&
+  !isSendingAnnouncement
+) {
+  return;
+}
 
     const previousOverflow =
       document.body.style.overflow;
@@ -383,6 +396,14 @@ const AdminEventsPage = () => {
       ) {
         return;
       }
+
+      if (eventToSend) {
+  if (!isSendingAnnouncement) {
+    setEventToSend(null);
+  }
+
+  return;
+}
 
       if (
         isEditing ||
@@ -1173,6 +1194,73 @@ const AdminEventsPage = () => {
       }
     };
 
+    const handleSendAnnouncement = async () => {
+  if (!eventToSend || isSendingAnnouncement) {
+    return;
+  }
+
+  setIsSendingAnnouncement(true);
+  setMessage("");
+
+  try {
+    const {
+      data: { session },
+      error: sessionError,
+    } = await supabase.auth.getSession();
+
+    if (sessionError || !session?.access_token) {
+      throw new Error(
+        "Your admin session has expired. Please sign in again."
+      );
+    }
+
+    const response = await fetch(
+      "/api/newsletter/send-event",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${session.access_token}`,
+        },
+
+        body: JSON.stringify({
+          eventId: eventToSend.id,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        data.message ||
+          "Unable to send announcement."
+      );
+    }
+
+    setMessage(
+      data.message ||
+        "Announcement sent successfully."
+    );
+
+    setEventToSend(null);
+  } catch (error) {
+    console.error(
+      "Send announcement error:",
+      error
+    );
+
+    setMessage(
+      error instanceof Error
+        ? error.message
+        : "Unable to send announcement."
+    );
+  } finally {
+    setIsSendingAnnouncement(false);
+  }
+};
+
   // ==========================================
   // LOGOUT
   // ==========================================
@@ -1725,6 +1813,16 @@ const AdminEventsPage = () => {
 
                       <button
                         type="button"
+                        onClick={() => setEventToSend(event)}
+                        className="flex items-center gap-2 border border-green-700/20 px-4 py-3 text-[9px] font-semibold uppercase tracking-[0.14em] text-green-700 transition-colors hover:bg-green-700 hover:text-white"
+                      >
+                        <FiMail />
+
+                        Send
+                      </button>
+
+                      <button
+                        type="button"
                         onClick={() =>
                           handleStartEdit(
                             event
@@ -1736,6 +1834,122 @@ const AdminEventsPage = () => {
 
                         Edit
                       </button>
+
+                      <AnimatePresence>
+                        {eventToSend && (
+                          <motion.div
+                            className="fixed inset-0 z-[130] flex items-center justify-center px-5"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                          >
+                            <button
+                              type="button"
+                              aria-label="Close announcement confirmation"
+                              onClick={() => {
+                                if (!isSendingAnnouncement) {
+                                  setEventToSend(null);
+                                }
+                              }}
+                              className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"
+                            />
+
+                            <motion.div
+                              initial={{
+                                opacity: 0,
+                                y: 24,
+                                scale: 0.98,
+                              }}
+                              animate={{
+                                opacity: 1,
+                                y: 0,
+                                scale: 1,
+                              }}
+                              exit={{
+                                opacity: 0,
+                                y: 16,
+                                scale: 0.98,
+                              }}
+                              transition={{
+                                duration: 0.3,
+                                ease: [0.22, 1, 0.36, 1],
+                              }}
+                              className="relative z-10 w-full max-w-lg bg-white p-7 sm:p-8"
+                            >
+                              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-green-700 text-white">
+                                <FiMail />
+                              </div>
+
+                              <p className="mt-6 text-[9px] font-semibold uppercase tracking-[0.24em] text-green-700">
+                                Newsletter
+                              </p>
+
+                              <h3 className="mt-3 text-2xl font-medium tracking-[-0.035em]">
+                                Send this programme?
+                              </h3>
+
+                              <p className="mt-3 text-sm leading-6 text-black/50">
+                                The flyer and programme details for{" "}
+                                <strong className="font-medium text-black">
+                                  {eventToSend.title}
+                                </strong>{" "}
+                                will be emailed to all active newsletter
+                                subscribers.
+                              </p>
+
+                              {eventToSend.image_url && (
+                                <div className="mt-6 flex items-center gap-4 border-y border-black/10 py-4">
+                                  <img
+                                    src={eventToSend.image_url}
+                                    alt={eventToSend.title}
+                                    className="h-20 w-16 object-cover"
+                                  />
+
+                                  <div>
+                                    <p className="text-[8px] font-semibold uppercase tracking-[0.18em] text-green-700">
+                                      {eventToSend.category}
+                                    </p>
+
+                                    <p className="mt-1 text-sm font-medium">
+                                      {eventToSend.title}
+                                    </p>
+
+                                    <p className="mt-1 text-xs text-black/40">
+                                      {formatDate(eventToSend.event_date)}
+                                    </p>
+                                  </div>
+                                </div>
+                              )}
+
+                              <div className="mt-8 flex gap-3">
+                                <button
+                                  type="button"
+                                  disabled={isSendingAnnouncement}
+                                  onClick={() => setEventToSend(null)}
+                                  className="flex-1 border border-black/10 px-5 py-4 text-[9px] font-semibold uppercase tracking-[0.15em] transition-colors hover:bg-black hover:text-white disabled:opacity-40"
+                                >
+                                  Cancel
+                                </button>
+
+                                <button
+                                  type="button"
+                                  onClick={handleSendAnnouncement}
+                                  disabled={isSendingAnnouncement}
+                                  className="flex-1 bg-green-700 px-5 py-4 text-[9px] font-semibold uppercase tracking-[0.15em] text-white transition-colors hover:bg-black disabled:cursor-not-allowed disabled:opacity-40"
+                                >
+                                  {isSendingAnnouncement
+                                    ? "Sending..."
+                                    : "Send Announcement"}
+                                </button>
+                              </div>
+
+                              <p className="mt-4 text-center text-[9px] leading-4 text-black/35">
+                                Only active subscribers will receive this email.
+                              </p>
+                            </motion.div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
 
                       <button
                         type="button"

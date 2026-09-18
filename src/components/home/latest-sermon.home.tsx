@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
+import { Sermon } from "@/types/sermon.types";
 
 import {
   motion,
@@ -9,14 +10,51 @@ import {
   useTransform,
 } from "framer-motion";
 
+
 import {
   FiArrowRight,
   FiArrowUpRight,
   FiPlay,
+  FiPause,
 } from "react-icons/fi";
 
-const LatestSermonHome = () => {
+interface LatestSermonHomeProps {
+  sermon: Sermon | null;
+}
+
+const LatestSermonHome = ({
+  sermon,
+}: LatestSermonHomeProps) => {
   const sectionRef = useRef<HTMLElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleAudio = async () => {
+  const audio = audioRef.current;
+
+  if (!audio) return;
+
+  try {
+    if (audio.paused) {
+      await audio.play();
+    } else {
+      audio.pause();
+    }
+  } catch (error) {
+    console.error("Unable to play sermon:", error);
+  }
+};
+
+  if (!sermon) return null;
+
+const sermonDate = new Intl.DateTimeFormat("en-NG", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+}).format(new Date(`${sermon.sermon_date}T00:00:00`));
+
+const sermonImage =
+  sermon.image_url || "/images/sermon.jpg";
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -46,6 +84,14 @@ const LatestSermonHome = () => {
       ref={sectionRef}
       className="relative overflow-hidden bg-white text-black"
     >
+      <audio
+      ref={audioRef}
+      src={sermon.audio_url}
+      preload="metadata"
+      onPlay={() => setIsPlaying(true)}
+      onPause={() => setIsPlaying(false)}
+      onEnded={() => setIsPlaying(false)}
+    />
       {/* Decorative Background Text */}
       <motion.div
         style={{
@@ -273,10 +319,7 @@ const LatestSermonHome = () => {
           }}
           className="relative"
         >
-          <Link
-            href="/sermons"
-            className="group relative block h-[540px] overflow-hidden rounded-[2px] bg-black md:h-[700px] lg:h-[790px]"
-          >
+          <div className="group relative block h-[540px] overflow-hidden rounded-[2px] bg-black md:h-[700px] lg:h-[790px]">
 
             {/* Main Image */}
             <div className="absolute inset-0 overflow-hidden">
@@ -287,8 +330,8 @@ const LatestSermonHome = () => {
                 className="absolute -inset-[6%]"
               >
                 <motion.img
-                  src="/images/sermon.jpg"
-                  alt="Latest sermon"
+                  src={sermonImage}
+                  alt={sermon.title}
                   initial={{
                     scale: 1.08,
                   }}
@@ -347,7 +390,9 @@ const LatestSermonHome = () => {
               className="absolute left-6 top-6 z-10 md:left-10 md:top-10"
             >
               <p className="text-[9px] font-semibold uppercase tracking-[0.3em] text-white/55">
-                Featured Sermon
+                {sermon.featured
+                  ? "Featured Sermon"
+                  : "Latest Sermon"}
               </p>
             </motion.div>
 
@@ -376,68 +421,83 @@ const LatestSermonHome = () => {
             </motion.div>
 
             {/* Play Button */}
-            <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  scale: 0.75,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.45,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="relative"
-              >
-                {/* Pulse Ring */}
-                <motion.span
-                  animate={{
-                    scale: [1, 1.45],
-                    opacity: [0.45, 0],
-                  }}
-                  transition={{
-                    duration: 2.2,
-                    repeat: Infinity,
-                    ease: "easeOut",
-                  }}
-                  className="absolute inset-0 rounded-full border border-white/30"
-                />
+              <div className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2">
 
-                {/* Second Pulse Ring */}
-                <motion.span
-                  animate={{
-                    scale: [1, 1.8],
-                    opacity: [0.2, 0],
+                <motion.button
+                  type="button"
+                  onClick={toggleAudio}
+                  initial={{
+                    opacity: 0,
+                    scale: 0.75,
                   }}
-                  transition={{
-                    duration: 2.2,
-                    repeat: Infinity,
-                    delay: 0.5,
-                    ease: "easeOut",
+                  whileInView={{
+                    opacity: 1,
+                    scale: 1,
                   }}
-                  className="absolute inset-0 rounded-full border border-green-400/25"
-                />
-
-                <motion.div
                   whileHover={{
-                    scale: 1.1,
+                    scale: 1.08,
                   }}
                   whileTap={{
                     scale: 0.95,
                   }}
-                  className="relative flex h-20 w-20 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-colors duration-300 group-hover:bg-green-700 group-hover:text-white md:h-24 md:w-24"
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.7,
+                    delay: 0.45,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  className="relative flex h-20 w-20 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-colors duration-300 hover:bg-green-700 hover:text-white md:h-24 md:w-24"
+                  aria-label={
+                    isPlaying
+                      ? "Pause sermon"
+                      : "Play sermon"
+                  }
                 >
-                  <FiPlay className="ml-1 text-xl md:text-2xl" />
-                </motion.div>
-              </motion.div>
-            </div>
+
+                  {/* Pulse 1 */}
+                  {!isPlaying && (
+                    <motion.span
+                      animate={{
+                        scale: [1, 1.45],
+                        opacity: [0.45, 0],
+                      }}
+                      transition={{
+                        duration: 2.2,
+                        repeat: Infinity,
+                        ease: "easeOut",
+                      }}
+                      className="pointer-events-none absolute inset-0 rounded-full border border-white/40"
+                    />
+                  )}
+
+                  {/* Pulse 2 */}
+                  {!isPlaying && (
+                    <motion.span
+                      animate={{
+                        scale: [1, 1.8],
+                        opacity: [0.2, 0],
+                      }}
+                      transition={{
+                        duration: 2.2,
+                        repeat: Infinity,
+                        delay: 0.5,
+                        ease: "easeOut",
+                      }}
+                      className="pointer-events-none absolute inset-0 rounded-full border border-green-400/30"
+                    />
+                  )}
+
+                  {isPlaying ? (
+                    <FiPause className="relative z-10 text-xl md:text-2xl" />
+                  ) : (
+                    <FiPlay className="relative z-10 ml-1 text-xl md:text-2xl" />
+                  )}
+
+                </motion.button>
+
+              </div>
 
             {/* Bottom Content */}
             <div className="absolute bottom-0 left-0 z-10 w-full p-6 md:p-10 lg:p-14">
@@ -461,43 +521,45 @@ const LatestSermonHome = () => {
               >
                 <div className="mb-5 flex flex-wrap items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.25em] text-white/50">
                   <span className="text-green-400">
-                    Sunday Message
+                    {sermon.category}
                   </span>
 
                   <span className="h-1 w-1 rounded-full bg-white/30" />
 
-                  <span>
-                    September 6, 2026
-                  </span>
+                  <span>{sermonDate}</span>
                 </div>
 
                 <h3 className="max-w-4xl text-4xl font-medium leading-[0.92] tracking-[-0.05em] sm:text-5xl md:text-6xl lg:text-[5rem]">
-                  Established
-
-                  <span className="block text-white/55">
-                    in God.
-                  </span>
+                  {sermon.title}
                 </h3>
 
                 <div className="mt-8 flex flex-col justify-between gap-8 border-t border-white/15 pt-6 md:flex-row md:items-end">
                   <p className="max-w-xl text-sm leading-6 text-white/55 md:text-base md:leading-7">
-                    A reminder to remain rooted, grounded and strengthened
-                    in God through every season of life.
+                    Listen to the latest message and continue growing
+                    through God&apos;s Word.
                   </p>
 
-                  <div className="flex shrink-0 items-center gap-4">
-                    <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Watch Now
-                    </span>
+                  <button
+                      type="button"
+                      onClick={toggleAudio}
+                      className="group/listen flex shrink-0 items-center gap-4"
+                    >
+                      <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
+                        {isPlaying ? "Pause Message" : "Listen Now"}
+                      </span>
 
-                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 transition-all duration-300 group-hover:-rotate-45 group-hover:border-green-500 group-hover:bg-green-700">
-                      <FiArrowRight />
-                    </span>
-                  </div>
+                      <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 group-hover/listen:border-green-500 group-hover/listen:bg-green-700">
+                        {isPlaying ? (
+                          <FiPause />
+                        ) : (
+                          <FiPlay className="ml-0.5" />
+                        )}
+                      </span>
+                    </button>
                 </div>
               </motion.div>
             </div>
-          </Link>
+          </div>
 
           {/* Floating Archive Card */}
           <motion.div

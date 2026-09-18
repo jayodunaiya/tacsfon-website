@@ -13,6 +13,7 @@ import {
   FiLogOut,
   FiMenu,
   FiX,
+  FiMail,
 } from "react-icons/fi";
 
 import { supabase } from "@/lib/supabase/client";
@@ -43,6 +44,11 @@ const adminLinks = [
     href: "/admin/gallery",
     icon: FiImage,
   },
+  {
+  name: "Messages",
+  href: "/admin/messages",
+  icon: FiMail,
+},
 ];
 
 const AdminNav = () => {

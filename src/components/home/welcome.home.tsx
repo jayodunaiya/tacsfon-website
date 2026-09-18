@@ -43,7 +43,13 @@ const WelcomeHome = () => {
   return (
     <section
       ref={sectionRef}
-      className="overflow-hidden bg-white px-6 py-24 text-black md:py-32 lg:px-10 lg:py-40"
+      className="
+        overflow-hidden bg-white px-5 py-16 text-black
+        min-[375px]:px-6
+        sm:py-20
+        md:py-28
+        lg:px-10 lg:py-40
+      "
     >
       <div className="mx-auto max-w-[1440px]">
         {/* Top Content */}
@@ -51,12 +57,24 @@ const WelcomeHome = () => {
           style={{
             y: contentY,
           }}
-          className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"
+          className="
+            grid gap-9
+            sm:gap-11
+            md:gap-12
+            lg:grid-cols-[0.8fr_1.2fr] lg:gap-20
+          "
         >
           {/* Section Label */}
           <FadeUp>
-            <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-green-700">
-              <span className="relative h-px w-8 overflow-hidden bg-green-700">
+            <p
+              className="
+                flex items-center gap-3
+                text-[10px] font-semibold uppercase
+                tracking-[0.22em] text-green-700
+                sm:text-xs sm:tracking-[0.25em]
+              "
+            >
+              <span className="relative h-px w-7 overflow-hidden bg-green-700 sm:w-8">
                 {/* Continuous subtle shimmer */}
                 <motion.span
                   animate={{
@@ -77,9 +95,19 @@ const WelcomeHome = () => {
           </FadeUp>
 
           {/* Main Content */}
-          <div>
+          <div className="min-w-0">
             <FadeUp delay={0.1}>
-              <h2 className="max-w-4xl text-4xl font-semibold leading-[1.05] tracking-[-0.04em] sm:text-5xl md:text-6xl lg:text-7xl">
+              <h2
+                className="
+                  max-w-4xl
+                  text-[clamp(2.35rem,11vw,3.5rem)]
+                  font-semibold leading-[1.03]
+                  tracking-[-0.04em]
+                  sm:text-5xl
+                  md:text-6xl
+                  lg:text-7xl
+                "
+              >
                 More than a church.
 
                 <span className="block text-green-700">
@@ -88,9 +116,21 @@ const WelcomeHome = () => {
               </h2>
             </FadeUp>
 
-            <div className="mt-10 grid gap-8 border-t border-black/10 pt-8 md:grid-cols-2">
+            <div
+              className="
+                mt-7 grid gap-7
+                border-t border-black/10 pt-6
+                sm:mt-8 sm:pt-7
+                md:mt-10 md:grid-cols-2 md:gap-8 md:pt-8
+              "
+            >
               <FadeUp delay={0.2}>
-                <p className="max-w-md text-base leading-7 text-black/60">
+                <p
+                  className="
+                    max-w-md text-sm leading-6 text-black/60
+                    sm:text-base sm:leading-7
+                  "
+                >
                   We are a community of believers passionate about knowing God,
                   growing together, and making His love known in our world.
                 </p>
@@ -107,14 +147,31 @@ const WelcomeHome = () => {
                   transition={{
                     duration: 0.25,
                   }}
+                  className="w-fit"
                 >
                   <Link
                     href="/about"
-                    className="group inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.12em]"
+                    className="
+                      group inline-flex items-center gap-3
+                      text-xs font-semibold uppercase
+                      tracking-[0.1em]
+                      sm:text-sm sm:tracking-[0.12em]
+                    "
                   >
-                    Discover Our Story
+                    <span>Discover Our Story</span>
 
-                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-black/20 transition duration-300 group-hover:rotate-[-45deg] group-hover:border-green-700 group-hover:bg-green-700 group-hover:text-white">
+                    <span
+                      className="
+                        flex h-9 w-9 shrink-0 items-center justify-center
+                        rounded-full border border-black/20
+                        transition duration-300
+                        group-hover:rotate-[-45deg]
+                        group-hover:border-green-700
+                        group-hover:bg-green-700
+                        group-hover:text-white
+                        sm:h-10 sm:w-10
+                      "
+                    >
                       →
                     </span>
                   </Link>
@@ -125,15 +182,37 @@ const WelcomeHome = () => {
         </motion.div>
 
         {/* Community Image */}
-        <Reveal className="mt-16 overflow-hidden lg:mt-24">
-          <div className="group relative h-[420px] overflow-hidden md:h-[550px] lg:h-[680px]">
+        <Reveal
+          className="
+            mt-10 overflow-hidden
+            sm:mt-12
+            md:mt-16
+            lg:mt-24
+          "
+        >
+          <div
+            className="
+              group relative
+              h-[300px] overflow-hidden
+              min-[375px]:h-[340px]
+              sm:h-[420px]
+              md:h-[550px]
+              lg:h-[680px]
+            "
+          >
             <motion.img
               src="/images/church-community.jpg"
               alt="Church community worshipping together"
               style={{
                 y: imageY,
               }}
-              className="absolute -inset-[6%] h-[112%] w-[112%] object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.025]"
+              className="
+                absolute -inset-[6%]
+                h-[112%] w-[112%]
+                object-cover
+                transition-transform duration-[1400ms] ease-out
+                group-hover:scale-[1.025]
+              "
             />
 
             {/* Soft image depth */}

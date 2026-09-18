@@ -6,6 +6,7 @@ import {
   FiInstagram,
   FiYoutube,
 } from "react-icons/fi";
+import NewsletterForm from "@/components/newsletter/newsletter-form";
 
 const FooterCommon = () => {
   const navigation = [
@@ -188,12 +189,56 @@ const FooterCommon = () => {
           </div>
         </div>
 
+        
+
         {/* Large Wordmark */}
         <div className="overflow-hidden border-b border-white/10 py-10">
           <p className="whitespace-nowrap text-[clamp(4rem,12vw,12rem)] font-semibold leading-[0.8] tracking-[-0.075em] text-white/[0.035]">
             TACSFON LAUTECH.
           </p>
         </div>
+
+        <div className="border-y border-white/10 py-10 md:py-12">
+  <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
+
+    {/* LEFT */}
+    <div>
+      <div className="flex items-center gap-3">
+        <span className="h-px w-7 bg-green-500" />
+
+        <p className="text-[9px] font-semibold uppercase tracking-[0.24em] text-green-400">
+          Stay Updated
+        </p>
+      </div>
+
+      <h3 className="mt-4 max-w-md text-2xl font-medium leading-[1.05] tracking-[-0.04em] text-white sm:text-3xl">
+        Keep up with what&apos;s
+        <span className="text-white/40"> happening.</span>
+      </h3>
+
+      <p className="mt-3 max-w-md text-xs leading-5 text-white/40">
+        Special programmes, conferences and important
+        fellowship updates — straight to your inbox.
+      </p>
+    </div>
+
+    {/* RIGHT */}
+    <div>
+      <div className="rounded-sm border border-white/10 bg-white/[0.04] px-5 py-5 sm:px-6">
+        <p className="mb-1 text-[9px] font-semibold uppercase tracking-[0.18em] text-white/45">
+          Join the mailing list
+        </p>
+
+        <NewsletterForm variant="dark" />
+      </div>
+
+      <p className="mt-3 text-[9px] leading-4 text-white/25">
+        No spam. Unsubscribe whenever you want.
+      </p>
+    </div>
+
+  </div>
+</div>
 
         {/* Bottom */}
         <div className="flex flex-col justify-between gap-5 py-7 text-[10px] uppercase tracking-[0.18em] text-white/25 md:flex-row md:items-center">

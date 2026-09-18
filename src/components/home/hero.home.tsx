@@ -12,36 +12,23 @@ import {
 const HeroHome = () => {
   const heroRef = useRef<HTMLElement>(null);
 
-  /*
-   * Track the hero as it moves through the viewport.
-   * This is used for the subtle parallax effect.
-   */
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
 
-  /*
-   * Background moves down slightly as the user scrolls away.
-   */
   const backgroundY = useTransform(
     scrollYProgress,
     [0, 1],
     ["0%", "10%"]
   );
 
-  /*
-   * Content moves upward slightly faster than the background.
-   */
   const contentY = useTransform(
     scrollYProgress,
     [0, 1],
     ["0%", "-6%"]
   );
 
-  /*
-   * Gradually fade the content while leaving the hero.
-   */
   const contentOpacity = useTransform(
     scrollYProgress,
     [0, 0.75, 1],
@@ -51,7 +38,10 @@ const HeroHome = () => {
   return (
     <section
       ref={heroRef}
-      className="relative flex min-h-screen items-end overflow-hidden bg-black"
+      className="
+        relative flex min-h-[100svh] items-end overflow-hidden bg-black
+        sm:min-h-screen
+      "
     >
       {/* Background */}
       <motion.div
@@ -70,7 +60,6 @@ const HeroHome = () => {
         }}
         className="absolute -inset-[6%]"
       >
-        {/* Continuous cinematic background movement */}
         <motion.img
           src="/images/church-hero.jpg"
           alt="Church worship service"
@@ -113,10 +102,16 @@ const HeroHome = () => {
           y: contentY,
           opacity: contentOpacity,
         }}
-        className="relative z-10 mx-auto w-full max-w-[1440px] px-6 pb-16 pt-40 lg:px-10 lg:pb-20"
+        className="
+          relative z-10 mx-auto w-full max-w-[1440px]
+          px-5 pb-8 pt-28
+          min-[375px]:px-6 min-[375px]:pb-10
+          sm:pb-12 sm:pt-32
+          md:pb-14 md:pt-36
+          lg:px-10 lg:pb-20 lg:pt-40
+        "
       >
         <div className="max-w-6xl">
-
           {/* Eyebrow */}
           <motion.p
             initial={{
@@ -132,7 +127,13 @@ const HeroHome = () => {
               delay: 0.2,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-white/70"
+            className="
+              mb-4 flex items-center gap-3
+              text-[10px] font-semibold uppercase
+              tracking-[0.25em] text-white/70
+              sm:mb-5 sm:text-[11px] sm:tracking-[0.28em]
+              md:mb-6 md:text-xs md:tracking-[0.3em]
+            "
           >
             <motion.span
               initial={{
@@ -148,7 +149,6 @@ const HeroHome = () => {
               }}
               className="relative h-px overflow-hidden bg-green-500"
             >
-              {/* Small continuous shimmer */}
               <motion.span
                 animate={{
                   x: ["-100%", "200%"],
@@ -181,7 +181,17 @@ const HeroHome = () => {
               delay: 0.35,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="max-w-5xl text-[clamp(3.5rem,8vw,8rem)] font-semibold leading-[0.88] tracking-[-0.06em] text-white"
+            className="
+              max-w-5xl
+              text-[clamp(2.65rem,13vw,4rem)]
+              font-semibold leading-[0.9]
+              tracking-[-0.055em] text-white
+              sm:text-[clamp(3.2rem,11vw,5rem)]
+              md:text-[clamp(4.5rem,9vw,6.5rem)]
+              lg:text-[clamp(5rem,8vw,8rem)]
+              lg:leading-[0.88]
+              lg:tracking-[-0.06em]
+            "
           >
             <motion.span
               initial={{
@@ -256,7 +266,12 @@ const HeroHome = () => {
               delay: 0.78,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-7 max-w-xl text-base font-medium italic tracking-[-0.01em] text-white/70 md:text-lg"
+            className="
+              mt-5 max-w-xl text-sm font-medium italic
+              tracking-[-0.01em] text-white/70
+              sm:mt-6 sm:text-base
+              md:mt-7 md:text-lg
+            "
           >
             “Where love rises and never sets.”
           </motion.p>
@@ -276,21 +291,26 @@ const HeroHome = () => {
               delay: 0.85,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-10 flex flex-col justify-between gap-8 border-t border-white/20 pt-7 md:flex-row md:items-end"
+            className="
+              mt-6 flex flex-col justify-between
+              gap-5 border-t border-white/20 pt-5
+              sm:mt-8 sm:gap-6 sm:pt-6
+              md:mt-10 md:flex-row md:items-end md:gap-8 md:pt-7
+            "
           >
             {/* Service Time */}
-            <div>
-              <p className="text-sm text-white/50">
+            <div className="shrink-0">
+              <p className="text-xs text-white/50 sm:text-sm">
                 Sunday Service
               </p>
 
-              <p className="mt-1 text-lg text-white">
+              <p className="mt-1 text-base text-white sm:text-lg">
                 Sundays · 9:00 AM
               </p>
             </div>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex w-full gap-2.5 sm:w-auto sm:gap-3">
               <motion.div
                 whileHover={{
                   y: -3,
@@ -301,10 +321,19 @@ const HeroHome = () => {
                 transition={{
                   duration: 0.2,
                 }}
+                className="min-w-0 flex-1 sm:flex-none"
               >
                 <Link
                   href="/contact"
-                  className="block bg-green-700 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-green-800"
+                  className="
+                    block whitespace-nowrap bg-green-700
+                    px-4 py-3.5 text-center text-xs
+                    font-medium text-white
+                    transition-colors duration-300
+                    hover:bg-green-800
+                    min-[375px]:px-5
+                    sm:px-7 sm:py-4 sm:text-sm
+                  "
                 >
                   Plan Your Visit
                 </Link>
@@ -320,10 +349,19 @@ const HeroHome = () => {
                 transition={{
                   duration: 0.2,
                 }}
+                className="min-w-0 flex-1 sm:flex-none"
               >
                 <Link
                   href="/sermons"
-                  className="block border border-white/30 px-7 py-4 text-sm font-medium text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                  className="
+                    block whitespace-nowrap border border-white/30
+                    px-4 py-3.5 text-center text-xs
+                    font-medium text-white
+                    transition-colors duration-300
+                    hover:bg-white hover:text-black
+                    min-[375px]:px-5
+                    sm:px-7 sm:py-4 sm:text-sm
+                  "
                 >
                   Watch Sermons
                 </Link>
