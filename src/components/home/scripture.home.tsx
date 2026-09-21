@@ -23,11 +23,13 @@ const ScriptureHome = () => {
     diff / oneDay
   );
 
-  const scriptureIndex =
-  Math.min(Math.max(dayOfYear - 1, 0), 364);
+  const scriptureIndex = Math.min(
+    Math.max(dayOfYear - 1, 0),
+    364
+  );
 
-const scripture =
-  dailyScriptures[scriptureIndex];
+  const scripture =
+    dailyScriptures[scriptureIndex];
 
   const formattedDate =
     today.toLocaleDateString("en-NG", {
@@ -37,8 +39,16 @@ const scripture =
     });
 
   return (
-    <section className="relative overflow-hidden bg-black px-6 py-28 text-white md:py-36 lg:px-10 lg:py-44">
-      
+    <section
+      className="
+        relative overflow-hidden bg-black
+        px-5 py-16 text-white
+        min-[375px]:px-6
+        sm:py-20
+        md:py-28
+        lg:px-10 lg:py-44
+      "
+    >
       {/* Large Decorative Scripture Mark */}
       <motion.div
         initial={{
@@ -56,7 +66,14 @@ const scripture =
           duration: 1,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="pointer-events-none absolute -right-6 top-0 hidden select-none text-[18rem] font-serif leading-none text-white/[0.025] lg:block"
+        className="
+          pointer-events-none absolute
+          -right-6 top-0 hidden
+          select-none text-[18rem]
+          font-serif leading-none
+          text-white/[0.025]
+          lg:block
+        "
       >
         ”
       </motion.div>
@@ -71,14 +88,31 @@ const scripture =
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-green-700/20 via-transparent to-transparent"
+        className="
+          pointer-events-none absolute inset-0
+          bg-gradient-to-br
+          from-green-700/20
+          via-transparent
+          to-transparent
+        "
       />
 
       <div className="relative z-10 mx-auto max-w-[1400px]">
-        
-        {/* Top */}
-        <div className="grid gap-12 border-b border-white/15 pb-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
-          
+
+        {/* ==========================================
+            TOP
+        ========================================== */}
+        <div
+          className="
+            grid gap-5
+            border-b border-white/15
+            pb-6
+            sm:gap-6 sm:pb-8
+            md:gap-8 md:pb-10
+            lg:grid-cols-[0.7fr_1.3fr]
+            lg:items-end lg:gap-12
+          "
+        >
           {/* Label */}
           <motion.div
             initial={{
@@ -97,9 +131,24 @@ const scripture =
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <p className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-green-500">
-              
-              <span className="relative h-px w-10 overflow-hidden bg-green-500/50">
+            <p
+              className="
+                flex items-center gap-3
+                text-[9px] font-semibold
+                uppercase tracking-[0.24em]
+                text-green-500
+                min-[375px]:text-[10px]
+                min-[375px]:tracking-[0.3em]
+              "
+            >
+              <span
+                className="
+                  relative h-px w-8
+                  shrink-0 overflow-hidden
+                  bg-green-500/50
+                  min-[375px]:w-10
+                "
+              >
                 <motion.span
                   animate={{
                     x: ["-120%", "220%"],
@@ -110,7 +159,10 @@ const scripture =
                     repeatDelay: 2.5,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-y-0 left-0 w-1/2 bg-green-400"
+                  className="
+                    absolute inset-y-0 left-0
+                    w-1/2 bg-green-400
+                  "
                 />
               </span>
 
@@ -137,14 +189,32 @@ const scripture =
             }}
             className="lg:text-right"
           >
-            <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-white/35">
+            <p
+              className="
+                text-[9px] font-medium
+                uppercase tracking-[0.18em]
+                text-white/35
+                min-[375px]:text-[10px]
+                min-[375px]:tracking-[0.25em]
+              "
+            >
               {formattedDate}
             </p>
           </motion.div>
         </div>
 
-        {/* Scripture */}
-        <div className="py-16 md:py-20 lg:py-28">
+        {/* ==========================================
+            SCRIPTURE
+        ========================================== */}
+        <div
+          className="
+            py-10
+            min-[375px]:py-12
+            sm:py-14
+            md:py-20
+            lg:py-28
+          "
+        >
           <motion.blockquote
             key={scripture.day}
             initial={{
@@ -163,7 +233,19 @@ const scripture =
               duration: 0.9,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="max-w-6xl text-4xl font-medium leading-[1.05] tracking-[-0.045em] text-white sm:text-5xl md:text-6xl lg:text-[5.8rem]"
+            className="
+              max-w-6xl
+              break-words
+              text-[clamp(2rem,9.5vw,3rem)]
+              font-medium
+              leading-[1.06]
+              tracking-[-0.045em]
+              text-white
+              sm:text-5xl
+              md:text-6xl
+              lg:text-[5.8rem]
+              lg:leading-[1.05]
+            "
           >
             “{scripture.verse}”
           </motion.blockquote>
@@ -184,17 +266,37 @@ const scripture =
               duration: 0.7,
               delay: 0.25,
             }}
-            className="mt-10 flex items-center gap-4"
+            className="
+              mt-7 flex items-center gap-3
+              min-[375px]:mt-8
+              sm:mt-10 sm:gap-4
+            "
           >
-            <span className="h-px w-10 bg-green-500" />
+            <span
+              className="
+                h-px w-8 shrink-0
+                bg-green-500
+                sm:w-10
+              "
+            />
 
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-500">
+            <p
+              className="
+                text-[10px] font-semibold
+                uppercase tracking-[0.16em]
+                text-green-500
+                min-[375px]:text-xs
+                min-[375px]:tracking-[0.2em]
+              "
+            >
               {scripture.reference}
             </p>
           </motion.div>
         </div>
 
-        {/* Bottom Detail */}
+        {/* ==========================================
+            BOTTOM DETAIL
+        ========================================== */}
         <motion.div
           initial={{
             opacity: 0,
@@ -211,18 +313,46 @@ const scripture =
             duration: 0.7,
             delay: 0.3,
           }}
-          className="flex flex-col justify-between gap-5 border-t border-white/15 pt-8 md:flex-row md:items-center"
+          className="
+            flex flex-col justify-between
+            gap-5 border-t border-white/15
+            pt-6
+            sm:pt-8
+            md:flex-row md:items-center
+          "
         >
-          <p className="max-w-md text-sm leading-6 text-white/40">
+          <p
+            className="
+              max-w-md
+              text-xs leading-5
+              text-white/40
+              min-[375px]:text-sm
+              min-[375px]:leading-6
+            "
+          >
             Take a moment. Read it again. Carry it with you today.
           </p>
 
           <div className="flex items-center gap-3">
-            <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/30">
+            <span
+              className="
+                text-[8px] font-semibold
+                uppercase tracking-[0.2em]
+                text-white/30
+                min-[375px]:text-[9px]
+                min-[375px]:tracking-[0.25em]
+              "
+            >
               Daily Word
             </span>
 
-            <span className="relative h-px w-12 overflow-hidden bg-white/15">
+            <span
+              className="
+                relative h-px w-10
+                overflow-hidden bg-white/15
+                min-[375px]:w-12
+              "
+            >
               <motion.span
                 animate={{
                   x: ["-100%", "220%"],
@@ -233,7 +363,10 @@ const scripture =
                   repeatDelay: 2,
                   ease: "easeInOut",
                 }}
-                className="absolute inset-y-0 left-0 w-1/2 bg-green-500"
+                className="
+                  absolute inset-y-0 left-0
+                  w-1/2 bg-green-500
+                "
               />
             </span>
           </div>

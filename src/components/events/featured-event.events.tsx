@@ -74,7 +74,11 @@ const FeaturedEvent = ({
 
   return (
     <section className="relative overflow-hidden bg-black text-white">
-      {/* Decorative number */}
+
+      {/* ======================================
+          DECORATIVE NUMBER
+      ====================================== */}
+
       <motion.div
         animate={{
           y: [0, -18, 0],
@@ -84,73 +88,243 @@ const FeaturedEvent = ({
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute -right-6 top-0 z-0 hidden select-none text-[18rem] font-semibold leading-none tracking-[-0.1em] text-white/[0.025] xl:block"
+        className="
+          pointer-events-none
+          absolute -right-6 top-0 z-0
+          hidden select-none
+          text-[18rem] font-semibold
+          leading-none
+          tracking-[-0.1em]
+          text-white/[0.025]
+          xl:block
+        "
       >
         {day}
       </motion.div>
 
-      <div className="relative z-10 mx-auto grid max-w-[1500px] lg:min-h-[720px] lg:grid-cols-[0.92fr_1.08fr]">
+      <div
+        className="
+          relative z-10
+          mx-auto grid
+          max-w-[1500px]
+          lg:min-h-[720px]
+          lg:grid-cols-[0.92fr_1.08fr]
+        "
+      >
 
         {/* =================================
             CONTENT
         ================================= */}
-        <div className="flex flex-col justify-between px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20 xl:px-16">
 
+        <div
+          className="
+            flex min-w-0
+            flex-col justify-between
+            px-5 py-12
+            min-[375px]:px-6
+            min-[375px]:py-14
+            sm:px-8 sm:py-16
+            lg:px-12 lg:py-20
+            xl:px-16
+          "
+        >
           <FadeUp>
-            <div>
-              <div className="flex items-center gap-3">
-                <span className="h-[1px] w-8 bg-green-500" />
+            <div className="min-w-0">
 
-                <p className="text-[9px] font-semibold uppercase tracking-[0.28em] text-green-400">
+              {/* LABEL */}
+
+              <div className="flex items-center gap-2.5 min-[375px]:gap-3">
+                <span
+                  className="
+                    h-px w-6 shrink-0
+                    bg-green-500
+                    min-[375px]:w-8
+                  "
+                />
+
+                <p
+                  className="
+                    text-[8px] font-semibold
+                    uppercase
+                    tracking-[0.22em]
+                    text-green-400
+                    min-[375px]:text-[9px]
+                    min-[375px]:tracking-[0.28em]
+                  "
+                >
                   Featured Event
                 </p>
               </div>
 
-              <p className="mt-8 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">
+              {/* CATEGORY */}
+
+              <p
+                className="
+                  mt-6
+                  break-words
+                  text-[8px] font-semibold
+                  uppercase
+                  tracking-[0.16em]
+                  text-white/40
+                  min-[375px]:mt-7
+                  min-[375px]:text-[9px]
+                  min-[375px]:tracking-[0.18em]
+                  sm:mt-8
+                  sm:text-[10px]
+                  sm:tracking-[0.2em]
+                "
+              >
                 {event.category}
               </p>
 
-              <h2 className="mt-4 max-w-2xl text-4xl font-medium leading-[0.95] tracking-[-0.055em] sm:text-5xl lg:text-6xl xl:text-7xl">
+              {/* TITLE */}
+
+              <h2
+                className="
+                  mt-3 max-w-2xl
+                  break-words
+                  text-[clamp(2.4rem,11vw,3.5rem)]
+                  font-medium
+                  leading-[0.96]
+                  tracking-[-0.05em]
+                  min-[375px]:mt-4
+                  sm:text-5xl
+                  lg:text-6xl
+                  lg:leading-[0.95]
+                  lg:tracking-[-0.055em]
+                  xl:text-7xl
+                "
+              >
                 {event.title}
               </h2>
 
+              {/* DESCRIPTION */}
+
               {event.description && (
-                <p className="mt-7 max-w-xl text-sm leading-7 text-white/50 sm:text-base sm:leading-8">
+                <p
+                  className="
+                    mt-5 max-w-xl
+                    break-words
+                    text-[13px]
+                    leading-6
+                    text-white/50
+                    min-[375px]:mt-6
+                    min-[375px]:text-sm
+                    min-[375px]:leading-7
+                    sm:mt-7
+                    sm:text-base
+                    sm:leading-8
+                  "
+                >
                   {event.description}
                 </p>
               )}
             </div>
           </FadeUp>
 
+          {/* =================================
+              EVENT DETAILS
+          ================================= */}
+
           <FadeUp>
-            <div className="mt-12 border-t border-white/15 pt-7 lg:mt-16">
+            <div
+              className="
+                mt-9
+                border-t border-white/15
+                pt-6
+                min-[375px]:mt-10
+                min-[375px]:pt-7
+                sm:mt-12
+                lg:mt-16
+              "
+            >
+              <div
+                className="
+                  grid grid-cols-2
+                  gap-x-4 gap-y-6
+                  min-[375px]:gap-x-5
+                  sm:grid-cols-2
+                  sm:gap-5
+                "
+              >
 
-              <div className="grid gap-5 sm:grid-cols-2">
+                {/* DATE */}
 
-                <div className="flex items-start gap-3">
-                  <FiCalendar className="mt-0.5 text-green-400" />
+                <div className="col-span-2 flex min-w-0 items-start gap-3 sm:col-span-1">
+                  <FiCalendar
+                    className="
+                      mt-0.5 shrink-0
+                      text-sm text-green-400
+                      sm:text-base
+                    "
+                  />
 
-                  <div>
-                    <p className="text-[8px] font-semibold uppercase tracking-[0.18em] text-white/30">
+                  <div className="min-w-0">
+                    <p
+                      className="
+                        text-[7px] font-semibold
+                        uppercase
+                        tracking-[0.15em]
+                        text-white/30
+                        min-[375px]:text-[8px]
+                        min-[375px]:tracking-[0.18em]
+                      "
+                    >
                       Date
                     </p>
 
-                    <p className="mt-1 text-sm text-white/75">
+                    <p
+                      className="
+                        mt-1
+                        text-[12px]
+                        leading-5
+                        text-white/75
+                        min-[375px]:text-[13px]
+                        sm:text-sm
+                      "
+                    >
                       {formattedDate}
                     </p>
                   </div>
                 </div>
 
-                {event.start_time && (
-                  <div className="flex items-start gap-3">
-                    <FiClock className="mt-0.5 text-green-400" />
+                {/* TIME */}
 
-                    <div>
-                      <p className="text-[8px] font-semibold uppercase tracking-[0.18em] text-white/30">
+                {event.start_time && (
+                  <div className="col-span-2 flex min-w-0 items-start gap-3 min-[375px]:col-span-1 sm:col-span-1">
+                    <FiClock
+                      className="
+                        mt-0.5 shrink-0
+                        text-sm text-green-400
+                        sm:text-base
+                      "
+                    />
+
+                    <div className="min-w-0">
+                      <p
+                        className="
+                          text-[7px] font-semibold
+                          uppercase
+                          tracking-[0.15em]
+                          text-white/30
+                          min-[375px]:text-[8px]
+                          min-[375px]:tracking-[0.18em]
+                        "
+                      >
                         Time
                       </p>
 
-                      <p className="mt-1 text-sm text-white/75">
+                      <p
+                        className="
+                          mt-1
+                          whitespace-nowrap
+                          text-[12px]
+                          leading-5
+                          text-white/75
+                          min-[375px]:text-[13px]
+                          sm:text-sm
+                        "
+                      >
                         {formatTime(
                           event.start_time
                         )}
@@ -159,21 +333,53 @@ const FeaturedEvent = ({
                   </div>
                 )}
 
-                <div className="flex items-start gap-3 sm:col-span-2">
-                  <FiMapPin className="mt-0.5 shrink-0 text-green-400" />
+                {/* LOCATION */}
 
-                  <div>
-                    <p className="text-[8px] font-semibold uppercase tracking-[0.18em] text-white/30">
+                <div className="col-span-2 flex min-w-0 items-start gap-3">
+                  <FiMapPin
+                    className="
+                      mt-0.5 shrink-0
+                      text-sm text-green-400
+                      sm:text-base
+                    "
+                  />
+
+                  <div className="min-w-0">
+                    <p
+                      className="
+                        text-[7px] font-semibold
+                        uppercase
+                        tracking-[0.15em]
+                        text-white/30
+                        min-[375px]:text-[8px]
+                        min-[375px]:tracking-[0.18em]
+                      "
+                    >
                       Location
                     </p>
 
-                    <p className="mt-1 text-sm leading-6 text-white/75">
+                    <p
+                      className="
+                        mt-1
+                        max-w-xl
+                        break-words
+                        text-[12px]
+                        leading-5
+                        text-white/75
+                        min-[375px]:text-[13px]
+                        min-[375px]:leading-6
+                        sm:text-sm
+                      "
+                    >
                       {event.location}
                     </p>
                   </div>
                 </div>
-
               </div>
+
+              {/* =================================
+                  REGISTRATION
+              ================================= */}
 
               {event.registration_url && (
                 <Link
@@ -182,24 +388,62 @@ const FeaturedEvent = ({
                   }
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mt-8 inline-flex items-center gap-5 bg-green-700 px-6 py-4 text-[9px] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-white hover:text-black"
+                  className="
+                    group mt-7
+                    inline-flex
+                    max-w-full
+                    items-center
+                    justify-between
+                    gap-4
+                    bg-green-700
+                    px-5 py-4
+                    text-[8px] font-semibold
+                    uppercase
+                    tracking-[0.14em]
+                    text-white
+                    transition-colors
+                    hover:bg-white
+                    hover:text-black
+                    min-[375px]:gap-5
+                    min-[375px]:px-6
+                    min-[375px]:text-[9px]
+                    min-[375px]:tracking-[0.18em]
+                    sm:mt-8
+                  "
                 >
-                  Register for Event
+                  <span>
+                    Register for Event
+                  </span>
 
-                  <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <FiArrowUpRight
+                    className="
+                      shrink-0
+                      transition-transform
+                      duration-300
+                      group-hover:translate-x-1
+                      group-hover:-translate-y-1
+                    "
+                  />
                 </Link>
               )}
-
             </div>
           </FadeUp>
-
         </div>
 
         {/* =================================
             IMAGE
         ================================= */}
-        <Reveal className="relative min-h-[480px] overflow-hidden lg:min-h-full">
 
+        <Reveal
+          className="
+            relative
+            min-h-[360px]
+            overflow-hidden
+            min-[375px]:min-h-[400px]
+            sm:min-h-[480px]
+            lg:min-h-full
+          "
+        >
           {event.image_url ? (
             <Parallax
               distance={55}
@@ -208,38 +452,95 @@ const FeaturedEvent = ({
               <img
                 src={event.image_url}
                 alt={event.title}
-                className="absolute inset-0 h-[115%] w-full object-cover"
+                className="
+                  absolute inset-0
+                  h-[115%] w-full
+                  object-cover
+                "
               />
             </Parallax>
           ) : (
             <div className="absolute inset-0 bg-[#151515]" />
           )}
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent lg:bg-gradient-to-r lg:from-black/20 lg:to-transparent" />
+          <div
+            className="
+              absolute inset-0
+              bg-gradient-to-t
+              from-black/55
+              via-transparent
+              to-transparent
+              lg:bg-gradient-to-r
+              lg:from-black/20
+              lg:to-transparent
+            "
+          />
 
-          {/* Date block */}
-          <div className="absolute bottom-0 left-0 bg-white px-6 py-5 text-black sm:px-8 sm:py-7">
+          {/* =================================
+              DATE BLOCK
+          ================================= */}
 
-            <div className="flex items-end gap-4">
-              <p className="text-5xl font-medium leading-none tracking-[-0.07em] sm:text-6xl">
+          <div
+            className="
+              absolute bottom-0 left-0
+              bg-white
+              px-5 py-4
+              text-black
+              min-[375px]:px-6
+              min-[375px]:py-5
+              sm:px-8
+              sm:py-7
+            "
+          >
+            <div
+              className="
+                flex items-end
+                gap-3
+                min-[375px]:gap-4
+              "
+            >
+              <p
+                className="
+                  text-[2.75rem]
+                  font-medium
+                  leading-none
+                  tracking-[-0.07em]
+                  min-[375px]:text-5xl
+                  sm:text-6xl
+                "
+              >
                 {day}
               </p>
 
-              <div className="pb-1">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-green-700">
+              <div className="pb-0.5 min-[375px]:pb-1">
+                <p
+                  className="
+                    text-[9px] font-semibold
+                    uppercase
+                    tracking-[0.17em]
+                    text-green-700
+                    min-[375px]:text-[10px]
+                    min-[375px]:tracking-[0.2em]
+                  "
+                >
                   {month}
                 </p>
 
-                <p className="mt-1 text-[9px] text-black/40">
+                <p
+                  className="
+                    mt-0.5
+                    text-[8px]
+                    text-black/40
+                    min-[375px]:mt-1
+                    min-[375px]:text-[9px]
+                  "
+                >
                   {year}
                 </p>
               </div>
             </div>
-
           </div>
-
         </Reveal>
-
       </div>
     </section>
   );

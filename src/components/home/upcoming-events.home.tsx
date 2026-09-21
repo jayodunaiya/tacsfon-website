@@ -127,19 +127,31 @@ const UpcomingEventsHome = () => {
   return (
     <section
       ref={sectionRef}
-      className="overflow-hidden bg-[#F7F7F3] px-6 py-24 text-black md:py-32 lg:px-10 lg:py-40"
+      className="
+        overflow-hidden bg-[#F7F7F3] px-5 py-16 text-black
+        min-[375px]:px-6
+        sm:py-20
+        md:py-28
+        lg:px-10 lg:py-40
+      "
     >
       <div className="mx-auto max-w-[1400px]">
 
         {/* ======================================
             SECTION HEADER
         ====================================== */}
-        <div className="mb-16 grid gap-10 lg:grid-cols-[0.65fr_1.35fr] lg:items-end">
-
+        <div
+          className="
+            mb-10 grid gap-7
+            sm:mb-12 sm:gap-8
+            md:mb-14
+            lg:mb-16 lg:grid-cols-[0.65fr_1.35fr]
+            lg:items-end lg:gap-10
+          "
+        >
           <FadeUp>
             <p className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-green-700">
-
-              <span className="relative h-px w-10 overflow-hidden bg-green-700">
+              <span className="relative h-px w-8 overflow-hidden bg-green-700 sm:w-10">
                 <motion.span
                   animate={{
                     x: ["-120%", "220%"],
@@ -155,21 +167,32 @@ const UpcomingEventsHome = () => {
               </span>
 
               What&apos;s Happening
-
             </p>
           </FadeUp>
 
-          <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-
+          <div
+            className="
+              flex flex-col justify-between gap-6
+              sm:gap-7
+              md:flex-row md:items-end md:gap-8
+            "
+          >
             <FadeUp delay={0.1}>
-              <h2 className="max-w-3xl text-5xl font-medium leading-[0.92] tracking-[-0.055em] sm:text-6xl lg:text-[5.5rem]">
-
+              <h2
+                className="
+                  max-w-3xl
+                  text-[clamp(2.65rem,12vw,4rem)]
+                  font-medium leading-[0.92]
+                  tracking-[-0.055em]
+                  sm:text-6xl
+                  lg:text-[5.5rem]
+                "
+              >
                 There&apos;s always
 
                 <span className="block text-green-700">
                   a place to belong.
                 </span>
-
               </h2>
             </FadeUp>
 
@@ -184,19 +207,34 @@ const UpcomingEventsHome = () => {
               >
                 <Link
                   href="/events"
-                  className="group mb-2 inline-flex w-fit items-center gap-3 text-xs font-semibold uppercase tracking-[0.15em] text-black"
+                  className="
+                    group inline-flex w-fit items-center gap-3
+                    text-[10px] font-semibold uppercase
+                    tracking-[0.15em] text-black
+                    sm:text-xs
+                    md:mb-2
+                  "
                 >
                   View All Events
 
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full border border-black/15 transition-all duration-300 group-hover:-rotate-45 group-hover:border-green-700 group-hover:bg-green-700 group-hover:text-white">
+                  <span
+                    className="
+                      flex h-8 w-8 shrink-0 items-center justify-center
+                      rounded-full border border-black/15
+                      transition-all duration-300
+                      group-hover:-rotate-45
+                      group-hover:border-green-700
+                      group-hover:bg-green-700
+                      group-hover:text-white
+                      sm:h-9 sm:w-9
+                    "
+                  >
                     <FiArrowUpRight />
                   </span>
                 </Link>
               </motion.div>
             </FadeUp>
-
           </div>
-
         </div>
 
         {/* ======================================
@@ -204,42 +242,42 @@ const UpcomingEventsHome = () => {
         ====================================== */}
 
         {isLoading ? (
-          <div className="border-y border-black/10 py-16">
-
+          <div className="border-y border-black/10 py-10 sm:py-12 md:py-16">
             <div className="flex items-center gap-4">
-
-              <div className="h-5 w-5 animate-spin rounded-full border-2 border-black/10 border-t-green-700" />
+              <div className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-black/10 border-t-green-700" />
 
               <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-black/35">
                 Loading upcoming events
               </p>
-
             </div>
-
           </div>
         ) : events.length === 0 ? (
           <FadeUp>
-            <div className="border-y border-black/10 py-16">
-
+            <div className="border-y border-black/10 py-10 sm:py-12 md:py-16">
               <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-green-700">
                 Coming Soon
               </p>
 
-              <h3 className="mt-4 text-3xl font-medium tracking-[-0.04em]">
+              <h3
+                className="
+                  mt-4 max-w-xl
+                  text-2xl font-medium leading-tight
+                  tracking-[-0.04em]
+                  sm:text-3xl
+                "
+              >
                 The next gathering is on the way.
               </h3>
 
-              <p className="mt-4 max-w-lg text-sm leading-7 text-black/45">
+              <p className="mt-4 max-w-lg text-sm leading-6 text-black/45 sm:leading-7">
                 There are no upcoming events published at the
                 moment. Check back soon to see what&apos;s
                 happening in the family.
               </p>
-
             </div>
           </FadeUp>
         ) : (
           <Stagger className="border-t border-black/10">
-
             {events.map((event, index) => {
               const eventDate = new Date(
                 `${event.event_date}T00:00:00`
@@ -265,7 +303,6 @@ const UpcomingEventsHome = () => {
 
               return (
                 <StaggerItem key={event.id}>
-
                   <motion.div
                     whileHover={{
                       x: 4,
@@ -275,92 +312,118 @@ const UpcomingEventsHome = () => {
                       ease: [0.22, 1, 0.36, 1],
                     }}
                   >
-
-                    <div className="group relative grid gap-7 border-b border-black/10 py-8 transition-all duration-300 md:grid-cols-[140px_1fr_auto] md:items-center lg:grid-cols-[160px_1fr_260px_60px] lg:py-10">
-
+                    <div
+                      className="
+                        group relative grid gap-5
+                        border-b border-black/10 py-7
+                        transition-all duration-300
+                        min-[375px]:gap-6
+                        sm:py-8
+                        md:grid-cols-[120px_1fr]
+                        md:items-center md:gap-7
+                        lg:grid-cols-[160px_1fr_260px_60px]
+                        lg:gap-7 lg:py-10
+                      "
+                    >
                       {/* Hover Background */}
                       <span className="absolute inset-0 -z-10 origin-bottom scale-y-0 bg-white transition-transform duration-300 ease-out group-hover:scale-y-100" />
 
                       {/* ========================
                           DATE
                       ======================== */}
-                      <div className="flex items-center gap-4">
-
-                        <span className="text-5xl font-medium leading-none tracking-[-0.06em] text-black transition-all duration-300 group-hover:-translate-y-1 group-hover:text-green-700 md:text-6xl">
+                      <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+                        <span
+                          className="
+                            text-4xl font-medium leading-none
+                            tracking-[-0.06em] text-black
+                            transition-all duration-300
+                            group-hover:-translate-y-1
+                            group-hover:text-green-700
+                            min-[375px]:text-5xl
+                            md:text-6xl
+                          "
+                        >
                           {day}
                         </span>
 
-                        <div>
-
-                          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-green-700">
+                        <div className="min-w-0">
+                          <p className="text-[9px] font-semibold uppercase tracking-[0.22em] text-green-700 sm:text-[10px] sm:tracking-[0.25em]">
                             {month}
                           </p>
 
-                          <p className="mt-1 text-xs text-black/40">
+                          <p className="mt-1 text-[11px] text-black/40 sm:text-xs">
                             {weekday}
                           </p>
-
                         </div>
-
                       </div>
 
                       {/* ========================
                           EVENT INFORMATION
                       ======================== */}
-                      <div>
-
-                        <div className="mb-3 flex items-center gap-3">
-
-                          <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-green-700">
+                      <div className="min-w-0 pr-7 sm:pr-8 md:pr-0">
+                        <div className="mb-2.5 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1.5 sm:mb-3">
+                          <span className="break-words text-[8px] font-semibold uppercase tracking-[0.18em] text-green-700 sm:text-[9px] sm:tracking-[0.22em]">
                             {event.category}
                           </span>
 
-                          <span className="h-1 w-1 rounded-full bg-black/20" />
+                          <span className="h-1 w-1 shrink-0 rounded-full bg-black/20" />
 
-                          <span className="text-[9px] font-medium uppercase tracking-[0.18em] text-black/30">
+                          <span className="text-[8px] font-medium uppercase tracking-[0.15em] text-black/30 sm:text-[9px] sm:tracking-[0.18em]">
                             Upcoming
                           </span>
-
                         </div>
 
-                        <h3 className="max-w-2xl text-2xl font-medium tracking-[-0.03em] transition-all duration-300 group-hover:translate-x-1 group-hover:text-green-800 md:text-3xl lg:text-4xl">
+                        <h3
+                          className="
+                            max-w-2xl break-words
+                            text-[1.4rem] font-medium
+                            leading-[1.08] tracking-[-0.03em]
+                            transition-all duration-300
+                            group-hover:translate-x-1
+                            group-hover:text-green-800
+                            min-[375px]:text-2xl
+                            md:text-3xl
+                            lg:text-4xl
+                          "
+                        >
                           {event.title}
                         </h3>
-
                       </div>
 
                       {/* ========================
                           TIME & LOCATION
                       ======================== */}
-                      <div className="flex flex-col gap-3 text-sm text-black/45 md:col-start-2 lg:col-start-auto">
+                      <div
+                        className="
+                          min-w-0 max-w-full
+                          flex flex-col gap-2.5
+                          text-xs text-black/45
+                          sm:gap-3 sm:text-sm
+                          md:col-start-2
+                          lg:col-start-auto
+                        "
+                      >
+                        <div className="flex min-w-0 items-start gap-3">
+                          <FiClock className="mt-0.5 shrink-0 text-green-700" />
 
-                        <div className="flex items-center gap-3">
-
-                          <FiClock className="shrink-0 text-green-700" />
-
-                          <span>
+                          <span className="min-w-0">
                             {formatTime(event.start_time)}
                           </span>
-
                         </div>
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex min-w-0 items-start gap-3">
+                          <FiMapPin className="mt-0.5 shrink-0 text-green-700" />
 
-                          <FiMapPin className="shrink-0 text-green-700" />
-
-                          <span>
+                          <span className="min-w-0 break-words leading-5 sm:leading-6">
                             {event.location}
                           </span>
-
                         </div>
-
                       </div>
 
                       {/* ========================
                           ARROW
                       ======================== */}
                       <div className="hidden justify-end lg:flex">
-
                         <Link
                           href="/events"
                           aria-label={`View ${event.title}`}
@@ -368,22 +431,26 @@ const UpcomingEventsHome = () => {
                         >
                           <FiArrowRight />
                         </Link>
-
                       </div>
 
                       {/* Mobile Event Number */}
-                      <span className="absolute right-0 top-8 text-[10px] font-medium tracking-[0.2em] text-black/20 lg:hidden">
+                      <span
+                        className="
+                          absolute right-0 top-7
+                          text-[9px] font-medium
+                          tracking-[0.18em] text-black/20
+                          sm:top-8 sm:text-[10px]
+                          sm:tracking-[0.2em]
+                          lg:hidden
+                        "
+                      >
                         {String(index + 1).padStart(2, "0")}
                       </span>
-
                     </div>
-
                   </motion.div>
-
                 </StaggerItem>
               );
             })}
-
           </Stagger>
         )}
 
@@ -409,19 +476,23 @@ const UpcomingEventsHome = () => {
             duration: 1,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="group relative mt-16 min-h-[600px] overflow-hidden bg-black md:min-h-[680px] lg:min-h-[720px]"
+          className="
+            group relative mt-12
+            min-h-[500px] overflow-hidden bg-black
+            min-[375px]:min-h-[520px]
+            sm:mt-14 sm:min-h-[580px]
+            md:mt-16 md:min-h-[680px]
+            lg:min-h-[720px]
+          "
         >
-
           {/* Background Image */}
           <div className="absolute inset-0 overflow-hidden">
-
             <motion.div
               style={{
                 y: featureImageY,
               }}
               className="absolute -inset-[6%]"
             >
-
               <motion.img
                 src="/images/church-gathering.jpg"
                 alt="Church gathering"
@@ -440,9 +511,7 @@ const UpcomingEventsHome = () => {
                 }}
                 className="h-full w-full object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
               />
-
             </motion.div>
-
           </div>
 
           {/* Main Blend */}
@@ -474,11 +543,19 @@ const UpcomingEventsHome = () => {
             style={{
               y: featureContentY,
             }}
-            className="relative z-10 flex min-h-[600px] flex-col justify-between px-8 py-10 md:min-h-[680px] md:px-12 md:py-14 lg:min-h-[720px] lg:w-[52%] lg:px-16 lg:py-16"
+            className="
+              relative z-10 flex min-h-[500px]
+              flex-col justify-between
+              px-5 py-8
+              min-[375px]:min-h-[520px]
+              min-[375px]:px-6
+              sm:min-h-[580px] sm:px-8 sm:py-10
+              md:min-h-[680px] md:px-12 md:py-14
+              lg:min-h-[720px] lg:w-[52%]
+              lg:px-16 lg:py-16
+            "
           >
-
             <div>
-
               {/* Icon */}
               <motion.div
                 initial={{
@@ -498,9 +575,8 @@ const UpcomingEventsHome = () => {
                   duration: 0.6,
                   delay: 0.2,
                 }}
-                className="mb-10"
+                className="mb-6 sm:mb-8 md:mb-10"
               >
-
                 <motion.div
                   animate={{
                     scale: [1, 1.05, 1],
@@ -515,11 +591,16 @@ const UpcomingEventsHome = () => {
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}
-                  className="flex h-14 w-14 items-center justify-center rounded-full border text-green-500 backdrop-blur-sm"
+                  className="
+                    flex h-11 w-11 items-center justify-center
+                    rounded-full border text-green-500
+                    backdrop-blur-sm
+                    sm:h-12 sm:w-12
+                    md:h-14 md:w-14
+                  "
                 >
-                  <FiCalendar className="text-xl" />
+                  <FiCalendar className="text-base sm:text-lg md:text-xl" />
                 </motion.div>
-
               </motion.div>
 
               {/* Label */}
@@ -539,13 +620,16 @@ const UpcomingEventsHome = () => {
                   duration: 0.6,
                   delay: 0.25,
                 }}
-                className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.3em] text-green-500"
+                className="
+                  flex items-center gap-3
+                  text-[9px] font-semibold uppercase
+                  tracking-[0.25em] text-green-500
+                  sm:text-[10px] sm:tracking-[0.3em]
+                "
               >
-
                 Stay Connected
 
-                <span className="relative h-px w-9 overflow-hidden bg-green-500/40">
-
+                <span className="relative h-px w-7 overflow-hidden bg-green-500/40 sm:w-9">
                   <motion.span
                     animate={{
                       x: ["-100%", "220%"],
@@ -558,9 +642,7 @@ const UpcomingEventsHome = () => {
                     }}
                     className="absolute inset-y-0 left-0 w-1/2 bg-green-400"
                   />
-
                 </span>
-
               </motion.p>
 
               {/* Heading */}
@@ -581,15 +663,20 @@ const UpcomingEventsHome = () => {
                   delay: 0.35,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="mt-6 max-w-xl text-5xl font-medium leading-[0.92] tracking-[-0.05em] text-white sm:text-6xl lg:text-[5rem]"
+                className="
+                  mt-5 max-w-xl
+                  text-[clamp(2.7rem,13vw,4rem)]
+                  font-medium leading-[0.92]
+                  tracking-[-0.05em] text-white
+                  sm:mt-6 sm:text-6xl
+                  lg:text-[5rem]
+                "
               >
-
                 Never miss
 
                 <span className="block text-green-500">
                   what&apos;s next.
                 </span>
-
               </motion.h3>
 
               {/* Description */}
@@ -609,13 +696,17 @@ const UpcomingEventsHome = () => {
                   duration: 0.7,
                   delay: 0.5,
                 }}
-                className="mt-8 max-w-md text-sm leading-7 text-white/65 md:text-base"
+                className="
+                  mt-5 max-w-md
+                  text-sm leading-6 text-white/65
+                  sm:mt-6 sm:leading-7
+                  md:mt-8 md:text-base
+                "
               >
                 Stay informed about upcoming services,
                 gatherings, programmes and special events
                 happening within the church.
               </motion.p>
-
             </div>
 
             {/* CTA */}
@@ -635,9 +726,8 @@ const UpcomingEventsHome = () => {
                 duration: 0.7,
                 delay: 0.65,
               }}
-              className="mt-16"
+              className="mt-8 sm:mt-10 md:mt-16"
             >
-
               <motion.div
                 whileHover={{
                   x: 4,
@@ -646,22 +736,35 @@ const UpcomingEventsHome = () => {
                   duration: 0.25,
                 }}
               >
-
                 <Link
                   href="/events"
-                  className="group/cta inline-flex w-fit items-center gap-5 text-xs font-semibold uppercase tracking-[0.18em] text-white"
+                  className="
+                    group/cta inline-flex w-fit
+                    items-center gap-3
+                    text-[10px] font-semibold uppercase
+                    tracking-[0.15em] text-white
+                    sm:gap-4 sm:text-xs sm:tracking-[0.18em]
+                    md:gap-5
+                  "
                 >
                   Explore Calendar
 
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-green-500 text-white transition-all duration-300 group-hover/cta:bg-green-600">
+                  <span
+                    className="
+                      flex h-10 w-10 shrink-0 items-center
+                      justify-center rounded-full
+                      border border-green-500 text-white
+                      transition-all duration-300
+                      group-hover/cta:bg-green-600
+                      sm:h-11 sm:w-11
+                      md:h-12 md:w-12
+                    "
+                  >
                     <FiArrowRight className="transition-transform duration-300 group-hover/cta:translate-x-1" />
                   </span>
                 </Link>
-
               </motion.div>
-
             </motion.div>
-
           </motion.div>
 
           {/* ====================================
@@ -688,13 +791,11 @@ const UpcomingEventsHome = () => {
             }}
             className="absolute bottom-8 right-8 z-10 hidden items-center gap-4 md:flex lg:bottom-10 lg:right-12"
           >
-
             <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-white/70">
               Gather · Grow · Belong
             </span>
 
             <span className="relative h-px w-12 overflow-hidden bg-green-500/40">
-
               <motion.span
                 animate={{
                   x: ["-100%", "220%"],
@@ -707,13 +808,9 @@ const UpcomingEventsHome = () => {
                 }}
                 className="absolute inset-y-0 left-0 w-1/2 bg-green-400"
               />
-
             </span>
-
           </motion.div>
-
         </motion.div>
-
       </div>
     </section>
   );
