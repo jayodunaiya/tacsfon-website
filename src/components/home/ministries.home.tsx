@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -17,6 +18,19 @@ import Stagger from "@/components/motion/stagger.motion";
 import StaggerItem from "@/components/motion/stagger-item.motion";
 
 const MinistriesHome = () => {
+  const [showAllSubgroups, setShowAllSubgroups] =
+  useState(false);
+
+const initialSubgroups =
+  ministrySubgroups.slice(0, 6);
+
+const visibleSubgroups =
+  showAllSubgroups
+    ? ministrySubgroups
+    : initialSubgroups;
+
+const hasMoreSubgroups =
+  ministrySubgroups.length > 6;
   return (
     <section
       className="
@@ -437,96 +451,270 @@ const MinistriesHome = () => {
             </div>
           </FadeUp>
 
-          <Stagger className="border-t border-black/10">
-            {ministrySubgroups.map((subgroup) => (
-              <StaggerItem key={subgroup.id}>
-                <Link
-                  href={`/ministries/${subgroup.id}`}
+          <div className="border-t border-black/10">
+            {visibleSubgroups.map((subgroup, index) => {
+              const hiddenOnMobile =
+                !showAllSubgroups && index >= 4;
+
+              return (
+                <motion.div
+                  key={subgroup.id}
+                  initial={
+                    showAllSubgroups && index >= 6
+                      ? {
+                          opacity: 0,
+                          y: 12,
+                        }
+                      : false
+                  }
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    delay:
+                      showAllSubgroups && index >= 6
+                        ? Math.min(
+                            (index - 6) * 0.035,
+                            0.18
+                          )
+                        : 0,
+                  }}
+                  className={
+                    hiddenOnMobile
+                      ? "hidden sm:block"
+                      : "block"
+                  }
+                >
+                  <Link
+                    href={`/ministries/${subgroup.id}`}
+                    className="
+                      group relative grid
+                      grid-cols-[32px_minmax(0,1fr)_auto]
+                      items-start
+                      gap-2.5
+                      border-b border-black/10
+                      py-5
+                      text-black
+                      transition-all
+                      duration-300
+
+                      min-[375px]:
+                      grid-cols-[36px_minmax(0,1fr)_auto]
+
+                      min-[375px]:gap-3
+
+                      sm:grid-cols-[80px_minmax(0,1fr)_auto]
+                      sm:items-center
+                      sm:gap-5
+                      sm:py-6
+
+                      lg:py-8
+                    "
+                  >
+                    {/* HOVER BACKGROUND */}
+
+                    <span
+                      aria-hidden="true"
+                      className="
+                        pointer-events-none
+                        absolute inset-0
+                        -z-10
+                        origin-left
+                        scale-x-0
+                        bg-[#F7F7F3]
+                        transition-transform
+                        duration-300
+                        ease-out
+                        group-hover:scale-x-100
+                      "
+                    />
+
+                    {/* NUMBER */}
+
+                    <span
+                      className="
+                        relative z-10
+                        pt-1
+                        text-[8px]
+                        font-semibold
+                        tracking-[0.15em]
+                        text-black/25
+                        transition-colors
+                        duration-300
+
+                        group-hover:text-green-700
+
+                        sm:pt-0
+                        sm:text-[10px]
+                        sm:tracking-[0.18em]
+                      "
+                    >
+                      {subgroup.number}
+                    </span>
+
+                    {/* NAME + DESCRIPTION */}
+
+                    <div className="relative z-10 min-w-0">
+                      <h4
+                        className="
+                          break-words
+                          text-xl
+                          font-medium
+                          leading-tight
+                          tracking-[-0.03em]
+                          text-black
+                          opacity-100
+                          transition-all
+                          duration-300
+
+                          group-hover:translate-x-2
+                          group-hover:text-green-700
+
+                          min-[375px]:text-[1.35rem]
+
+                          sm:text-3xl
+
+                          lg:text-4xl
+                        "
+                      >
+                        {subgroup.name}
+                      </h4>
+
+                      <p
+                        className="
+                          mt-1.5
+                          max-w-xl
+                          break-words
+                          text-[11px]
+                          leading-[1.55]
+                          text-black/40
+                          opacity-100
+                          transition-all
+                          duration-300
+
+                          group-hover:translate-x-2
+                          group-hover:text-black/55
+
+                          min-[375px]:text-xs
+
+                          sm:mt-2
+                          sm:text-sm
+                          sm:leading-5
+                        "
+                      >
+                        {subgroup.shortDescription}
+                      </p>
+                    </div>
+
+                    {/* ARROW */}
+
+                    <span
+                      className="
+                        relative z-10
+                        mt-0.5
+                        flex h-8 w-8
+                        shrink-0
+                        items-center
+                        justify-center
+                        rounded-full
+                        border border-black/10
+                        text-xs
+                        text-black
+                        opacity-100
+                        transition-all
+                        duration-300
+
+                        group-hover:-rotate-45
+                        group-hover:border-green-700
+                        group-hover:bg-green-700
+                        group-hover:text-white
+
+                        min-[375px]:h-9
+                        min-[375px]:w-9
+
+                        sm:mt-0
+                        sm:h-11
+                        sm:w-11
+                        sm:text-base
+                      "
+                    >
+                      <FiArrowRight />
+                    </span>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+
+            {/* SHOW MORE / LESS */}
+
+            {hasMoreSubgroups && (
+              <FadeUp>
+                <div
                   className="
-                    group relative grid
-                    grid-cols-[32px_1fr_auto]
-                    items-start gap-2.5
+                    flex justify-center
                     border-b border-black/10
-                    py-5 transition-all duration-300
-                    min-[375px]:grid-cols-[36px_1fr_auto]
-                    min-[375px]:gap-3
-                    sm:grid-cols-[80px_1fr_auto]
-                    sm:items-center sm:gap-5 sm:py-6
-                    lg:py-8
+                    py-7
+                    sm:py-8
                   "
                 >
-                  {/* Hover Background */}
-                  <span className="absolute inset-0 -z-10 origin-left scale-x-0 bg-[#F7F7F3] transition-transform duration-300 ease-out group-hover:scale-x-100" />
-
-                  {/* Number */}
-                  <span
+                  <motion.button
+                    type="button"
+                    onClick={() =>
+                      setShowAllSubgroups(
+                        (previous) => !previous
+                      )
+                    }
+                    whileTap={{
+                      scale: 0.97,
+                    }}
                     className="
-                      pt-1 text-[8px] font-semibold
-                      tracking-[0.15em] text-black/25
-                      transition-colors duration-300
-                      group-hover:text-green-700
-                      sm:pt-0 sm:text-[10px]
-                      sm:tracking-[0.18em]
+                      group inline-flex
+                      items-center gap-4
+                      text-[10px]
+                      font-semibold uppercase
+                      tracking-[0.16em]
+                      text-black
+                      transition-colors
+                      hover:text-green-700
+                      sm:text-xs
                     "
                   >
-                    {subgroup.number}
-                  </span>
+                    <span>
+                      {showAllSubgroups
+                        ? "Show Less"
+                        : "Show More"}
+                    </span>
 
-                  {/* Name + Description */}
-                  <div className="min-w-0">
-                    <h4
-                      className="
-                        break-words text-xl font-medium
-                        leading-tight tracking-[-0.03em]
-                        transition-all duration-300
-                        group-hover:translate-x-2
-                        group-hover:text-green-700
-                        min-[375px]:text-[1.35rem]
-                        sm:text-3xl
-                        lg:text-4xl
-                      "
+                    <span
+                      className={`
+                        flex h-9 w-9
+                        items-center justify-center
+                        rounded-full
+                        border border-black/15
+                        transition-all
+                        duration-300
+
+                        group-hover:border-green-700
+                        group-hover:bg-green-700
+                        group-hover:text-white
+
+                        ${
+                          showAllSubgroups
+                            ? "-rotate-90"
+                            : "rotate-90"
+                        }
+                      `}
                     >
-                      {subgroup.name}
-                    </h4>
+                      <FiArrowRight />
+                    </span>
+                  </motion.button>
+                </div>
+              </FadeUp>
+            )}
 
-                    <p
-                      className="
-                        mt-1.5 max-w-xl
-                        text-[11px] leading-[1.55]
-                        text-black/35
-                        transition-all duration-300
-                        group-hover:translate-x-2
-                        group-hover:text-black/50
-                        min-[375px]:text-xs
-                        sm:mt-2 sm:text-sm sm:leading-5
-                      "
-                    >
-                      {subgroup.shortDescription}
-                    </p>
-                  </div>
-
-                  {/* Arrow */}
-                  <span
-                    className="
-                      mt-0.5 flex h-8 w-8 shrink-0
-                      items-center justify-center
-                      rounded-full border border-black/10
-                      text-xs
-                      transition-all duration-300
-                      group-hover:-rotate-45
-                      group-hover:border-green-700
-                      group-hover:bg-green-700
-                      group-hover:text-white
-                      min-[375px]:h-9 min-[375px]:w-9
-                      sm:mt-0 sm:h-11 sm:w-11 sm:text-base
-                    "
-                  >
-                    <FiArrowRight />
-                  </span>
-                </Link>
-              </StaggerItem>
-            ))}
-          </Stagger>
         </div>
 
         {/* ==========================================

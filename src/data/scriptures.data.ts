@@ -1,1838 +1,1847 @@
 import { ScriptureItem } from "@/types/scripture.types";
 
 /*
+ * TACSFON LAUTECH
  * 365 Daily Scriptures
+ *
  * Translation: King James Version (KJV)
  *
- * Generated from public-domain scripture data.
- * Do not manually reorder unless you intentionally want
- * to change which verse belongs to each day.
+ * These scriptures were intentionally selected around
+ * Christian faith, prayer, wisdom, purpose, purity,
+ * perseverance, relationships, service, spiritual growth,
+ * courage, hope, discipline and daily Christian living.
+ *
+ * Scripture text is generated from a local
+ * public-domain KJV dataset.
+ *
+ * AUTO-GENERATED FILE.
+ * Do not manually edit individual verses here.
  */
 
 export const dailyScriptures: ScriptureItem[] = [
   {
     "day": 1,
-    "verse": "Blessed is the man that walketh not in the counsel of the ungodly, nor standeth in the way of sinners, nor sitteth in the seat of the scornful.",
-    "reference": "Psalms 1:1"
+    "verse": "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.",
+    "reference": "Proverbs 3:5-6"
   },
   {
     "day": 2,
-    "verse": "The proverbs of Solomon the son of David, king of Israel;",
-    "reference": "Proverbs 1:1"
+    "verse": "Commit thy way unto the Lord; trust also in him; and he shall bring it to pass.",
+    "reference": "Psalm 37:5"
   },
   {
     "day": 3,
-    "verse": "The vision of Isaiah the son of Amoz, which he saw concerning Judah and Jerusalem in the days of Uzziah, Jotham, Ahaz, and Hezekiah, kings of Judah.",
-    "reference": "Isaiah 1:1"
+    "verse": "Now faith is the substance of things hoped for, the evidence of things not seen.",
+    "reference": "Hebrews 11:1"
   },
   {
     "day": 4,
-    "verse": "The book of the generation of Jesus Christ, the son of David, the son of Abraham.",
-    "reference": "Matthew 1:1"
+    "verse": "But without faith it is impossible to please him: for he that cometh to God must believe that he is, and that he is a rewarder of them that diligently seek him.",
+    "reference": "Hebrews 11:6"
   },
   {
     "day": 5,
-    "verse": "The beginning of the gospel of Jesus Christ, the Son of God;",
-    "reference": "Mark 1:1"
+    "verse": "And Jesus answering saith unto them, Have faith in God.",
+    "reference": "Mark 11:22"
   },
   {
     "day": 6,
-    "verse": "Forasmuch as many have taken in hand to set forth in order a declaration of those things which are most surely believed among us,",
-    "reference": "Luke 1:1"
+    "verse": "So then faith cometh by hearing, and hearing by the word of God.",
+    "reference": "Romans 10:17"
   },
   {
     "day": 7,
-    "verse": "In the beginning was the Word, and the Word was with God, and the Word was God.",
-    "reference": "John 1:1"
+    "verse": "What time I am afraid, I will trust in thee.",
+    "reference": "Psalm 56:3"
   },
   {
     "day": 8,
-    "verse": "Paul, a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God,",
-    "reference": "Romans 1:1"
+    "verse": "(For we walk by faith, not by sight:)",
+    "reference": "2 Corinthians 5:7"
   },
   {
     "day": 9,
-    "verse": "Paul called to be an apostle of Jesus Christ through the will of God, and Sosthenes our brother,",
-    "reference": "1 Corinthians 1:1"
+    "verse": "Trust in him at all times; ye people, pour out your heart before him: God is a refuge for us. Selah.",
+    "reference": "Psalm 62:8"
   },
   {
     "day": 10,
-    "verse": "Paul, an apostle of Jesus Christ by the will of God, and Timothy our brother, unto the church of God which is at Corinth, with all the saints which are in all Achaia:",
-    "reference": "2 Corinthians 1:1"
+    "verse": "Blessed is the man that trusteth in the Lord, and whose hope the Lord is. For he shall be as a tree planted by the waters, and that spreadeth out her roots by the river, and shall not see when heat cometh, but her leaf shall be green; and shall not be careful in the year of drought, neither shall cease from yielding fruit.",
+    "reference": "Jeremiah 17:7-8"
   },
   {
     "day": 11,
-    "verse": "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father, who raised him from the dead;)",
-    "reference": "Galatians 1:1"
+    "verse": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee. Trust ye in the Lord for ever: for in the Lord Jehovah is everlasting strength:",
+    "reference": "Isaiah 26:3-4"
   },
   {
     "day": 12,
-    "verse": "Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus, and to the faithful in Christ Jesus:",
-    "reference": "Ephesians 1:1"
+    "verse": "They that trust in the Lord shall be as mount Zion, which cannot be removed, but abideth for ever.",
+    "reference": "Psalm 125:1"
   },
   {
     "day": 13,
-    "verse": "Paul and Timotheus, the servants of Jesus Christ, to all the saints in Christ Jesus which are at Philippi, with the bishops and deacons:",
-    "reference": "Philippians 1:1"
+    "verse": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+    "reference": "Romans 8:28"
   },
   {
     "day": 14,
-    "verse": "Paul, an apostle of Jesus Christ by the will of God, and Timotheus our brother,",
-    "reference": "Colossians 1:1"
+    "verse": "And they that know thy name will put their trust in thee: for thou, Lord, hast not forsaken them that seek thee.",
+    "reference": "Psalm 9:10"
   },
   {
     "day": 15,
-    "verse": "Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians which is in God the Father and in the Lord Jesus Christ: Grace be unto you, and peace, from God our Father, and the Lord Jesus Christ.",
-    "reference": "1 Thessalonians 1:1"
+    "verse": "The Lord is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+    "reference": "Nahum 1:7"
   },
   {
     "day": 16,
-    "verse": "Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians in God our Father and the Lord Jesus Christ:",
-    "reference": "2 Thessalonians 1:1"
-  },
-  {
-    "day": 17,
-    "verse": "Paul, an apostle of Jesus Christ by the commandment of God our Saviour, and Lord Jesus Christ, which is our hope;",
-    "reference": "1 Timothy 1:1"
-  },
-  {
-    "day": 18,
-    "verse": "Paul, an apostle of Jesus Christ by the will of God, according to the promise of life which is in Christ Jesus,",
-    "reference": "2 Timothy 1:1"
-  },
-  {
-    "day": 19,
-    "verse": "God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets,",
-    "reference": "Hebrews 1:1"
-  },
-  {
-    "day": 20,
-    "verse": "James, a servant of God and of the Lord Jesus Christ, to the twelve tribes which are scattered abroad, greeting.",
-    "reference": "James 1:1"
-  },
-  {
-    "day": 21,
-    "verse": "Peter, an apostle of Jesus Christ, to the strangers scattered throughout Pontus, Galatia, Cappadocia, Asia, and Bithynia,",
-    "reference": "1 Peter 1:1"
-  },
-  {
-    "day": 22,
-    "verse": "Simon Peter, a servant and an apostle of Jesus Christ, to them that have obtained like precious faith with us through the righteousness of God and our Saviour Jesus Christ:",
-    "reference": "2 Peter 1:1"
-  },
-  {
-    "day": 23,
-    "verse": "That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;",
-    "reference": "1 John 1:1"
-  },
-  {
-    "day": 24,
-    "verse": "But his delight is in the law of the Lord; and in his law doth he meditate day and night.",
-    "reference": "Psalms 1:2"
-  },
-  {
-    "day": 25,
-    "verse": "To know wisdom and instruction; to perceive the words of understanding;",
-    "reference": "Proverbs 1:2"
-  },
-  {
-    "day": 26,
-    "verse": "Hear, O heavens, and give ear, O earth: for the Lord hath spoken, I have nourished and brought up children, and they have rebelled against me.",
-    "reference": "Isaiah 1:2"
-  },
-  {
-    "day": 27,
-    "verse": "So all the generations from Abraham to David are fourteen generations; and from David until the carrying away into Babylon are fourteen generations; and from the carrying away into Babylon unto Christ are fourteen generations.",
-    "reference": "Matthew 1:17"
-  },
-  {
-    "day": 28,
-    "verse": "As it is written in the prophets, Behold, I send my messenger before thy face, which shall prepare thy way before thee.",
-    "reference": "Mark 1:2"
-  },
-  {
-    "day": 29,
-    "verse": "Even as they delivered them unto us, which from the beginning were eyewitnesses, and ministers of the word;",
-    "reference": "Luke 1:2"
-  },
-  {
-    "day": 30,
-    "verse": "All things were made by him; and without him was not any thing made that was made.",
-    "reference": "John 1:3"
-  },
-  {
-    "day": 31,
-    "verse": "(Which he had promised afore by his prophets in the holy scriptures,)",
-    "reference": "Romans 1:2"
-  },
-  {
-    "day": 32,
-    "verse": "Unto the church of God which is at Corinth, to them that are sanctified in Christ Jesus, called to be saints, with all that in every place call upon the name of Jesus Christ our Lord, both their's and our's:",
-    "reference": "1 Corinthians 1:2"
-  },
-  {
-    "day": 33,
-    "verse": "Grace be to you and peace from God our Father, and from the Lord Jesus Christ.",
-    "reference": "2 Corinthians 1:2"
-  },
-  {
-    "day": 34,
-    "verse": "And all the brethren which are with me, unto the churches of Galatia:",
-    "reference": "Galatians 1:2"
-  },
-  {
-    "day": 35,
-    "verse": "Grace be to you, and peace, from God our Father, and from the Lord Jesus Christ.",
-    "reference": "Ephesians 1:2"
-  },
-  {
-    "day": 36,
-    "verse": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ.",
-    "reference": "Philippians 1:2"
-  },
-  {
-    "day": 37,
-    "verse": "To the saints and faithful brethren in Christ which are at Colosse: Grace be unto you, and peace, from God our Father and the Lord Jesus Christ.",
-    "reference": "Colossians 1:2"
-  },
-  {
-    "day": 38,
-    "verse": "We give thanks to God always for you all, making mention of you in our prayers;",
-    "reference": "1 Thessalonians 1:2"
-  },
-  {
-    "day": 39,
-    "verse": "Grace unto you, and peace, from God our Father and the Lord Jesus Christ.",
-    "reference": "2 Thessalonians 1:2"
-  },
-  {
-    "day": 40,
-    "verse": "Unto Timothy, my own son in the faith: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.",
-    "reference": "1 Timothy 1:2"
-  },
-  {
-    "day": 41,
-    "verse": "To Timothy, my dearly beloved son: Grace, mercy, and peace, from God the Father and Christ Jesus our Lord.",
-    "reference": "2 Timothy 1:2"
-  },
-  {
-    "day": 42,
-    "verse": "Hath in these last days spoken unto us by his Son, whom he hath appointed heir of all things, by whom also he made the worlds;",
-    "reference": "Hebrews 1:2"
-  },
-  {
-    "day": 43,
-    "verse": "My brethren, count it all joy when ye fall into divers temptations;",
-    "reference": "James 1:2"
-  },
-  {
-    "day": 44,
-    "verse": "Elect according to the foreknowledge of God the Father, through sanctification of the Spirit, unto obedience and sprinkling of the blood of Jesus Christ: Grace unto you, and peace, be multiplied.",
-    "reference": "1 Peter 1:2"
-  },
-  {
-    "day": 45,
-    "verse": "Grace and peace be multiplied unto you through the knowledge of God, and of Jesus our Lord,",
-    "reference": "2 Peter 1:2"
-  },
-  {
-    "day": 46,
-    "verse": "(For the life was manifested, and we have seen it, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;)",
-    "reference": "1 John 1:2"
-  },
-  {
-    "day": 47,
-    "verse": "And he shall be like a tree planted by the rivers of water, that bringeth forth his fruit in his season; his leaf also shall not wither; and whatsoever he doeth shall prosper.",
-    "reference": "Psalms 1:3"
-  },
-  {
-    "day": 48,
-    "verse": "To receive the instruction of wisdom, justice, and judgment, and equity;",
-    "reference": "Proverbs 1:3"
-  },
-  {
-    "day": 49,
-    "verse": "The ox knoweth his owner, and the ass his master's crib: but Israel doth not know, my people doth not consider.",
-    "reference": "Isaiah 1:3"
-  },
-  {
-    "day": 50,
-    "verse": "Now the birth of Jesus Christ was on this wise: When as his mother Mary was espoused to Joseph, before they came together, she was found with child of the Holy Ghost.",
-    "reference": "Matthew 1:18"
-  },
-  {
-    "day": 51,
-    "verse": "The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight.",
-    "reference": "Mark 1:3"
-  },
-  {
-    "day": 52,
-    "verse": "It seemed good to me also, having had perfect understanding of all things from the very first, to write unto thee in order, most excellent Theophilus,",
-    "reference": "Luke 1:3"
-  },
-  {
-    "day": 53,
-    "verse": "In him was life; and the life was the light of men.",
-    "reference": "John 1:4"
-  },
-  {
-    "day": 54,
-    "verse": "Concerning his Son Jesus Christ our Lord, which was made of the seed of David according to the flesh;",
-    "reference": "Romans 1:3"
-  },
-  {
-    "day": 55,
-    "verse": "Grace be unto you, and peace, from God our Father, and from the Lord Jesus Christ.",
-    "reference": "1 Corinthians 1:3"
-  },
-  {
-    "day": 56,
-    "verse": "Blessed be God, even the Father of our Lord Jesus Christ, the Father of mercies, and the God of all comfort;",
-    "reference": "2 Corinthians 1:3"
-  },
-  {
-    "day": 57,
-    "verse": "Grace be to you and peace from God the Father, and from our Lord Jesus Christ,",
-    "reference": "Galatians 1:3"
-  },
-  {
-    "day": 58,
-    "verse": "Blessed be the God and Father of our Lord Jesus Christ, who hath blessed us with all spiritual blessings in heavenly places in Christ:",
-    "reference": "Ephesians 1:3"
-  },
-  {
-    "day": 59,
-    "verse": "I thank my God upon every remembrance of you,",
-    "reference": "Philippians 1:3"
-  },
-  {
-    "day": 60,
-    "verse": "We give thanks to God and the Father of our Lord Jesus Christ, praying always for you,",
-    "reference": "Colossians 1:3"
-  },
-  {
-    "day": 61,
-    "verse": "Remembering without ceasing your work of faith, and labour of love, and patience of hope in our Lord Jesus Christ, in the sight of God and our Father;",
-    "reference": "1 Thessalonians 1:3"
-  },
-  {
-    "day": 62,
-    "verse": "We are bound to thank God always for you, brethren, as it is meet, because that your faith groweth exceedingly, and the charity of every one of you all toward each other aboundeth;",
-    "reference": "2 Thessalonians 1:3"
-  },
-  {
-    "day": 63,
-    "verse": "As I besought thee to abide still at Ephesus, when I went into Macedonia, that thou mightest charge some that they teach no other doctrine,",
-    "reference": "1 Timothy 1:3"
-  },
-  {
-    "day": 64,
-    "verse": "I thank God, whom I serve from my forefathers with pure conscience, that without ceasing I have remembrance of thee in my prayers night and day;",
-    "reference": "2 Timothy 1:3"
-  },
-  {
-    "day": 65,
-    "verse": "Who being the brightness of his glory, and the express image of his person, and upholding all things by the word of his power, when he had by himself purged our sins, sat down on the right hand of the Majesty on high:",
-    "reference": "Hebrews 1:3"
-  },
-  {
-    "day": 66,
-    "verse": "Knowing this, that the trying of your faith worketh patience.",
-    "reference": "James 1:3"
-  },
-  {
-    "day": 67,
-    "verse": "Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead,",
-    "reference": "1 Peter 1:3"
-  },
-  {
-    "day": 68,
-    "verse": "According as his divine power hath given unto us all things that pertain unto life and godliness, through the knowledge of him that hath called us to glory and virtue:",
-    "reference": "2 Peter 1:3"
-  },
-  {
-    "day": 69,
-    "verse": "That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship is with the Father, and with his Son Jesus Christ.",
-    "reference": "1 John 1:3"
-  },
-  {
-    "day": 70,
-    "verse": "The ungodly are not so: but are like the chaff which the wind driveth away.",
-    "reference": "Psalms 1:4"
-  },
-  {
-    "day": 71,
-    "verse": "To give subtilty to the simple, to the young man knowledge and discretion.",
-    "reference": "Proverbs 1:4"
-  },
-  {
-    "day": 72,
-    "verse": "Ah sinful nation, a people laden with iniquity, a seed of evildoers, children that are corrupters: they have forsaken the Lord, they have provoked the Holy One of Israel unto anger, they are gone away backward.",
-    "reference": "Isaiah 1:4"
-  },
-  {
-    "day": 73,
-    "verse": "Then Joseph her husband, being a just man, and not willing to make her a public example, was minded to put her away privily.",
-    "reference": "Matthew 1:19"
-  },
-  {
-    "day": 74,
-    "verse": "John did baptize in the wilderness, and preach the baptism of repentance for the remission of sins.",
-    "reference": "Mark 1:4"
-  },
-  {
-    "day": 75,
-    "verse": "That thou mightest know the certainty of those things, wherein thou hast been instructed.",
-    "reference": "Luke 1:4"
-  },
-  {
-    "day": 76,
-    "verse": "And the light shineth in darkness; and the darkness comprehended it not.",
-    "reference": "John 1:5"
-  },
-  {
-    "day": 77,
-    "verse": "And declared to be the Son of God with power, according to the spirit of holiness, by the resurrection from the dead:",
-    "reference": "Romans 1:4"
-  },
-  {
-    "day": 78,
-    "verse": "I thank my God always on your behalf, for the grace of God which is given you by Jesus Christ;",
-    "reference": "1 Corinthians 1:4"
-  },
-  {
-    "day": 79,
-    "verse": "Who comforteth us in all our tribulation, that we may be able to comfort them which are in any trouble, by the comfort wherewith we ourselves are comforted of God.",
-    "reference": "2 Corinthians 1:4"
-  },
-  {
-    "day": 80,
-    "verse": "Who gave himself for our sins, that he might deliver us from this present evil world, according to the will of God and our Father:",
-    "reference": "Galatians 1:4"
-  },
-  {
-    "day": 81,
-    "verse": "According as he hath chosen us in him before the foundation of the world, that we should be holy and without blame before him in love:",
-    "reference": "Ephesians 1:4"
-  },
-  {
-    "day": 82,
-    "verse": "Always in every prayer of mine for you all making request with joy,",
-    "reference": "Philippians 1:4"
-  },
-  {
-    "day": 83,
-    "verse": "Since we heard of your faith in Christ Jesus, and of the love which ye have to all the saints,",
-    "reference": "Colossians 1:4"
-  },
-  {
-    "day": 84,
-    "verse": "Knowing, brethren beloved, your election of God.",
-    "reference": "1 Thessalonians 1:4"
-  },
-  {
-    "day": 85,
-    "verse": "So that we ourselves glory in you in the churches of God for your patience and faith in all your persecutions and tribulations that ye endure:",
-    "reference": "2 Thessalonians 1:4"
-  },
-  {
-    "day": 86,
-    "verse": "Neither give heed to fables and endless genealogies, which minister questions, rather than godly edifying which is in faith: so do.",
-    "reference": "1 Timothy 1:4"
-  },
-  {
-    "day": 87,
-    "verse": "Greatly desiring to see thee, being mindful of thy tears, that I may be filled with joy;",
-    "reference": "2 Timothy 1:4"
-  },
-  {
-    "day": 88,
-    "verse": "Being made so much better than the angels, as he hath by inheritance obtained a more excellent name than they.",
-    "reference": "Hebrews 1:4"
-  },
-  {
-    "day": 89,
-    "verse": "But let patience have her perfect work, that ye may be perfect and entire, wanting nothing.",
-    "reference": "James 1:4"
-  },
-  {
-    "day": 90,
-    "verse": "To an inheritance incorruptible, and undefiled, and that fadeth not away, reserved in heaven for you,",
-    "reference": "1 Peter 1:4"
-  },
-  {
-    "day": 91,
-    "verse": "Whereby are given unto us exceeding great and precious promises: that by these ye might be partakers of the divine nature, having escaped the corruption that is in the world through lust.",
-    "reference": "2 Peter 1:4"
-  },
-  {
-    "day": 92,
-    "verse": "And these things write we unto you, that your joy may be full.",
-    "reference": "1 John 1:4"
-  },
-  {
-    "day": 93,
-    "verse": "Therefore the ungodly shall not stand in the judgment, nor sinners in the congregation of the righteous.",
-    "reference": "Psalms 1:5"
-  },
-  {
-    "day": 94,
-    "verse": "A wise man will hear, and will increase learning; and a man of understanding shall attain unto wise counsels:",
-    "reference": "Proverbs 1:5"
-  },
-  {
-    "day": 95,
-    "verse": "Why should ye be stricken any more? ye will revolt more and more: the whole head is sick, and the whole heart faint.",
-    "reference": "Isaiah 1:5"
-  },
-  {
-    "day": 96,
-    "verse": "But while he thought on these things, behold, the angel of the Lord appeared unto him in a dream, saying, Joseph, thou son of David, fear not to take unto thee Mary thy wife: for that which is conceived in her is of the Holy Ghost.",
-    "reference": "Matthew 1:20"
-  },
-  {
-    "day": 97,
-    "verse": "And there went out unto him all the land of Judaea, and they of Jerusalem, and were all baptized of him in the river of Jordan, confessing their sins.",
-    "reference": "Mark 1:5"
-  },
-  {
-    "day": 98,
-    "verse": "There was in the days of Herod, the king of Judaea, a certain priest named Zacharias, of the course of Abia: and his wife was of the daughters of Aaron, and her name was Elisabeth.",
-    "reference": "Luke 1:5"
-  },
-  {
-    "day": 99,
-    "verse": "There was a man sent from God, whose name was John.",
-    "reference": "John 1:6"
-  },
-  {
-    "day": 100,
-    "verse": "By whom we have received grace and apostleship, for obedience to the faith among all nations, for his name:",
-    "reference": "Romans 1:5"
-  },
-  {
-    "day": 101,
-    "verse": "That in every thing ye are enriched by him, in all utterance, and in all knowledge;",
-    "reference": "1 Corinthians 1:5"
-  },
-  {
-    "day": 102,
-    "verse": "For as the sufferings of Christ abound in us, so our consolation also aboundeth by Christ.",
-    "reference": "2 Corinthians 1:5"
-  },
-  {
-    "day": 103,
-    "verse": "I marvel that ye are so soon removed from him that called you into the grace of Christ unto another gospel:",
-    "reference": "Galatians 1:6"
-  },
-  {
-    "day": 104,
-    "verse": "Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will,",
-    "reference": "Ephesians 1:5"
-  },
-  {
-    "day": 105,
-    "verse": "For your fellowship in the gospel from the first day until now;",
-    "reference": "Philippians 1:5"
-  },
-  {
-    "day": 106,
-    "verse": "For the hope which is laid up for you in heaven, whereof ye heard before in the word of the truth of the gospel;",
-    "reference": "Colossians 1:5"
-  },
-  {
-    "day": 107,
-    "verse": "For our gospel came not unto you in word only, but also in power, and in the Holy Ghost, and in much assurance; as ye know what manner of men we were among you for your sake.",
-    "reference": "1 Thessalonians 1:5"
-  },
-  {
-    "day": 108,
-    "verse": "Which is a manifest token of the righteous judgment of God, that ye may be counted worthy of the kingdom of God, for which ye also suffer:",
-    "reference": "2 Thessalonians 1:5"
-  },
-  {
-    "day": 109,
-    "verse": "Now the end of the commandment is charity out of a pure heart, and of a good conscience, and of faith unfeigned:",
-    "reference": "1 Timothy 1:5"
-  },
-  {
-    "day": 110,
-    "verse": "When I call to remembrance the unfeigned faith that is in thee, which dwelt first in thy grandmother Lois, and thy mother Eunice; and I am persuaded that in thee also.",
-    "reference": "2 Timothy 1:5"
-  },
-  {
-    "day": 111,
-    "verse": "For unto which of the angels said he at any time, Thou art my Son, this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son?",
-    "reference": "Hebrews 1:5"
-  },
-  {
-    "day": 112,
     "verse": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
     "reference": "James 1:5"
   },
   {
-    "day": 113,
-    "verse": "Who are kept by the power of God through faith unto salvation ready to be revealed in the last time.",
-    "reference": "1 Peter 1:5"
+    "day": 17,
+    "verse": "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.",
+    "reference": "Psalm 32:8"
   },
   {
-    "day": 114,
-    "verse": "And beside this, giving all diligence, add to your faith virtue; and to virtue knowledge;",
-    "reference": "2 Peter 1:5"
+    "day": 18,
+    "verse": "A man's heart deviseth his way: but the Lord directeth his steps.",
+    "reference": "Proverbs 16:9"
   },
   {
-    "day": 115,
-    "verse": "This then is the message which we have heard of him, and declare unto you, that God is light, and in him is no darkness at all.",
-    "reference": "1 John 1:5"
+    "day": 19,
+    "verse": "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding.",
+    "reference": "Proverbs 4:7"
   },
   {
-    "day": 116,
-    "verse": "For the Lord knoweth the way of the righteous: but the way of the ungodly shall perish.",
-    "reference": "Psalms 1:6"
+    "day": 20,
+    "verse": "Thy word is a lamp unto my feet, and a light unto my path.",
+    "reference": "Psalm 119:105"
   },
   {
-    "day": 117,
-    "verse": "To understand a proverb, and the interpretation; the words of the wise, and their dark sayings.",
-    "reference": "Proverbs 1:6"
+    "day": 21,
+    "verse": "For the Lord giveth wisdom: out of his mouth cometh knowledge and understanding.",
+    "reference": "Proverbs 2:6"
   },
   {
-    "day": 118,
-    "verse": "From the sole of the foot even unto the head there is no soundness in it; but wounds, and bruises, and putrifying sores: they have not been closed, neither bound up, neither mollified with ointment.",
-    "reference": "Isaiah 1:6"
+    "day": 22,
+    "verse": "Commit thy works unto the Lord, and thy thoughts shall be established.",
+    "reference": "Proverbs 16:3"
   },
   {
-    "day": 119,
-    "verse": "And she shall bring forth a son, and thou shalt call his name Jesus: for he shall save his people from their sins.",
-    "reference": "Matthew 1:21"
+    "day": 23,
+    "verse": "And thine ears shall hear a word behind thee, saying, This is the way, walk ye in it, when ye turn to the right hand, and when ye turn to the left.",
+    "reference": "Isaiah 30:21"
   },
   {
-    "day": 120,
-    "verse": "And John was clothed with camel's hair, and with a girdle of a skin about his loins; and he did eat locusts and wild honey;",
-    "reference": "Mark 1:6"
+    "day": 24,
+    "verse": "Shew me thy ways, O Lord; teach me thy paths. Lead me in thy truth, and teach me: for thou art the God of my salvation; on thee do I wait all the day.",
+    "reference": "Psalm 25:4-5"
   },
   {
-    "day": 121,
-    "verse": "And they were both righteous before God, walking in all the commandments and ordinances of the Lord blameless.",
-    "reference": "Luke 1:6"
+    "day": 25,
+    "verse": "There are many devices in a man's heart; nevertheless the counsel of the Lord, that shall stand.",
+    "reference": "Proverbs 19:21"
   },
   {
-    "day": 122,
-    "verse": "The same came for a witness, to bear witness of the Light, that all men through him might believe.",
-    "reference": "John 1:7"
+    "day": 26,
+    "verse": "Where no counsel is, the people fall: but in the multitude of counsellors there is safety.",
+    "reference": "Proverbs 11:14"
   },
   {
-    "day": 123,
-    "verse": "Among whom are ye also the called of Jesus Christ:",
-    "reference": "Romans 1:6"
+    "day": 27,
+    "verse": "Without counsel purposes are disappointed: but in the multitude of counsellors they are established.",
+    "reference": "Proverbs 15:22"
   },
   {
-    "day": 124,
-    "verse": "Even as the testimony of Christ was confirmed in you:",
-    "reference": "1 Corinthians 1:6"
+    "day": 28,
+    "verse": "Teach me to do thy will; for thou art my God: thy spirit is good; lead me into the land of uprightness.",
+    "reference": "Psalm 143:10"
   },
   {
-    "day": 125,
-    "verse": "And whether we be afflicted, it is for your consolation and salvation, which is effectual in the enduring of the same sufferings which we also suffer: or whether we be comforted, it is for your consolation and salvation.",
-    "reference": "2 Corinthians 1:6"
-  },
-  {
-    "day": 126,
-    "verse": "Which is not another; but there be some that trouble you, and would pervert the gospel of Christ.",
-    "reference": "Galatians 1:7"
-  },
-  {
-    "day": 127,
-    "verse": "To the praise of the glory of his grace, wherein he hath made us accepted in the beloved.",
-    "reference": "Ephesians 1:6"
-  },
-  {
-    "day": 128,
-    "verse": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
-    "reference": "Philippians 1:6"
-  },
-  {
-    "day": 129,
-    "verse": "Which is come unto you, as it is in all the world; and bringeth forth fruit, as it doth also in you, since the day ye heard of it, and knew the grace of God in truth:",
-    "reference": "Colossians 1:6"
-  },
-  {
-    "day": 130,
-    "verse": "And ye became followers of us, and of the Lord, having received the word in much affliction, with joy of the Holy Ghost.",
-    "reference": "1 Thessalonians 1:6"
-  },
-  {
-    "day": 131,
-    "verse": "Seeing it is a righteous thing with God to recompense tribulation to them that trouble you;",
-    "reference": "2 Thessalonians 1:6"
-  },
-  {
-    "day": 132,
-    "verse": "From which some having swerved have turned aside unto vain jangling;",
-    "reference": "1 Timothy 1:6"
-  },
-  {
-    "day": 133,
-    "verse": "Wherefore I put thee in remembrance that thou stir up the gift of God, which is in thee by the putting on of my hands.",
-    "reference": "2 Timothy 1:6"
-  },
-  {
-    "day": 134,
-    "verse": "And again, when he bringeth in the firstbegotten into the world, he saith, And let all the angels of God worship him.",
-    "reference": "Hebrews 1:6"
-  },
-  {
-    "day": 135,
-    "verse": "But let him ask in faith, nothing wavering. For he that wavereth is like a wave of the sea driven with the wind and tossed.",
-    "reference": "James 1:6"
-  },
-  {
-    "day": 136,
-    "verse": "Wherein ye greatly rejoice, though now for a season, if need be, ye are in heaviness through manifold temptations:",
-    "reference": "1 Peter 1:6"
-  },
-  {
-    "day": 137,
-    "verse": "And to knowledge temperance; and to temperance patience; and to patience godliness;",
-    "reference": "2 Peter 1:6"
-  },
-  {
-    "day": 138,
-    "verse": "If we say that we have fellowship with him, and walk in darkness, we lie, and do not the truth:",
-    "reference": "1 John 1:6"
-  },
-  {
-    "day": 139,
-    "verse": "Why do the heathen rage, and the people imagine a vain thing?",
-    "reference": "Psalms 2:1"
-  },
-  {
-    "day": 140,
-    "verse": "The fear of the Lord is the beginning of knowledge: but fools despise wisdom and instruction.",
-    "reference": "Proverbs 1:7"
-  },
-  {
-    "day": 141,
-    "verse": "Your country is desolate, your cities are burned with fire: your land, strangers devour it in your presence, and it is desolate, as overthrown by strangers.",
-    "reference": "Isaiah 1:7"
-  },
-  {
-    "day": 142,
-    "verse": "Now all this was done, that it might be fulfilled which was spoken of the Lord by the prophet, saying,",
-    "reference": "Matthew 1:22"
-  },
-  {
-    "day": 143,
-    "verse": "And preached, saying, There cometh one mightier than I after me, the latchet of whose shoes I am not worthy to stoop down and unloose.",
-    "reference": "Mark 1:7"
-  },
-  {
-    "day": 144,
-    "verse": "And they had no child, because that Elisabeth was barren, and they both were now well stricken in years.",
-    "reference": "Luke 1:7"
-  },
-  {
-    "day": 145,
-    "verse": "He was not that Light, but was sent to bear witness of that Light.",
-    "reference": "John 1:8"
-  },
-  {
-    "day": 146,
-    "verse": "To all that be in Rome, beloved of God, called to be saints: Grace to you and peace from God our Father, and the Lord Jesus Christ.",
-    "reference": "Romans 1:7"
-  },
-  {
-    "day": 147,
-    "verse": "So that ye come behind in no gift; waiting for the coming of our Lord Jesus Christ:",
-    "reference": "1 Corinthians 1:7"
-  },
-  {
-    "day": 148,
-    "verse": "And our hope of you is stedfast, knowing, that as ye are partakers of the sufferings, so shall ye be also of the consolation.",
-    "reference": "2 Corinthians 1:7"
-  },
-  {
-    "day": 149,
-    "verse": "But though we, or an angel from heaven, preach any other gospel unto you than that which we have preached unto you, let him be accursed.",
-    "reference": "Galatians 1:8"
-  },
-  {
-    "day": 150,
-    "verse": "In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace;",
-    "reference": "Ephesians 1:7"
-  },
-  {
-    "day": 151,
-    "verse": "Even as it is meet for me to think this of you all, because I have you in my heart; inasmuch as both in my bonds, and in the defence and confirmation of the gospel, ye all are partakers of my grace.",
-    "reference": "Philippians 1:7"
-  },
-  {
-    "day": 152,
-    "verse": "As ye also learned of Epaphras our dear fellowservant, who is for you a faithful minister of Christ;",
-    "reference": "Colossians 1:7"
-  },
-  {
-    "day": 153,
-    "verse": "So that ye were ensamples to all that believe in Macedonia and Achaia.",
-    "reference": "1 Thessalonians 1:7"
-  },
-  {
-    "day": 154,
-    "verse": "And to you who are troubled rest with us, when the Lord Jesus shall be revealed from heaven with his mighty angels,",
-    "reference": "2 Thessalonians 1:7"
-  },
-  {
-    "day": 155,
-    "verse": "Desiring to be teachers of the law; understanding neither what they say, nor whereof they affirm.",
-    "reference": "1 Timothy 1:7"
-  },
-  {
-    "day": 156,
-    "verse": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
-    "reference": "2 Timothy 1:7"
-  },
-  {
-    "day": 157,
-    "verse": "And of the angels he saith, Who maketh his angels spirits, and his ministers a flame of fire.",
-    "reference": "Hebrews 1:7"
-  },
-  {
-    "day": 158,
-    "verse": "For let not that man think that he shall receive any thing of the Lord.",
-    "reference": "James 1:7"
-  },
-  {
-    "day": 159,
-    "verse": "That the trial of your faith, being much more precious than of gold that perisheth, though it be tried with fire, might be found unto praise and honour and glory at the appearing of Jesus Christ:",
-    "reference": "1 Peter 1:7"
-  },
-  {
-    "day": 160,
-    "verse": "And to godliness brotherly kindness; and to brotherly kindness charity.",
-    "reference": "2 Peter 1:7"
-  },
-  {
-    "day": 161,
-    "verse": "But if we walk in the light, as he is in the light, we have fellowship one with another, and the blood of Jesus Christ his Son cleanseth us from all sin.",
-    "reference": "1 John 1:7"
-  },
-  {
-    "day": 162,
-    "verse": "The kings of the earth set themselves, and the rulers take counsel together, against the Lord, and against his anointed, saying,",
-    "reference": "Psalms 2:2"
-  },
-  {
-    "day": 163,
-    "verse": "My son, hear the instruction of thy father, and forsake not the law of thy mother:",
-    "reference": "Proverbs 1:8"
-  },
-  {
-    "day": 164,
-    "verse": "And the daughter of Zion is left as a cottage in a vineyard, as a lodge in a garden of cucumbers, as a besieged city.",
-    "reference": "Isaiah 1:8"
-  },
-  {
-    "day": 165,
-    "verse": "Behold, a virgin shall be with child, and shall bring forth a son, and they shall call his name Emmanuel, which being interpreted is, God with us.",
-    "reference": "Matthew 1:23"
-  },
-  {
-    "day": 166,
-    "verse": "I indeed have baptized you with water: but he shall baptize you with the Holy Ghost.",
-    "reference": "Mark 1:8"
-  },
-  {
-    "day": 167,
-    "verse": "And it came to pass, that while he executed the priest's office before God in the order of his course,",
-    "reference": "Luke 1:8"
-  },
-  {
-    "day": 168,
-    "verse": "That was the true Light, which lighteth every man that cometh into the world.",
-    "reference": "John 1:9"
-  },
-  {
-    "day": 169,
-    "verse": "First, I thank my God through Jesus Christ for you all, that your faith is spoken of throughout the whole world.",
-    "reference": "Romans 1:8"
-  },
-  {
-    "day": 170,
-    "verse": "Who shall also confirm you unto the end, that ye may be blameless in the day of our Lord Jesus Christ.",
-    "reference": "1 Corinthians 1:8"
-  },
-  {
-    "day": 171,
-    "verse": "For we would not, brethren, have you ignorant of our trouble which came to us in Asia, that we were pressed out of measure, above strength, insomuch that we despaired even of life:",
-    "reference": "2 Corinthians 1:8"
-  },
-  {
-    "day": 172,
-    "verse": "As we said before, so say I now again, if any man preach any other gospel unto you than that ye have received, let him be accursed.",
-    "reference": "Galatians 1:9"
-  },
-  {
-    "day": 173,
-    "verse": "Wherein he hath abounded toward us in all wisdom and prudence;",
-    "reference": "Ephesians 1:8"
-  },
-  {
-    "day": 174,
-    "verse": "For God is my record, how greatly I long after you all in the bowels of Jesus Christ.",
-    "reference": "Philippians 1:8"
-  },
-  {
-    "day": 175,
-    "verse": "Who also declared unto us your love in the Spirit.",
-    "reference": "Colossians 1:8"
-  },
-  {
-    "day": 176,
-    "verse": "For from you sounded out the word of the Lord not only in Macedonia and Achaia, but also in every place your faith to God-ward is spread abroad; so that we need not to speak any thing.",
-    "reference": "1 Thessalonians 1:8"
-  },
-  {
-    "day": 177,
-    "verse": "In flaming fire taking vengeance on them that know not God, and that obey not the gospel of our Lord Jesus Christ:",
-    "reference": "2 Thessalonians 1:8"
-  },
-  {
-    "day": 178,
-    "verse": "But we know that the law is good, if a man use it lawfully;",
-    "reference": "1 Timothy 1:8"
-  },
-  {
-    "day": 179,
-    "verse": "Be not thou therefore ashamed of the testimony of our Lord, nor of me his prisoner: but be thou partaker of the afflictions of the gospel according to the power of God;",
-    "reference": "2 Timothy 1:8"
-  },
-  {
-    "day": 180,
-    "verse": "But unto the Son he saith, Thy throne, O God, is for ever and ever: a sceptre of righteousness is the sceptre of thy kingdom.",
-    "reference": "Hebrews 1:8"
-  },
-  {
-    "day": 181,
-    "verse": "A double minded man is unstable in all his ways.",
-    "reference": "James 1:8"
-  },
-  {
-    "day": 182,
-    "verse": "Whom having not seen, ye love; in whom, though now ye see him not, yet believing, ye rejoice with joy unspeakable and full of glory:",
-    "reference": "1 Peter 1:8"
-  },
-  {
-    "day": 183,
-    "verse": "For if these things be in you, and abound, they make you that ye shall neither be barren nor unfruitful in the knowledge of our Lord Jesus Christ.",
-    "reference": "2 Peter 1:8"
-  },
-  {
-    "day": 184,
-    "verse": "If we say that we have no sin, we deceive ourselves, and the truth is not in us.",
-    "reference": "1 John 1:8"
-  },
-  {
-    "day": 185,
-    "verse": "Let us break their bands asunder, and cast away their cords from us.",
-    "reference": "Psalms 2:3"
-  },
-  {
-    "day": 186,
-    "verse": "For they shall be an ornament of grace unto thy head, and chains about thy neck.",
-    "reference": "Proverbs 1:9"
-  },
-  {
-    "day": 187,
-    "verse": "Except the Lord of hosts had left unto us a very small remnant, we should have been as Sodom, and we should have been like unto Gomorrah.",
-    "reference": "Isaiah 1:9"
-  },
-  {
-    "day": 188,
-    "verse": "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife:",
-    "reference": "Matthew 1:24"
-  },
-  {
-    "day": 189,
-    "verse": "And it came to pass in those days, that Jesus came from Nazareth of Galilee, and was baptized of John in Jordan.",
-    "reference": "Mark 1:9"
-  },
-  {
-    "day": 190,
-    "verse": "According to the custom of the priest's office, his lot was to burn incense when he went into the temple of the Lord.",
-    "reference": "Luke 1:9"
-  },
-  {
-    "day": 191,
-    "verse": "He was in the world, and the world was made by him, and the world knew him not.",
-    "reference": "John 1:10"
-  },
-  {
-    "day": 192,
-    "verse": "For God is my witness, whom I serve with my spirit in the gospel of his Son, that without ceasing I make mention of you always in my prayers;",
-    "reference": "Romans 1:9"
-  },
-  {
-    "day": 193,
-    "verse": "God is faithful, by whom ye were called unto the fellowship of his Son Jesus Christ our Lord.",
-    "reference": "1 Corinthians 1:9"
-  },
-  {
-    "day": 194,
-    "verse": "But we had the sentence of death in ourselves, that we should not trust in ourselves, but in God which raiseth the dead:",
-    "reference": "2 Corinthians 1:9"
-  },
-  {
-    "day": 195,
-    "verse": "For do I now persuade men, or God? or do I seek to please men? for if I yet pleased men, I should not be the servant of Christ.",
-    "reference": "Galatians 1:10"
-  },
-  {
-    "day": 196,
-    "verse": "Having made known unto us the mystery of his will, according to his good pleasure which he hath purposed in himself:",
-    "reference": "Ephesians 1:9"
-  },
-  {
-    "day": 197,
-    "verse": "And this I pray, that your love may abound yet more and more in knowledge and in all judgment;",
-    "reference": "Philippians 1:9"
-  },
-  {
-    "day": 198,
+    "day": 29,
     "verse": "For this cause we also, since the day we heard it, do not cease to pray for you, and to desire that ye might be filled with the knowledge of his will in all wisdom and spiritual understanding;",
     "reference": "Colossians 1:9"
   },
   {
-    "day": 199,
-    "verse": "For they themselves shew of us what manner of entering in we had unto you, and how ye turned to God from idols to serve the living and true God;",
-    "reference": "1 Thessalonians 1:9"
+    "day": 30,
+    "verse": "See then that ye walk circumspectly, not as fools, but as wise, Redeeming the time, because the days are evil. Wherefore be ye not unwise, but understanding what the will of the Lord is.",
+    "reference": "Ephesians 5:15-17"
   },
   {
-    "day": 200,
-    "verse": "Who shall be punished with everlasting destruction from the presence of the Lord, and from the glory of his power;",
-    "reference": "2 Thessalonians 1:9"
+    "day": 31,
+    "verse": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+    "reference": "2 Timothy 1:7"
   },
   {
-    "day": 201,
-    "verse": "Knowing this, that the law is not made for a righteous man, but for the lawless and disobedient, for the ungodly and for sinners, for unholy and profane, for murderers of fathers and murderers of mothers, for manslayers,",
-    "reference": "1 Timothy 1:9"
+    "day": 32,
+    "verse": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+    "reference": "Isaiah 41:10"
   },
   {
-    "day": 202,
+    "day": 33,
+    "verse": "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the Lord thy God is with thee whithersoever thou goest.",
+    "reference": "Joshua 1:9"
+  },
+  {
+    "day": 34,
+    "verse": "The Lord is my light and my salvation; whom shall I fear? the Lord is the strength of my life; of whom shall I be afraid?",
+    "reference": "Psalm 27:1"
+  },
+  {
+    "day": 35,
+    "verse": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",
+    "reference": "Psalm 23:4"
+  },
+  {
+    "day": 36,
+    "verse": "And the Lord, he it is that doth go before thee; he will be with thee, he will not fail thee, neither forsake thee: fear not, neither be dismayed.",
+    "reference": "Deuteronomy 31:8"
+  },
+  {
+    "day": 37,
+    "verse": "The Lord is on my side; I will not fear: what can man do unto me?",
+    "reference": "Psalm 118:6"
+  },
+  {
+    "day": 38,
+    "verse": "But now thus saith the Lord that created thee, O Jacob, and he that formed thee, O Israel, Fear not: for I have redeemed thee, I have called thee by thy name; thou art mine. When thou passest through the waters, I will be with thee; and through the rivers, they shall not overflow thee: when thou walkest through the fire, thou shalt not be burned; neither shall the flame kindle upon thee.",
+    "reference": "Isaiah 43:1-2"
+  },
+  {
+    "day": 39,
+    "verse": "I sought the Lord, and he heard me, and delivered me from all my fears.",
+    "reference": "Psalm 34:4"
+  },
+  {
+    "day": 40,
+    "verse": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+    "reference": "John 14:27"
+  },
+  {
+    "day": 41,
+    "verse": "God is our refuge and strength, a very present help in trouble. Therefore will not we fear, though the earth be removed, and though the mountains be carried into the midst of the sea;",
+    "reference": "Psalm 46:1-2"
+  },
+  {
+    "day": 42,
+    "verse": "What shall we then say to these things? If God be for us, who can be against us?",
+    "reference": "Romans 8:31"
+  },
+  {
+    "day": 43,
+    "verse": "He shall not be afraid of evil tidings: his heart is fixed, trusting in the Lord.",
+    "reference": "Psalm 112:7"
+  },
+  {
+    "day": 44,
+    "verse": "Ye are of God, little children, and have overcome them: because greater is he that is in you, than he that is in the world.",
+    "reference": "1 John 4:4"
+  },
+  {
+    "day": 45,
+    "verse": "In God have I put my trust: I will not be afraid what man can do unto me.",
+    "reference": "Psalm 56:11"
+  },
+  {
+    "day": 46,
+    "verse": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+    "reference": "Philippians 4:6-7"
+  },
+  {
+    "day": 47,
+    "verse": "Casting all your care upon him; for he careth for you.",
+    "reference": "1 Peter 5:7"
+  },
+  {
+    "day": 48,
+    "verse": "Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof.",
+    "reference": "Matthew 6:34"
+  },
+  {
+    "day": 49,
+    "verse": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you. Let not your heart be troubled, neither let it be afraid.",
+    "reference": "John 14:27"
+  },
+  {
+    "day": 50,
+    "verse": "Cast thy burden upon the Lord, and he shall sustain thee: he shall never suffer the righteous to be moved.",
+    "reference": "Psalm 55:22"
+  },
+  {
+    "day": 51,
+    "verse": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+    "reference": "Isaiah 26:3"
+  },
+  {
+    "day": 52,
+    "verse": "In the multitude of my thoughts within me thy comforts delight my soul.",
+    "reference": "Psalm 94:19"
+  },
+  {
+    "day": 53,
+    "verse": "And let the peace of God rule in your hearts, to the which also ye are called in one body; and be ye thankful.",
+    "reference": "Colossians 3:15"
+  },
+  {
+    "day": 54,
+    "verse": "I will both lay me down in peace, and sleep: for thou, Lord, only makest me dwell in safety.",
+    "reference": "Psalm 4:8"
+  },
+  {
+    "day": 55,
+    "verse": "Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. For my yoke is easy, and my burden is light.",
+    "reference": "Matthew 11:28-30"
+  },
+  {
+    "day": 56,
+    "verse": "The Lord will give strength unto his people; the Lord will bless his people with peace.",
+    "reference": "Psalm 29:11"
+  },
+  {
+    "day": 57,
+    "verse": "These things I have spoken unto you, that in me ye might have peace. In the world ye shall have tribulation: but be of good cheer; I have overcome the world.",
+    "reference": "John 16:33"
+  },
+  {
+    "day": 58,
+    "verse": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    "reference": "Romans 15:13"
+  },
+  {
+    "day": 59,
+    "verse": "The righteous cry, and the Lord heareth, and delivereth them out of all their troubles.",
+    "reference": "Psalm 34:17"
+  },
+  {
+    "day": 60,
+    "verse": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things.",
+    "reference": "Philippians 4:8"
+  },
+  {
+    "day": 61,
+    "verse": "I can do all things through Christ which strengtheneth me.",
+    "reference": "Philippians 4:13"
+  },
+  {
+    "day": 62,
+    "verse": "But they that wait upon the Lord shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+    "reference": "Isaiah 40:31"
+  },
+  {
+    "day": 63,
+    "verse": "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+    "reference": "Galatians 6:9"
+  },
+  {
+    "day": 64,
+    "verse": "Then he said unto them, Go your way, eat the fat, and drink the sweet, and send portions unto them for whom nothing is prepared: for this day is holy unto our Lord: neither be ye sorry; for the joy of the Lord is your strength.",
+    "reference": "Nehemiah 8:10"
+  },
+  {
+    "day": 65,
+    "verse": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+    "reference": "Psalm 73:26"
+  },
+  {
+    "day": 66,
+    "verse": "And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness. Most gladly therefore will I rather glory in my infirmities, that the power of Christ may rest upon me.",
+    "reference": "2 Corinthians 12:9"
+  },
+  {
+    "day": 67,
+    "verse": "It is God that girdeth me with strength, and maketh my way perfect.",
+    "reference": "Psalm 18:32"
+  },
+  {
+    "day": 68,
+    "verse": "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+    "reference": "Ephesians 6:10"
+  },
+  {
+    "day": 69,
+    "verse": "The Lord God is my strength, and he will make my feet like hinds' feet, and he will make me to walk upon mine high places. To the chief singer on my stringed instruments.",
+    "reference": "Habakkuk 3:19"
+  },
+  {
+    "day": 70,
+    "verse": "The Lord is my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him.",
+    "reference": "Psalm 28:7"
+  },
+  {
+    "day": 71,
+    "verse": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+    "reference": "1 Corinthians 15:58"
+  },
+  {
+    "day": 72,
+    "verse": "Wherefore seeing we also are compassed about with so great a cloud of witnesses, let us lay aside every weight, and the sin which doth so easily beset us, and let us run with patience the race that is set before us,",
+    "reference": "Hebrews 12:1"
+  },
+  {
+    "day": 73,
+    "verse": "My brethren, count it all joy when ye fall into divers temptations; Knowing this, that the trying of your faith worketh patience. But let patience have her perfect work, that ye may be perfect and entire, wanting nothing.",
+    "reference": "James 1:2-4"
+  },
+  {
+    "day": 74,
+    "verse": "And not only so, but we glory in tribulations also: knowing that tribulation worketh patience; And patience, experience; and experience, hope: And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+    "reference": "Romans 5:3-5"
+  },
+  {
+    "day": 75,
+    "verse": "But ye, brethren, be not weary in well doing.",
+    "reference": "2 Thessalonians 3:13"
+  },
+  {
+    "day": 76,
+    "verse": "For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+    "reference": "Ephesians 2:10"
+  },
+  {
+    "day": 77,
+    "verse": "For I know the thoughts that I think toward you, saith the Lord, thoughts of peace, and not of evil, to give you an expected end.",
+    "reference": "Jeremiah 29:11"
+  },
+  {
+    "day": 78,
+    "verse": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+    "reference": "Romans 8:28"
+  },
+  {
+    "day": 79,
+    "verse": "There are many devices in a man's heart; nevertheless the counsel of the Lord, that shall stand.",
+    "reference": "Proverbs 19:21"
+  },
+  {
+    "day": 80,
+    "verse": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+    "reference": "Philippians 1:6"
+  },
+  {
+    "day": 81,
     "verse": "Who hath saved us, and called us with an holy calling, not according to our works, but according to his own purpose and grace, which was given us in Christ Jesus before the world began,",
     "reference": "2 Timothy 1:9"
   },
   {
-    "day": 203,
-    "verse": "Thou hast loved righteousness, and hated iniquity; therefore God, even thy God, hath anointed thee with the oil of gladness above thy fellows.",
-    "reference": "Hebrews 1:9"
+    "day": 82,
+    "verse": "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light;",
+    "reference": "1 Peter 2:9"
   },
   {
-    "day": 204,
-    "verse": "Let the brother of low degree rejoice in that he is exalted:",
-    "reference": "James 1:9"
+    "day": 83,
+    "verse": "Ye are the light of the world. A city that is set on an hill cannot be hid. Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house. Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+    "reference": "Matthew 5:14-16"
   },
   {
-    "day": 205,
-    "verse": "Receiving the end of your faith, even the salvation of your souls.",
-    "reference": "1 Peter 1:9"
+    "day": 84,
+    "verse": "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+    "reference": "Colossians 3:17"
   },
   {
-    "day": 206,
-    "verse": "But he that lacketh these things is blind, and cannot see afar off, and hath forgotten that he was purged from his old sins.",
-    "reference": "2 Peter 1:9"
+    "day": 85,
+    "verse": "Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.",
+    "reference": "1 Corinthians 10:31"
   },
   {
-    "day": 207,
-    "verse": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
-    "reference": "1 John 1:9"
+    "day": 86,
+    "verse": "For it is God which worketh in you both to will and to do of his good pleasure.",
+    "reference": "Philippians 2:13"
   },
   {
-    "day": 208,
-    "verse": "He that sitteth in the heavens shall laugh: the Lord shall have them in derision.",
-    "reference": "Psalms 2:4"
+    "day": 87,
+    "verse": "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.",
+    "reference": "Romans 12:2"
   },
   {
-    "day": 209,
-    "verse": "My son, if sinners entice thee, consent thou not.",
-    "reference": "Proverbs 1:10"
+    "day": 88,
+    "verse": "For if thou altogether holdest thy peace at this time, then shall there enlargement and deliverance arise to the Jews from another place; but thou and thy father's house shall be destroyed: and who knoweth whether thou art come to the kingdom for such a time as this?",
+    "reference": "Esther 4:14"
   },
   {
-    "day": 210,
-    "verse": "Hear the word of the Lord, ye rulers of Sodom; give ear unto the law of our God, ye people of Gomorrah.",
-    "reference": "Isaiah 1:10"
+    "day": 89,
+    "verse": "But none of these things move me, neither count I my life dear unto myself, so that I might finish my course with joy, and the ministry, which I have received of the Lord Jesus, to testify the gospel of the grace of God.",
+    "reference": "Acts 20:24"
   },
   {
-    "day": 211,
-    "verse": "And knew her not till she had brought forth her firstborn son: and he called his name Jesus.",
-    "reference": "Matthew 1:25"
+    "day": 90,
+    "verse": "I therefore, the prisoner of the Lord, beseech you that ye walk worthy of the vocation wherewith ye are called,",
+    "reference": "Ephesians 4:1"
   },
   {
-    "day": 212,
-    "verse": "And straightway coming up out of the water, he saw the heavens opened, and the Spirit like a dove descending upon him:",
-    "reference": "Mark 1:10"
+    "day": 91,
+    "verse": "And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",
+    "reference": "Colossians 3:23"
   },
   {
-    "day": 213,
-    "verse": "And the whole multitude of the people were praying without at the time of incense.",
-    "reference": "Luke 1:10"
+    "day": 92,
+    "verse": "Seest thou a man diligent in his business? he shall stand before kings; he shall not stand before mean men.",
+    "reference": "Proverbs 22:29"
   },
   {
-    "day": 214,
-    "verse": "He came unto his own, and his own received him not.",
-    "reference": "John 1:11"
+    "day": 93,
+    "verse": "In all labour there is profit: but the talk of the lips tendeth only to penury.",
+    "reference": "Proverbs 14:23"
   },
   {
-    "day": 215,
-    "verse": "Making request, if by any means now at length I might have a prosperous journey by the will of God to come unto you.",
-    "reference": "Romans 1:10"
+    "day": 94,
+    "verse": "The soul of the sluggard desireth, and hath nothing: but the soul of the diligent shall be made fat.",
+    "reference": "Proverbs 13:4"
   },
   {
-    "day": 216,
-    "verse": "Now I beseech you, brethren, by the name of our Lord Jesus Christ, that ye all speak the same thing, and that there be no divisions among you; but that ye be perfectly joined together in the same mind and in the same judgment.",
-    "reference": "1 Corinthians 1:10"
+    "day": 95,
+    "verse": "Whatsoever thy hand findeth to do, do it with thy might; for there is no work, nor device, nor knowledge, nor wisdom, in the grave, whither thou goest.",
+    "reference": "Ecclesiastes 9:10"
   },
   {
-    "day": 217,
-    "verse": "Who delivered us from so great a death, and doth deliver: in whom we trust that he will yet deliver us;",
-    "reference": "2 Corinthians 1:10"
+    "day": 96,
+    "verse": "The thoughts of the diligent tend only to plenteousness; but of every one that is hasty only to want.",
+    "reference": "Proverbs 21:5"
   },
   {
-    "day": 218,
-    "verse": "But I certify you, brethren, that the gospel which was preached of me is not after man.",
-    "reference": "Galatians 1:11"
+    "day": 97,
+    "verse": "Study to shew thyself approved unto God, a workman that needeth not to be ashamed, rightly dividing the word of truth.",
+    "reference": "2 Timothy 2:15"
   },
   {
-    "day": 219,
-    "verse": "That in the dispensation of the fulness of times he might gather together in one all things in Christ, both which are in heaven, and which are on earth; even in him:",
-    "reference": "Ephesians 1:10"
+    "day": 98,
+    "verse": "He becometh poor that dealeth with a slack hand: but the hand of the diligent maketh rich.",
+    "reference": "Proverbs 10:4"
   },
   {
-    "day": 220,
-    "verse": "That ye may approve things that are excellent; that ye may be sincere and without offence till the day of Christ.",
-    "reference": "Philippians 1:10"
+    "day": 99,
+    "verse": "The hand of the diligent shall bear rule: but the slothful shall be under tribute.",
+    "reference": "Proverbs 12:24"
   },
   {
-    "day": 221,
-    "verse": "That ye might walk worthy of the Lord unto all pleasing, being fruitful in every good work, and increasing in the knowledge of God;",
-    "reference": "Colossians 1:10"
+    "day": 100,
+    "verse": "Then this Daniel was preferred above the presidents and princes, because an excellent spirit was in him; and the king thought to set him over the whole realm.",
+    "reference": "Daniel 6:3"
   },
   {
-    "day": 222,
-    "verse": "And to wait for his Son from heaven, whom he raised from the dead, even Jesus, which delivered us from the wrath to come.",
-    "reference": "1 Thessalonians 1:10"
+    "day": 101,
+    "verse": "I can do all things through Christ which strengtheneth me.",
+    "reference": "Philippians 4:13"
   },
   {
-    "day": 223,
-    "verse": "When he shall come to be glorified in his saints, and to be admired in all them that believe (because our testimony among you was believed) in that day.",
-    "reference": "2 Thessalonians 1:10"
+    "day": 102,
+    "verse": "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+    "reference": "James 1:5"
   },
   {
-    "day": 224,
-    "verse": "For whoremongers, for them that defile themselves with mankind, for menstealers, for liars, for perjured persons, and if there be any other thing that is contrary to sound doctrine;",
-    "reference": "1 Timothy 1:10"
+    "day": 103,
+    "verse": "Commit thy works unto the Lord, and thy thoughts shall be established.",
+    "reference": "Proverbs 16:3"
   },
   {
-    "day": 225,
-    "verse": "But is now made manifest by the appearing of our Saviour Jesus Christ, who hath abolished death, and hath brought life and immortality to light through the gospel:",
-    "reference": "2 Timothy 1:10"
+    "day": 104,
+    "verse": "And let the beauty of the Lord our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+    "reference": "Psalm 90:17"
   },
   {
-    "day": 226,
-    "verse": "And, Thou, Lord, in the beginning hast laid the foundation of the earth; and the heavens are the works of thine hands:",
-    "reference": "Hebrews 1:10"
+    "day": 105,
+    "verse": "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+    "reference": "Galatians 6:9"
   },
   {
-    "day": 227,
-    "verse": "But the rich, in that he is made low: because as the flower of the grass he shall pass away.",
-    "reference": "James 1:10"
+    "day": 106,
+    "verse": "There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able; but will with the temptation also make a way to escape, that ye may be able to bear it.",
+    "reference": "1 Corinthians 10:13"
   },
   {
-    "day": 228,
-    "verse": "Of which salvation the prophets have enquired and searched diligently, who prophesied of the grace that should come unto you:",
-    "reference": "1 Peter 1:10"
+    "day": 107,
+    "verse": "Wherewithal shall a young man cleanse his way? by taking heed thereto according to thy word.",
+    "reference": "Psalm 119:9"
   },
   {
-    "day": 229,
-    "verse": "Wherefore the rather, brethren, give diligence to make your calling and election sure: for if ye do these things, ye shall never fall:",
-    "reference": "2 Peter 1:10"
+    "day": 108,
+    "verse": "Thy word have I hid in mine heart, that I might not sin against thee.",
+    "reference": "Psalm 119:11"
   },
   {
-    "day": 230,
-    "verse": "If we say that we have not sinned, we make him a liar, and his word is not in us.",
-    "reference": "1 John 1:10"
+    "day": 109,
+    "verse": "Submit yourselves therefore to God. Resist the devil, and he will flee from you.",
+    "reference": "James 4:7"
   },
   {
-    "day": 231,
-    "verse": "Then shall he speak unto them in his wrath, and vex them in his sore displeasure.",
-    "reference": "Psalms 2:5"
+    "day": 110,
+    "verse": "Flee also youthful lusts: but follow righteousness, faith, charity, peace, with them that call on the Lord out of a pure heart.",
+    "reference": "2 Timothy 2:22"
   },
   {
-    "day": 232,
-    "verse": "If they say, Come with us, let us lay wait for blood, let us lurk privily for the innocent without cause:",
-    "reference": "Proverbs 1:11"
+    "day": 111,
+    "verse": "Watch and pray, that ye enter not into temptation: the spirit indeed is willing, but the flesh is weak.",
+    "reference": "Matthew 26:41"
   },
   {
-    "day": 233,
-    "verse": "To what purpose is the multitude of your sacrifices unto me? saith the Lord: I am full of the burnt offerings of rams, and the fat of fed beasts; and I delight not in the blood of bullocks, or of lambs, or of he goats.",
-    "reference": "Isaiah 1:11"
+    "day": 112,
+    "verse": "This I say then, Walk in the Spirit, and ye shall not fulfil the lust of the flesh.",
+    "reference": "Galatians 5:16"
   },
   {
-    "day": 234,
-    "verse": "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem,",
-    "reference": "Matthew 2:1"
+    "day": 113,
+    "verse": "For this is the will of God, even your sanctification, that ye should abstain from fornication: That every one of you should know how to possess his vessel in sanctification and honour;",
+    "reference": "1 Thessalonians 4:3-4"
   },
   {
-    "day": 235,
-    "verse": "And there came a voice from heaven, saying, Thou art my beloved Son, in whom I am well pleased.",
-    "reference": "Mark 1:11"
+    "day": 114,
+    "verse": "What? know ye not that your body is the temple of the Holy Ghost which is in you, which ye have of God, and ye are not your own? For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God's.",
+    "reference": "1 Corinthians 6:19-20"
   },
   {
-    "day": 236,
-    "verse": "And there appeared unto him an angel of the Lord standing on the right side of the altar of incense.",
-    "reference": "Luke 1:11"
+    "day": 115,
+    "verse": "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things.",
+    "reference": "Philippians 4:8"
   },
   {
-    "day": 237,
+    "day": 116,
+    "verse": "Keep thy heart with all diligence; for out of it are the issues of life.",
+    "reference": "Proverbs 4:23"
+  },
+  {
+    "day": 117,
+    "verse": "But put ye on the Lord Jesus Christ, and make not provision for the flesh, to fulfil the lusts thereof.",
+    "reference": "Romans 13:14"
+  },
+  {
+    "day": 118,
+    "verse": "But as he which hath called you is holy, so be ye holy in all manner of conversation; Because it is written, Be ye holy; for I am holy.",
+    "reference": "1 Peter 1:15-16"
+  },
+  {
+    "day": 119,
+    "verse": "Create in me a clean heart, O God; and renew a right spirit within me.",
+    "reference": "Psalm 51:10"
+  },
+  {
+    "day": 120,
+    "verse": "Having therefore these promises, dearly beloved, let us cleanse ourselves from all filthiness of the flesh and spirit, perfecting holiness in the fear of God.",
+    "reference": "2 Corinthians 7:1"
+  },
+  {
+    "day": 121,
+    "verse": "Call unto me, and I will answer thee, and show thee great and mighty things, which thou knowest not.",
+    "reference": "Jeremiah 33:3"
+  },
+  {
+    "day": 122,
+    "verse": "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you:",
+    "reference": "Matthew 7:7"
+  },
+  {
+    "day": 123,
+    "verse": "Pray without ceasing.",
+    "reference": "1 Thessalonians 5:17"
+  },
+  {
+    "day": 124,
+    "verse": "Therefore I say unto you, What things soever ye desire, when ye pray, believe that ye receive them, and ye shall have them.",
+    "reference": "Mark 11:24"
+  },
+  {
+    "day": 125,
+    "verse": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+    "reference": "Philippians 4:6"
+  },
+  {
+    "day": 126,
+    "verse": "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.",
+    "reference": "James 5:16"
+  },
+  {
+    "day": 127,
+    "verse": "The Lord is nigh unto all them that call upon him, to all that call upon him in truth.",
+    "reference": "Psalm 145:18"
+  },
+  {
+    "day": 128,
+    "verse": "Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+    "reference": "Romans 12:12"
+  },
+  {
+    "day": 129,
+    "verse": "Continue in prayer, and watch in the same with thanksgiving;",
+    "reference": "Colossians 4:2"
+  },
+  {
+    "day": 130,
+    "verse": "And this is the confidence that we have in him, that, if we ask any thing according to his will, he heareth us:",
+    "reference": "1 John 5:14"
+  },
+  {
+    "day": 131,
+    "verse": "But verily God hath heard me; he hath attended to the voice of my prayer.",
+    "reference": "Psalm 66:19"
+  },
+  {
+    "day": 132,
+    "verse": "And all things, whatsoever ye shall ask in prayer, believing, ye shall receive.",
+    "reference": "Matthew 21:22"
+  },
+  {
+    "day": 133,
+    "verse": "And he spake a parable unto them to this end, that men ought always to pray, and not to faint;",
+    "reference": "Luke 18:1"
+  },
+  {
+    "day": 134,
+    "verse": "My voice shalt thou hear in the morning, O Lord; in the morning will I direct my prayer unto thee, and will look up.",
+    "reference": "Psalm 5:3"
+  },
+  {
+    "day": 135,
+    "verse": "Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints;",
+    "reference": "Ephesians 6:18"
+  },
+  {
+    "day": 136,
+    "verse": "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+    "reference": "2 Corinthians 5:17"
+  },
+  {
+    "day": 137,
+    "verse": "But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light;",
+    "reference": "1 Peter 2:9"
+  },
+  {
+    "day": 138,
+    "verse": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
+    "reference": "Galatians 2:20"
+  },
+  {
+    "day": 139,
+    "verse": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.",
+    "reference": "Romans 8:1"
+  },
+  {
+    "day": 140,
     "verse": "But as many as received him, to them gave he power to become the sons of God, even to them that believe on his name:",
     "reference": "John 1:12"
   },
   {
+    "day": 141,
+    "verse": "For ye are dead, and your life is hid with Christ in God.",
+    "reference": "Colossians 3:3"
+  },
+  {
+    "day": 142,
+    "verse": "Blessed be the God and Father of our Lord Jesus Christ, who hath blessed us with all spiritual blessings in heavenly places in Christ:",
+    "reference": "Ephesians 1:3"
+  },
+  {
+    "day": 143,
+    "verse": "For our conversation is in heaven; from whence also we look for the Saviour, the Lord Jesus Christ:",
+    "reference": "Philippians 3:20"
+  },
+  {
+    "day": 144,
+    "verse": "Nay, in all these things we are more than conquerors through him that loved us.",
+    "reference": "Romans 8:37"
+  },
+  {
+    "day": 145,
+    "verse": "And ye are complete in him, which is the head of all principality and power:",
+    "reference": "Colossians 2:10"
+  },
+  {
+    "day": 146,
+    "verse": "For ye are bought with a price: therefore glorify God in your body, and in your spirit, which are God's.",
+    "reference": "1 Corinthians 6:20"
+  },
+  {
+    "day": 147,
+    "verse": "For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.",
+    "reference": "Ephesians 2:10"
+  },
+  {
+    "day": 148,
+    "verse": "For as many as are led by the Spirit of God, they are the sons of God.",
+    "reference": "Romans 8:14"
+  },
+  {
+    "day": 149,
+    "verse": "For ye are all the children of God by faith in Christ Jesus.",
+    "reference": "Galatians 3:26"
+  },
+  {
+    "day": 150,
+    "verse": "Put on therefore, as the elect of God, holy and beloved, bowels of mercies, kindness, humbleness of mind, meekness, longsuffering;",
+    "reference": "Colossians 3:12"
+  },
+  {
+    "day": 151,
+    "verse": "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up, Doth not behave itself unseemly, seeketh not her own, is not easily provoked, thinketh no evil; Rejoiceth not in iniquity, but rejoiceth in the truth; Beareth all things, believeth all things, hopeth all things, endureth all things.",
+    "reference": "1 Corinthians 13:4-7"
+  },
+  {
+    "day": 152,
+    "verse": "A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another. By this shall all men know that ye are my disciples, if ye have love one to another.",
+    "reference": "John 13:34-35"
+  },
+  {
+    "day": 153,
+    "verse": "With all lowliness and meekness, with longsuffering, forbearing one another in love; Endeavouring to keep the unity of the Spirit in the bond of peace.",
+    "reference": "Ephesians 4:2-3"
+  },
+  {
+    "day": 154,
+    "verse": "Forbearing one another, and forgiving one another, if any man have a quarrel against any: even as Christ forgave you, so also do ye.",
+    "reference": "Colossians 3:13"
+  },
+  {
+    "day": 155,
+    "verse": "A friend loveth at all times, and a brother is born for adversity.",
+    "reference": "Proverbs 17:17"
+  },
+  {
+    "day": 156,
+    "verse": "Be kindly affectioned one to another with brotherly love; in honour preferring one another;",
+    "reference": "Romans 12:10"
+  },
+  {
+    "day": 157,
+    "verse": "And above all things have fervent charity among yourselves: for charity shall cover the multitude of sins.",
+    "reference": "1 Peter 4:8"
+  },
+  {
+    "day": 158,
+    "verse": "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.",
+    "reference": "Proverbs 27:17"
+  },
+  {
+    "day": 159,
+    "verse": "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
+    "reference": "Ephesians 4:32"
+  },
+  {
+    "day": 160,
+    "verse": "Let nothing be done through strife or vainglory; but in lowliness of mind let each esteem other better than themselves. Look not every man on his own things, but every man also on the things of others.",
+    "reference": "Philippians 2:3-4"
+  },
+  {
+    "day": 161,
+    "verse": "If it be possible, as much as lieth in you, live peaceably with all men.",
+    "reference": "Romans 12:18"
+  },
+  {
+    "day": 162,
+    "verse": "Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",
+    "reference": "1 John 4:7"
+  },
+  {
+    "day": 163,
+    "verse": "A soft answer turneth away wrath: but grievous words stir up anger.",
+    "reference": "Proverbs 15:1"
+  },
+  {
+    "day": 164,
+    "verse": "Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",
+    "reference": "James 1:19"
+  },
+  {
+    "day": 165,
+    "verse": "And above all these things put on charity, which is the bond of perfectness.",
+    "reference": "Colossians 3:14"
+  },
+  {
+    "day": 166,
+    "verse": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+    "reference": "1 John 1:9"
+  },
+  {
+    "day": 167,
+    "verse": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God: Not of works, lest any man should boast.",
+    "reference": "Ephesians 2:8-9"
+  },
+  {
+    "day": 168,
+    "verse": "As far as the east is from the west, so far hath he removed our transgressions from us.",
+    "reference": "Psalm 103:12"
+  },
+  {
+    "day": 169,
+    "verse": "But God commendeth his love toward us, in that, while we were yet sinners, Christ died for us.",
+    "reference": "Romans 5:8"
+  },
+  {
+    "day": 170,
+    "verse": "In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace;",
+    "reference": "Ephesians 1:7"
+  },
+  {
+    "day": 171,
+    "verse": "Let us therefore come boldly unto the throne of grace, that we may obtain mercy, and find grace to help in time of need.",
+    "reference": "Hebrews 4:16"
+  },
+  {
+    "day": 172,
+    "verse": "Who is a God like unto thee, that pardoneth iniquity, and passeth by the transgression of the remnant of his heritage? he retaineth not his anger for ever, because he delighteth in mercy. He will turn again, he will have compassion upon us; he will subdue our iniquities; and thou wilt cast all their sins into the depths of the sea.",
+    "reference": "Micah 7:18-19"
+  },
+  {
+    "day": 173,
+    "verse": "Come now, and let us reason together, saith the Lord: though your sins be as scarlet, they shall be as white as snow; though they be red like crimson, they shall be as wool.",
+    "reference": "Isaiah 1:18"
+  },
+  {
+    "day": 174,
+    "verse": "Who hath delivered us from the power of darkness, and hath translated us into the kingdom of his dear Son: In whom we have redemption through his blood, even the forgiveness of sins:",
+    "reference": "Colossians 1:13-14"
+  },
+  {
+    "day": 175,
+    "verse": "There is therefore now no condemnation to them which are in Christ Jesus, who walk not after the flesh, but after the Spirit.",
+    "reference": "Romans 8:1"
+  },
+  {
+    "day": 176,
+    "verse": "For he hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.",
+    "reference": "2 Corinthians 5:21"
+  },
+  {
+    "day": 177,
+    "verse": "For the grace of God that bringeth salvation hath appeared to all men,",
+    "reference": "Titus 2:11"
+  },
+  {
+    "day": 178,
+    "verse": "For thou, Lord, art good, and ready to forgive; and plenteous in mercy unto all them that call upon thee.",
+    "reference": "Psalm 86:5"
+  },
+  {
+    "day": 179,
+    "verse": "For I will be merciful to their unrighteousness, and their sins and their iniquities will I remember no more.",
+    "reference": "Hebrews 8:12"
+  },
+  {
+    "day": 180,
+    "verse": "Be ye therefore merciful, as your Father also is merciful.",
+    "reference": "Luke 6:36"
+  },
+  {
+    "day": 181,
+    "verse": "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
+    "reference": "Philippians 4:19"
+  },
+  {
+    "day": 182,
+    "verse": "Therefore take no thought, saying, What shall we eat? or, What shall we drink? or, Wherewithal shall we be clothed? (For after all these things do the Gentiles seek:) for your heavenly Father knoweth that ye have need of all these things. But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+    "reference": "Matthew 6:31-33"
+  },
+  {
+    "day": 183,
+    "verse": "The Lord is my shepherd; I shall not want.",
+    "reference": "Psalm 23:1"
+  },
+  {
+    "day": 184,
+    "verse": "The young lions do lack, and suffer hunger: but they that seek the Lord shall not want any good thing.",
+    "reference": "Psalm 34:10"
+  },
+  {
+    "day": 185,
+    "verse": "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work:",
+    "reference": "2 Corinthians 9:8"
+  },
+  {
+    "day": 186,
+    "verse": "I have been young, and now am old; yet have I not seen the righteous forsaken, nor his seed begging bread.",
+    "reference": "Psalm 37:25"
+  },
+  {
+    "day": 187,
+    "verse": "If ye then, being evil, know how to give good gifts unto your children, how much more shall your Father which is in heaven give good things to them that ask him?",
+    "reference": "Matthew 7:11"
+  },
+  {
+    "day": 188,
+    "verse": "For the Lord God is a sun and shield: the Lord will give grace and glory: no good thing will he withhold from them that walk uprightly.",
+    "reference": "Psalm 84:11"
+  },
+  {
+    "day": 189,
+    "verse": "But thou shalt remember the Lord thy God: for it is he that giveth thee power to get wealth, that he may establish his covenant which he sware unto thy fathers, as it is this day.",
+    "reference": "Deuteronomy 8:18"
+  },
+  {
+    "day": 190,
+    "verse": "Blessed be the Lord, who daily loadeth us with benefits, even the God of our salvation. Selah.",
+    "reference": "Psalm 68:19"
+  },
+  {
+    "day": 191,
+    "verse": "He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?",
+    "reference": "Romans 8:32"
+  },
+  {
+    "day": 192,
+    "verse": "I am the Lord thy God, which brought thee out of the land of Egypt: open thy mouth wide, and I will fill it.",
+    "reference": "Psalm 81:10"
+  },
+  {
+    "day": 193,
+    "verse": "Consider the ravens: for they neither sow nor reap; which neither have storehouse nor barn; and God feedeth them: how much more are ye better than the fowls?",
+    "reference": "Luke 12:24"
+  },
+  {
+    "day": 194,
+    "verse": "The eyes of all wait upon thee; and thou givest them their meat in due season. Thou openest thine hand, and satisfiest the desire of every living thing.",
+    "reference": "Psalm 145:15-16"
+  },
+  {
+    "day": 195,
+    "verse": "Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?",
+    "reference": "Matthew 6:26"
+  },
+  {
+    "day": 196,
+    "verse": "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.",
+    "reference": "Romans 12:2"
+  },
+  {
+    "day": 197,
+    "verse": "But grow in grace, and in the knowledge of our Lord and Saviour Jesus Christ. To him be glory both now and for ever. Amen.",
+    "reference": "2 Peter 3:18"
+  },
+  {
+    "day": 198,
+    "verse": "As ye have therefore received Christ Jesus the Lord, so walk ye in him: Rooted and built up in him, and stablished in the faith, as ye have been taught, abounding therein with thanksgiving.",
+    "reference": "Colossians 2:6-7"
+  },
+  {
+    "day": 199,
+    "verse": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law.",
+    "reference": "Galatians 5:22-23"
+  },
+  {
+    "day": 200,
+    "verse": "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+    "reference": "John 15:5"
+  },
+  {
+    "day": 201,
+    "verse": "But his delight is in the law of the Lord; and in his law doth he meditate day and night. And he shall be like a tree planted by the rivers of water, that bringeth forth his fruit in his season; his leaf also shall not wither; and whatsoever he doeth shall prosper.",
+    "reference": "Psalm 1:2-3"
+  },
+  {
+    "day": 202,
+    "verse": "But strong meat belongeth to them that are of full age, even those who by reason of use have their senses exercised to discern both good and evil.",
+    "reference": "Hebrews 5:14"
+  },
+  {
+    "day": 203,
+    "verse": "That ye might walk worthy of the Lord unto all pleasing, being fruitful in every good work, and increasing in the knowledge of God;",
+    "reference": "Colossians 1:10"
+  },
+  {
+    "day": 204,
+    "verse": "But speaking the truth in love, may grow up into him in all things, which is the head, even Christ:",
+    "reference": "Ephesians 4:15"
+  },
+  {
+    "day": 205,
+    "verse": "Brethren, I count not myself to have apprehended: but this one thing I do, forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.",
+    "reference": "Philippians 3:13-14"
+  },
+  {
+    "day": 206,
+    "verse": "But be ye doers of the word, and not hearers only, deceiving your own selves.",
+    "reference": "James 1:22"
+  },
+  {
+    "day": 207,
+    "verse": "But we all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory, even as by the Spirit of the Lord.",
+    "reference": "2 Corinthians 3:18"
+  },
+  {
+    "day": 208,
+    "verse": "Meditate upon these things; give thyself wholly to them; that thy profiting may appear to all.",
+    "reference": "1 Timothy 4:15"
+  },
+  {
+    "day": 209,
+    "verse": "This book of the law shall not depart out of thy mouth; but thou shalt meditate therein day and night, that thou mayest observe to do according to all that is written therein: for then thou shalt make thy way prosperous, and then thou shalt have good success.",
+    "reference": "Joshua 1:8"
+  },
+  {
+    "day": 210,
+    "verse": "Then said Jesus to those Jews which believed on him, If ye continue in my word, then are ye my disciples indeed; And ye shall know the truth, and the truth shall make you free.",
+    "reference": "John 8:31-32"
+  },
+  {
+    "day": 211,
+    "verse": "For even the Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many.",
+    "reference": "Mark 10:45"
+  },
+  {
+    "day": 212,
+    "verse": "For, brethren, ye have been called unto liberty; only use not liberty for an occasion to the flesh, but by love serve one another.",
+    "reference": "Galatians 5:13"
+  },
+  {
+    "day": 213,
+    "verse": "As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God.",
+    "reference": "1 Peter 4:10"
+  },
+  {
+    "day": 214,
+    "verse": "But it shall not be so among you: but whosoever will be great among you, let him be your minister; And whosoever will be chief among you, let him be your servant: Even as the Son of man came not to be ministered unto, but to minister, and to give his life a ransom for many.",
+    "reference": "Matthew 20:26-28"
+  },
+  {
+    "day": 215,
+    "verse": "Let nothing be done through strife or vainglory; but in lowliness of mind let each esteem other better than themselves. Look not every man on his own things, but every man also on the things of others. Let this mind be in you, which was also in Christ Jesus:",
+    "reference": "Philippians 2:3-5"
+  },
+  {
+    "day": 216,
+    "verse": "And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",
+    "reference": "Colossians 3:23"
+  },
+  {
+    "day": 217,
+    "verse": "Not slothful in business; fervent in spirit; serving the Lord;",
+    "reference": "Romans 12:11"
+  },
+  {
+    "day": 218,
+    "verse": "The liberal soul shall be made fat: and he that watereth shall be watered also himself.",
+    "reference": "Proverbs 11:25"
+  },
+  {
+    "day": 219,
+    "verse": "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+    "reference": "Matthew 5:16"
+  },
+  {
+    "day": 220,
+    "verse": "For God is not unrighteous to forget your work and labour of love, which ye have shewed toward his name, in that ye have ministered to the saints, and do minister.",
+    "reference": "Hebrews 6:10"
+  },
+  {
+    "day": 221,
+    "verse": "Therefore, my beloved brethren, be ye stedfast, unmoveable, always abounding in the work of the Lord, forasmuch as ye know that your labour is not in vain in the Lord.",
+    "reference": "1 Corinthians 15:58"
+  },
+  {
+    "day": 222,
+    "verse": "And if it seem evil unto you to serve the Lord, choose you this day whom ye will serve; whether the gods which your fathers served that were on the other side of the flood, or the gods of the Amorites, in whose land ye dwell: but as for me and my house, we will serve the Lord.",
+    "reference": "Joshua 24:15"
+  },
+  {
+    "day": 223,
+    "verse": "But ye shall not be so: but he that is greatest among you, let him be as the younger; and he that is chief, as he that doth serve.",
+    "reference": "Luke 22:26"
+  },
+  {
+    "day": 224,
+    "verse": "I have shewed you all things, how that so labouring ye ought to support the weak, and to remember the words of the Lord Jesus, how he said, It is more blessed to give than to receive.",
+    "reference": "Acts 20:35"
+  },
+  {
+    "day": 225,
+    "verse": "Having then gifts differing according to the grace that is given to us, whether prophecy, let us prophesy according to the proportion of faith;",
+    "reference": "Romans 12:6"
+  },
+  {
+    "day": 226,
+    "verse": "Now the God of hope fill you with all joy and peace in believing, that ye may abound in hope, through the power of the Holy Ghost.",
+    "reference": "Romans 15:13"
+  },
+  {
+    "day": 227,
+    "verse": "Why art thou cast down, O my soul? and why art thou disquieted within me? hope thou in God: for I shall yet praise him, who is the health of my countenance, and my God.",
+    "reference": "Psalm 42:11"
+  },
+  {
+    "day": 228,
+    "verse": "It is of the Lord's mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness.",
+    "reference": "Lamentations 3:22-23"
+  },
+  {
+    "day": 229,
+    "verse": "But they that wait upon the Lord shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+    "reference": "Isaiah 40:31"
+  },
+  {
+    "day": 230,
+    "verse": "For his anger endureth but a moment; in his favour is life: weeping may endure for a night, but joy cometh in the morning.",
+    "reference": "Psalm 30:5"
+  },
+  {
+    "day": 231,
+    "verse": "For I know the thoughts that I think toward you, saith the Lord, thoughts of peace, and not of evil, to give you an expected end.",
+    "reference": "Jeremiah 29:11"
+  },
+  {
+    "day": 232,
+    "verse": "Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+    "reference": "Romans 12:12"
+  },
+  {
+    "day": 233,
+    "verse": "They that sow in tears shall reap in joy.",
+    "reference": "Psalm 126:5"
+  },
+  {
+    "day": 234,
+    "verse": "For which cause we faint not; but though our outward man perish, yet the inward man is renewed day by day. For our light affliction, which is but for a moment, worketh for us a far more exceeding and eternal weight of glory; While we look not at the things which are seen, but at the things which are not seen: for the things which are seen are temporal; but the things which are not seen are eternal.",
+    "reference": "2 Corinthians 4:16-18"
+  },
+  {
+    "day": 235,
+    "verse": "Be of good courage, and he shall strengthen your heart, all ye that hope in the Lord.",
+    "reference": "Psalm 31:24"
+  },
+  {
+    "day": 236,
+    "verse": "Let us hold fast the profession of our faith without wavering; (for he is faithful that promised;)",
+    "reference": "Hebrews 10:23"
+  },
+  {
+    "day": 237,
+    "verse": "I wait for the Lord, my soul doth wait, and in his word do I hope.",
+    "reference": "Psalm 130:5"
+  },
+  {
     "day": 238,
-    "verse": "For I long to see you, that I may impart unto you some spiritual gift, to the end ye may be established;",
-    "reference": "Romans 1:11"
+    "verse": "And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+    "reference": "Romans 5:5"
   },
   {
     "day": 239,
-    "verse": "For it hath been declared unto me of you, my brethren, by them which are of the house of Chloe, that there are contentions among you.",
-    "reference": "1 Corinthians 1:11"
+    "verse": "Blessed be the God and Father of our Lord Jesus Christ, which according to his abundant mercy hath begotten us again unto a lively hope by the resurrection of Jesus Christ from the dead,",
+    "reference": "1 Peter 1:3"
   },
   {
     "day": 240,
-    "verse": "Ye also helping together by prayer for us, that for the gift bestowed upon us by the means of many persons thanks may be given by many on our behalf.",
-    "reference": "2 Corinthians 1:11"
+    "verse": "But I will hope continually, and will yet praise thee more and more.",
+    "reference": "Psalm 71:14"
   },
   {
     "day": 241,
-    "verse": "For I neither received it of man, neither was I taught it, but by the revelation of Jesus Christ.",
-    "reference": "Galatians 1:12"
+    "verse": "Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name.",
+    "reference": "Psalm 100:4"
   },
   {
     "day": 242,
-    "verse": "In whom also we have obtained an inheritance, being predestinated according to the purpose of him who worketh all things after the counsel of his own will:",
-    "reference": "Ephesians 1:11"
+    "verse": "In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+    "reference": "1 Thessalonians 5:18"
   },
   {
     "day": 243,
-    "verse": "Being filled with the fruits of righteousness, which are by Jesus Christ, unto the glory and praise of God.",
-    "reference": "Philippians 1:11"
+    "verse": "O come, let us sing unto the Lord: let us make a joyful noise to the rock of our salvation. Let us come before his presence with thanksgiving, and make a joyful noise unto him with psalms.",
+    "reference": "Psalm 95:1-2"
   },
   {
     "day": 244,
-    "verse": "Strengthened with all might, according to his glorious power, unto all patience and longsuffering with joyfulness;",
-    "reference": "Colossians 1:11"
+    "verse": "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+    "reference": "Colossians 3:17"
   },
   {
     "day": 245,
-    "verse": "For yourselves, brethren, know our entrance in unto you, that it was not in vain:",
-    "reference": "1 Thessalonians 2:1"
+    "verse": "Bless the Lord, O my soul: and all that is within me, bless his holy name. Bless the Lord, O my soul, and forget not all his benefits:",
+    "reference": "Psalm 103:1-2"
   },
   {
     "day": 246,
-    "verse": "Wherefore also we pray always for you, that our God would count you worthy of this calling, and fulfil all the good pleasure of his goodness, and the work of faith with power:",
-    "reference": "2 Thessalonians 1:11"
+    "verse": "By him therefore let us offer the sacrifice of praise to God continually, that is, the fruit of our lips giving thanks to his name.",
+    "reference": "Hebrews 13:15"
   },
   {
     "day": 247,
-    "verse": "According to the glorious gospel of the blessed God, which was committed to my trust.",
-    "reference": "1 Timothy 1:11"
+    "verse": "I will bless the Lord at all times: his praise shall continually be in my mouth.",
+    "reference": "Psalm 34:1"
   },
   {
     "day": 248,
-    "verse": "Whereunto I am appointed a preacher, and an apostle, and a teacher of the Gentiles.",
-    "reference": "2 Timothy 1:11"
+    "verse": "Continue in prayer, and watch in the same with thanksgiving;",
+    "reference": "Colossians 4:2"
   },
   {
     "day": 249,
-    "verse": "They shall perish; but thou remainest; and they all shall wax old as doth a garment;",
-    "reference": "Hebrews 1:11"
+    "verse": "Let every thing that hath breath praise the Lord. Praise ye the Lord.",
+    "reference": "Psalm 150:6"
   },
   {
     "day": 250,
-    "verse": "For the sun is no sooner risen with a burning heat, but it withereth the grass, and the flower thereof falleth, and the grace of the fashion of it perisheth: so also shall the rich man fade away in his ways.",
-    "reference": "James 1:11"
+    "verse": "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ;",
+    "reference": "Ephesians 5:20"
   },
   {
     "day": 251,
-    "verse": "Searching what, or what manner of time the Spirit of Christ which was in them did signify, when it testified beforehand the sufferings of Christ, and the glory that should follow.",
-    "reference": "1 Peter 1:11"
+    "verse": "It is a good thing to give thanks unto the Lord, and to sing praises unto thy name, O Most High:",
+    "reference": "Psalm 92:1"
   },
   {
     "day": 252,
-    "verse": "For so an entrance shall be ministered unto you abundantly into the everlasting kingdom of our Lord and Saviour Jesus Christ.",
-    "reference": "2 Peter 1:11"
+    "verse": "Rejoice in the Lord always: and again I say, Rejoice.",
+    "reference": "Philippians 4:4"
   },
   {
     "day": 253,
-    "verse": "My little children, these things write I unto you, that ye sin not. And if any man sin, we have an advocate with the Father, Jesus Christ the righteous:",
-    "reference": "1 John 2:1"
+    "verse": "This is the day which the Lord hath made; we will rejoice and be glad in it.",
+    "reference": "Psalm 118:24"
   },
   {
     "day": 254,
-    "verse": "Yet have I set my king upon my holy hill of Zion.",
-    "reference": "Psalms 2:6"
+    "verse": "O worship the Lord in the beauty of holiness: fear before him, all the earth.",
+    "reference": "Psalm 96:9"
   },
   {
     "day": 255,
-    "verse": "Let us swallow them up alive as the grave; and whole, as those that go down into the pit:",
-    "reference": "Proverbs 1:12"
+    "verse": "Great is the Lord, and greatly to be praised; and his greatness is unsearchable.",
+    "reference": "Psalm 145:3"
   },
   {
     "day": 256,
-    "verse": "When ye come to appear before me, who hath required this at your hand, to tread my courts?",
-    "reference": "Isaiah 1:12"
+    "verse": "If ye love me, keep my commandments.",
+    "reference": "John 14:15"
   },
   {
     "day": 257,
-    "verse": "Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him.",
-    "reference": "Matthew 2:2"
+    "verse": "But as he which hath called you is holy, so be ye holy in all manner of conversation; Because it is written, Be ye holy; for I am holy.",
+    "reference": "1 Peter 1:15-16"
   },
   {
     "day": 258,
-    "verse": "And immediately the spirit driveth him into the wilderness.",
-    "reference": "Mark 1:12"
+    "verse": "But be ye doers of the word, and not hearers only, deceiving your own selves.",
+    "reference": "James 1:22"
   },
   {
     "day": 259,
-    "verse": "And when Zacharias saw him, he was troubled, and fear fell upon him.",
-    "reference": "Luke 1:12"
+    "verse": "I beseech you therefore, brethren, by the mercies of God, that ye present your bodies a living sacrifice, holy, acceptable unto God, which is your reasonable service.",
+    "reference": "Romans 12:1"
   },
   {
     "day": 260,
-    "verse": "Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",
-    "reference": "John 1:13"
+    "verse": "Wherewithal shall a young man cleanse his way? by taking heed thereto according to thy word.",
+    "reference": "Psalm 119:9"
   },
   {
     "day": 261,
-    "verse": "That is, that I may be comforted together with you by the mutual faith both of you and me.",
-    "reference": "Romans 1:12"
+    "verse": "Ye shall walk in all the ways which the Lord your God hath commanded you, that ye may live, and that it may be well with you, and that ye may prolong your days in the land which ye shall possess.",
+    "reference": "Deuteronomy 5:33"
   },
   {
     "day": 262,
-    "verse": "Now this I say, that every one of you saith, I am of Paul; and I of Apollos; and I of Cephas; and I of Christ.",
-    "reference": "1 Corinthians 1:12"
+    "verse": "And Samuel said, Hath the Lord as great delight in burnt offerings and sacrifices, as in obeying the voice of the Lord? Behold, to obey is better than sacrifice, and to hearken than the fat of rams.",
+    "reference": "1 Samuel 15:22"
   },
   {
     "day": 263,
-    "verse": "For our rejoicing is this, the testimony of our conscience, that in simplicity and godly sincerity, not with fleshly wisdom, but by the grace of God, we have had our conversation in the world, and more abundantly to you-ward.",
-    "reference": "2 Corinthians 1:12"
+    "verse": "If ye keep my commandments, ye shall abide in my love; even as I have kept my Father's commandments, and abide in his love.",
+    "reference": "John 15:10"
   },
   {
     "day": 264,
-    "verse": "For ye have heard of my conversation in time past in the Jews' religion, how that beyond measure I persecuted the church of God, and wasted it:",
-    "reference": "Galatians 1:13"
+    "verse": "Let not sin therefore reign in your mortal body, that ye should obey it in the lusts thereof. Neither yield ye your members as instruments of unrighteousness unto sin: but yield yourselves unto God, as those that are alive from the dead, and your members as instruments of righteousness unto God.",
+    "reference": "Romans 6:12-13"
   },
   {
     "day": 265,
-    "verse": "That we should be to the praise of his glory, who first trusted in Christ.",
-    "reference": "Ephesians 1:12"
+    "verse": "Having therefore these promises, dearly beloved, let us cleanse ourselves from all filthiness of the flesh and spirit, perfecting holiness in the fear of God.",
+    "reference": "2 Corinthians 7:1"
   },
   {
     "day": 266,
-    "verse": "But I would ye should understand, brethren, that the things which happened unto me have fallen out rather unto the furtherance of the gospel;",
-    "reference": "Philippians 1:12"
+    "verse": "I made haste, and delayed not to keep thy commandments.",
+    "reference": "Psalm 119:60"
   },
   {
     "day": 267,
-    "verse": "Giving thanks unto the Father, which hath made us meet to be partakers of the inheritance of the saints in light:",
-    "reference": "Colossians 1:12"
+    "verse": "For God hath not called us unto uncleanness, but unto holiness.",
+    "reference": "1 Thessalonians 4:7"
   },
   {
     "day": 268,
-    "verse": "But even after that we had suffered before, and were shamefully entreated, as ye know, at Philippi, we were bold in our God to speak unto you the gospel of God with much contention.",
-    "reference": "1 Thessalonians 2:2"
+    "verse": "Follow peace with all men, and holiness, without which no man shall see the Lord:",
+    "reference": "Hebrews 12:14"
   },
   {
     "day": 269,
-    "verse": "That the name of our Lord Jesus Christ may be glorified in you, and ye in him, according to the grace of our God and the Lord Jesus Christ.",
-    "reference": "2 Thessalonians 1:12"
+    "verse": "Teaching us that, denying ungodliness and worldly lusts, we should live soberly, righteously, and godly, in this present world;",
+    "reference": "Titus 2:12"
   },
   {
     "day": 270,
-    "verse": "And I thank Christ Jesus our Lord, who hath enabled me, for that he counted me faithful, putting me into the ministry;",
-    "reference": "1 Timothy 1:12"
+    "verse": "He hath shewed thee, O man, what is good; and what doth the Lord require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+    "reference": "Micah 6:8"
   },
   {
     "day": 271,
-    "verse": "For the which cause I also suffer these things: nevertheless I am not ashamed: for I know whom I have believed, and am persuaded that he is able to keep that which I have committed unto him against that day.",
-    "reference": "2 Timothy 1:12"
+    "verse": "Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you always, even unto the end of the world. Amen.",
+    "reference": "Matthew 28:19-20"
   },
   {
     "day": 272,
-    "verse": "And as a vesture shalt thou fold them up, and they shall be changed: but thou art the same, and thy years shall not fail.",
-    "reference": "Hebrews 1:12"
+    "verse": "And he said unto them, Go ye into all the world, and preach the gospel to every creature.",
+    "reference": "Mark 16:15"
   },
   {
     "day": 273,
-    "verse": "Blessed is the man that endureth temptation: for when he is tried, he shall receive the crown of life, which the Lord hath promised to them that love him.",
-    "reference": "James 1:12"
-  },
-  {
-    "day": 274,
-    "verse": "Wherefore gird up the loins of your mind, be sober, and hope to the end for the grace that is to be brought unto you at the revelation of Jesus Christ;",
-    "reference": "1 Peter 1:13"
-  },
-  {
-    "day": 275,
-    "verse": "Wherefore I will not be negligent to put you always in remembrance of these things, though ye know them, and be established in the present truth.",
-    "reference": "2 Peter 1:12"
-  },
-  {
-    "day": 276,
-    "verse": "And he is the propitiation for our sins: and not for ours only, but also for the sins of the whole world.",
-    "reference": "1 John 2:2"
-  },
-  {
-    "day": 277,
-    "verse": "I will declare the decree: the Lord hath said unto me, Thou art my Son; this day have I begotten thee.",
-    "reference": "Psalms 2:7"
-  },
-  {
-    "day": 278,
-    "verse": "We shall find all precious substance, we shall fill our houses with spoil:",
-    "reference": "Proverbs 1:13"
-  },
-  {
-    "day": 279,
-    "verse": "Bring no more vain oblations; incense is an abomination unto me; the new moons and sabbaths, the calling of assemblies, I cannot away with; it is iniquity, even the solemn meeting.",
-    "reference": "Isaiah 1:13"
-  },
-  {
-    "day": 280,
-    "verse": "When Herod the king had heard these things, he was troubled, and all Jerusalem with him.",
-    "reference": "Matthew 2:3"
-  },
-  {
-    "day": 281,
-    "verse": "And he was there in the wilderness forty days, tempted of Satan; and was with the wild beasts; and the angels ministered unto him.",
-    "reference": "Mark 1:13"
-  },
-  {
-    "day": 282,
-    "verse": "But the angel said unto him, Fear not, Zacharias: for thy prayer is heard; and thy wife Elisabeth shall bear thee a son, and thou shalt call his name John.",
-    "reference": "Luke 1:13"
-  },
-  {
-    "day": 283,
-    "verse": "And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.",
-    "reference": "John 1:14"
-  },
-  {
-    "day": 284,
-    "verse": "Now I would not have you ignorant, brethren, that oftentimes I purposed to come unto you, (but was let hitherto,) that I might have some fruit among you also, even as among other Gentiles.",
-    "reference": "Romans 1:13"
-  },
-  {
-    "day": 285,
-    "verse": "Is Christ divided? was Paul crucified for you? or were ye baptized in the name of Paul?",
-    "reference": "1 Corinthians 1:13"
-  },
-  {
-    "day": 286,
-    "verse": "For we write none other things unto you, that what ye read or acknowledge; and I trust ye shall acknowledge even to the end;",
-    "reference": "2 Corinthians 1:13"
-  },
-  {
-    "day": 287,
-    "verse": "And profited in the Jews' religion above many my equals in mine own nation, being more exceedingly zealous of the traditions of my fathers.",
-    "reference": "Galatians 1:14"
-  },
-  {
-    "day": 288,
-    "verse": "In whom ye also trusted, after that ye heard the word of truth, the gospel of your salvation: in whom also after that ye believed, ye were sealed with that holy Spirit of promise,",
-    "reference": "Ephesians 1:13"
-  },
-  {
-    "day": 289,
-    "verse": "So that my bonds in Christ are manifest in all the palace, and in all other places;",
-    "reference": "Philippians 1:13"
-  },
-  {
-    "day": 290,
-    "verse": "Who hath delivered us from the power of darkness, and hath translated us into the kingdom of his dear Son:",
-    "reference": "Colossians 1:13"
-  },
-  {
-    "day": 291,
-    "verse": "For our exhortation was not of deceit, nor of uncleanness, nor in guile:",
-    "reference": "1 Thessalonians 2:3"
-  },
-  {
-    "day": 292,
-    "verse": "Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him,",
-    "reference": "2 Thessalonians 2:1"
-  },
-  {
-    "day": 293,
-    "verse": "Who was before a blasphemer, and a persecutor, and injurious: but I obtained mercy, because I did it ignorantly in unbelief.",
-    "reference": "1 Timothy 1:13"
-  },
-  {
-    "day": 294,
-    "verse": "Hold fast the form of sound words, which thou hast heard of me, in faith and love which is in Christ Jesus.",
-    "reference": "2 Timothy 1:13"
-  },
-  {
-    "day": 295,
-    "verse": "But to which of the angels said he at any time, Sit on my right hand, until I make thine enemies thy footstool?",
-    "reference": "Hebrews 1:13"
-  },
-  {
-    "day": 296,
-    "verse": "Let no man say when he is tempted, I am tempted of God: for God cannot be tempted with evil, neither tempteth he any man:",
-    "reference": "James 1:13"
-  },
-  {
-    "day": 297,
-    "verse": "As obedient children, not fashioning yourselves according to the former lusts in your ignorance:",
-    "reference": "1 Peter 1:14"
-  },
-  {
-    "day": 298,
-    "verse": "Yea, I think it meet, as long as I am in this tabernacle, to stir you up by putting you in remembrance;",
-    "reference": "2 Peter 1:13"
-  },
-  {
-    "day": 299,
-    "verse": "And hereby we do know that we know him, if we keep his commandments.",
-    "reference": "1 John 2:3"
-  },
-  {
-    "day": 300,
-    "verse": "Ask of me, and I shall give thee the heathen for thine inheritance, and the uttermost parts of the earth for thy possession.",
-    "reference": "Psalms 2:8"
-  },
-  {
-    "day": 301,
-    "verse": "Cast in thy lot among us; let us all have one purse:",
-    "reference": "Proverbs 1:14"
-  },
-  {
-    "day": 302,
-    "verse": "Your new moons and your appointed feasts my soul hateth: they are a trouble unto me; I am weary to bear them.",
-    "reference": "Isaiah 1:14"
-  },
-  {
-    "day": 303,
-    "verse": "And when he had gathered all the chief priests and scribes of the people together, he demanded of them where Christ should be born.",
-    "reference": "Matthew 2:4"
-  },
-  {
-    "day": 304,
-    "verse": "Now after that John was put in prison, Jesus came into Galilee, preaching the gospel of the kingdom of God,",
-    "reference": "Mark 1:14"
-  },
-  {
-    "day": 305,
-    "verse": "And thou shalt have joy and gladness; and many shall rejoice at his birth.",
-    "reference": "Luke 1:14"
-  },
-  {
-    "day": 306,
-    "verse": "John bare witness of him, and cried, saying, This was he of whom I spake, He that cometh after me is preferred before me: for he was before me.",
-    "reference": "John 1:15"
-  },
-  {
-    "day": 307,
-    "verse": "I am debtor both to the Greeks, and to the Barbarians; both to the wise, and to the unwise.",
-    "reference": "Romans 1:14"
-  },
-  {
-    "day": 308,
-    "verse": "I thank God that I baptized none of you, but Crispus and Gaius;",
-    "reference": "1 Corinthians 1:14"
-  },
-  {
-    "day": 309,
-    "verse": "As also ye have acknowledged us in part, that we are your rejoicing, even as ye also are our's in the day of the Lord Jesus.",
-    "reference": "2 Corinthians 1:14"
-  },
-  {
-    "day": 310,
-    "verse": "But when it pleased God, who separated me from my mother's womb, and called me by his grace,",
-    "reference": "Galatians 1:15"
-  },
-  {
-    "day": 311,
-    "verse": "Which is the earnest of our inheritance until the redemption of the purchased possession, unto the praise of his glory.",
-    "reference": "Ephesians 1:14"
-  },
-  {
-    "day": 312,
-    "verse": "And many of the brethren in the Lord, waxing confident by my bonds, are much more bold to speak the word without fear.",
-    "reference": "Philippians 1:14"
-  },
-  {
-    "day": 313,
-    "verse": "In whom we have redemption through his blood, even the forgiveness of sins:",
-    "reference": "Colossians 1:14"
-  },
-  {
-    "day": 314,
-    "verse": "But as we were allowed of God to be put in trust with the gospel, even so we speak; not as pleasing men, but God, which trieth our hearts.",
-    "reference": "1 Thessalonians 2:4"
-  },
-  {
-    "day": 315,
-    "verse": "That ye be not soon shaken in mind, or be troubled, neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand.",
-    "reference": "2 Thessalonians 2:2"
-  },
-  {
-    "day": 316,
-    "verse": "And the grace of our Lord was exceeding abundant with faith and love which is in Christ Jesus.",
-    "reference": "1 Timothy 1:14"
-  },
-  {
-    "day": 317,
-    "verse": "That good thing which was committed unto thee keep by the Holy Ghost which dwelleth in us.",
-    "reference": "2 Timothy 1:14"
-  },
-  {
-    "day": 318,
-    "verse": "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?",
-    "reference": "Hebrews 1:14"
-  },
-  {
-    "day": 319,
-    "verse": "But every man is tempted, when he is drawn away of his own lust, and enticed.",
-    "reference": "James 1:14"
-  },
-  {
-    "day": 320,
-    "verse": "But as he which hath called you is holy, so be ye holy in all manner of conversation;",
-    "reference": "1 Peter 1:15"
-  },
-  {
-    "day": 321,
-    "verse": "Knowing that shortly I must put off this my tabernacle, even as our Lord Jesus Christ hath shewed me.",
-    "reference": "2 Peter 1:14"
-  },
-  {
-    "day": 322,
-    "verse": "He that saith, I know him, and keepeth not his commandments, is a liar, and the truth is not in him.",
-    "reference": "1 John 2:4"
-  },
-  {
-    "day": 323,
-    "verse": "Thou shalt break them with a rod of iron; thou shalt dash them in pieces like a potter's vessel.",
-    "reference": "Psalms 2:9"
-  },
-  {
-    "day": 324,
-    "verse": "My son, walk not thou in the way with them; refrain thy foot from their path:",
-    "reference": "Proverbs 1:15"
-  },
-  {
-    "day": 325,
-    "verse": "And when ye spread forth your hands, I will hide mine eyes from you: yea, when ye make many prayers, I will not hear: your hands are full of blood.",
-    "reference": "Isaiah 1:15"
-  },
-  {
-    "day": 326,
-    "verse": "And they said unto him, In Bethlehem of Judaea: for thus it is written by the prophet,",
-    "reference": "Matthew 2:5"
-  },
-  {
-    "day": 327,
-    "verse": "And saying, The time is fulfilled, and the kingdom of God is at hand: repent ye, and believe the gospel.",
-    "reference": "Mark 1:15"
-  },
-  {
-    "day": 328,
-    "verse": "For he shall be great in the sight of the Lord, and shall drink neither wine nor strong drink; and he shall be filled with the Holy Ghost, even from his mother's womb.",
-    "reference": "Luke 1:15"
-  },
-  {
-    "day": 329,
-    "verse": "And of his fulness have all we received, and grace for grace.",
-    "reference": "John 1:16"
-  },
-  {
-    "day": 330,
-    "verse": "So, as much as in me is, I am ready to preach the gospel to you that are at Rome also.",
-    "reference": "Romans 1:15"
-  },
-  {
-    "day": 331,
-    "verse": "Lest any should say that I had baptized in mine own name.",
-    "reference": "1 Corinthians 1:15"
-  },
-  {
-    "day": 332,
-    "verse": "And in this confidence I was minded to come unto you before, that ye might have a second benefit;",
-    "reference": "2 Corinthians 1:15"
-  },
-  {
-    "day": 333,
-    "verse": "To reveal his Son in me, that I might preach him among the heathen; immediately I conferred not with flesh and blood:",
-    "reference": "Galatians 1:16"
-  },
-  {
-    "day": 334,
-    "verse": "Wherefore I also, after I heard of your faith in the Lord Jesus, and love unto all the saints,",
-    "reference": "Ephesians 1:15"
-  },
-  {
-    "day": 335,
-    "verse": "Some indeed preach Christ even of envy and strife; and some also of good will:",
-    "reference": "Philippians 1:15"
-  },
-  {
-    "day": 336,
-    "verse": "Who is the image of the invisible God, the firstborn of every creature:",
-    "reference": "Colossians 1:15"
-  },
-  {
-    "day": 337,
-    "verse": "For neither at any time used we flattering words, as ye know, nor a cloke of covetousness; God is witness:",
-    "reference": "1 Thessalonians 2:5"
-  },
-  {
-    "day": 338,
-    "verse": "Let no man deceive you by any means: for that day shall not come, except there come a falling away first, and that man of sin be revealed, the son of perdition;",
-    "reference": "2 Thessalonians 2:3"
-  },
-  {
-    "day": 339,
-    "verse": "This is a faithful saying, and worthy of all acceptation, that Christ Jesus came into the world to save sinners; of whom I am chief.",
-    "reference": "1 Timothy 1:15"
-  },
-  {
-    "day": 340,
-    "verse": "This thou knowest, that all they which are in Asia be turned away from me; of whom are Phygellus and Hermogenes.",
-    "reference": "2 Timothy 1:15"
-  },
-  {
-    "day": 341,
-    "verse": "Therefore we ought to give the more earnest heed to the things which we have heard, lest at any time we should let them slip.",
-    "reference": "Hebrews 2:1"
-  },
-  {
-    "day": 342,
-    "verse": "Then when lust hath conceived, it bringeth forth sin: and sin, when it is finished, bringeth forth death.",
-    "reference": "James 1:15"
-  },
-  {
-    "day": 343,
-    "verse": "Because it is written, Be ye holy; for I am holy.",
-    "reference": "1 Peter 1:16"
-  },
-  {
-    "day": 344,
-    "verse": "Moreover I will endeavour that ye may be able after my decease to have these things always in remembrance.",
-    "reference": "2 Peter 1:15"
-  },
-  {
-    "day": 345,
-    "verse": "But whoso keepeth his word, in him verily is the love of God perfected: hereby know we that we are in him.",
-    "reference": "1 John 2:5"
-  },
-  {
-    "day": 346,
-    "verse": "Be wise now therefore, O ye kings: be instructed, ye judges of the earth.",
-    "reference": "Psalms 2:10"
-  },
-  {
-    "day": 347,
-    "verse": "For their feet run to evil, and make haste to shed blood.",
-    "reference": "Proverbs 1:16"
-  },
-  {
-    "day": 348,
-    "verse": "Wash you, make you clean; put away the evil of your doings from before mine eyes; cease to do evil;",
-    "reference": "Isaiah 1:16"
-  },
-  {
-    "day": 349,
-    "verse": "And thou Bethlehem, in the land of Juda, art not the least among the princes of Juda: for out of thee shall come a Governor, that shall rule my people Israel.",
-    "reference": "Matthew 2:6"
-  },
-  {
-    "day": 350,
-    "verse": "Now as he walked by the sea of Galilee, he saw Simon and Andrew his brother casting a net into the sea: for they were fishers.",
-    "reference": "Mark 1:16"
-  },
-  {
-    "day": 351,
-    "verse": "And many of the children of Israel shall he turn to the Lord their God.",
-    "reference": "Luke 1:16"
-  },
-  {
-    "day": 352,
-    "verse": "For the law was given by Moses, but grace and truth came by Jesus Christ.",
-    "reference": "John 1:17"
-  },
-  {
-    "day": 353,
     "verse": "For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek.",
     "reference": "Romans 1:16"
   },
   {
+    "day": 274,
+    "verse": "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judaea, and in Samaria, and unto the uttermost part of the earth.",
+    "reference": "Acts 1:8"
+  },
+  {
+    "day": 275,
+    "verse": "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+    "reference": "Matthew 5:16"
+  },
+  {
+    "day": 276,
+    "verse": "But sanctify the Lord God in your hearts: and be ready always to give an answer to every man that asketh you a reason of the hope that is in you with meekness and fear:",
+    "reference": "1 Peter 3:15"
+  },
+  {
+    "day": 277,
+    "verse": "Preach the word; be instant in season, out of season; reprove, rebuke, exhort with all long suffering and doctrine.",
+    "reference": "2 Timothy 4:2"
+  },
+  {
+    "day": 278,
+    "verse": "How then shall they call on him in whom they have not believed? and how shall they believe in him of whom they have not heard? and how shall they hear without a preacher?",
+    "reference": "Romans 10:14"
+  },
+  {
+    "day": 279,
+    "verse": "The fruit of the righteous is a tree of life; and he that winneth souls is wise.",
+    "reference": "Proverbs 11:30"
+  },
+  {
+    "day": 280,
+    "verse": "And they that be wise shall shine as the brightness of the firmament; and they that turn many to righteousness as the stars for ever and ever.",
+    "reference": "Daniel 12:3"
+  },
+  {
+    "day": 281,
+    "verse": "Walk in wisdom toward them that are without, redeeming the time. Let your speech be always with grace, seasoned with salt, that ye may know how ye ought to answer every man.",
+    "reference": "Colossians 4:5-6"
+  },
+  {
+    "day": 282,
+    "verse": "Declare his glory among the heathen, his wonders among all people.",
+    "reference": "Psalm 96:3"
+  },
+  {
+    "day": 283,
+    "verse": "For we cannot but speak the things which we have seen and heard.",
+    "reference": "Acts 4:20"
+  },
+  {
+    "day": 284,
+    "verse": "Now then we are ambassadors for Christ, as though God did beseech you by us: we pray you in Christ's stead, be ye reconciled to God.",
+    "reference": "2 Corinthians 5:20"
+  },
+  {
+    "day": 285,
+    "verse": "That the communication of thy faith may become effectual by the acknowledging of every good thing which is in you in Christ Jesus.",
+    "reference": "Philemon 1:6"
+  },
+  {
+    "day": 286,
+    "verse": "Thou wilt shew me the path of life: in thy presence is fulness of joy; at thy right hand there are pleasures for evermore.",
+    "reference": "Psalm 16:11"
+  },
+  {
+    "day": 287,
+    "verse": "Whither shall I go from thy spirit? or whither shall I flee from thy presence? If I ascend up into heaven, thou art there: if I make my bed in hell, behold, thou art there. If I take the wings of the morning, and dwell in the uttermost parts of the sea; Even there shall thy hand lead me, and thy right hand shall hold me.",
+    "reference": "Psalm 139:7-10"
+  },
+  {
+    "day": 288,
+    "verse": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+    "reference": "Hebrews 13:5"
+  },
+  {
+    "day": 289,
+    "verse": "Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you always, even unto the end of the world. Amen.",
+    "reference": "Matthew 28:20"
+  },
+  {
+    "day": 290,
+    "verse": "And he said, My presence shall go with thee, and I will give thee rest.",
+    "reference": "Exodus 33:14"
+  },
+  {
+    "day": 291,
+    "verse": "God is our refuge and strength, a very present help in trouble.",
+    "reference": "Psalm 46:1"
+  },
+  {
+    "day": 292,
+    "verse": "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.",
+    "reference": "Isaiah 41:10"
+  },
+  {
+    "day": 293,
+    "verse": "Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded.",
+    "reference": "James 4:8"
+  },
+  {
+    "day": 294,
+    "verse": "But it is good for me to draw near to God: I have put my trust in the Lord God, that I may declare all thy works.",
+    "reference": "Psalm 73:28"
+  },
+  {
+    "day": 295,
+    "verse": "And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever; Even the Spirit of truth; whom the world cannot receive, because it seeth him not, neither knoweth him: but ye know him; for he dwelleth with you, and shall be in you.",
+    "reference": "John 14:16-17"
+  },
+  {
+    "day": 296,
+    "verse": "One thing have I desired of the Lord, that will I seek after; that I may dwell in the house of the Lord all the days of my life, to behold the beauty of the Lord, and to enquire in his temple.",
+    "reference": "Psalm 27:4"
+  },
+  {
+    "day": 297,
+    "verse": "The Lord thy God in the midst of thee is mighty; he will save, he will rejoice over thee with joy; he will rest in his love, he will joy over thee with singing.",
+    "reference": "Zephaniah 3:17"
+  },
+  {
+    "day": 298,
+    "verse": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",
+    "reference": "Psalm 23:4"
+  },
+  {
+    "day": 299,
+    "verse": "That they should seek the Lord, if haply they might feel after him, and find him, though he be not far from every one of us: For in him we live, and move, and have our being; as certain also of your own poets have said, For we are also his offspring.",
+    "reference": "Acts 17:27-28"
+  },
+  {
+    "day": 300,
+    "verse": "For a day in thy courts is better than a thousand. I had rather be a doorkeeper in the house of my God, than to dwell in the tents of wickedness.",
+    "reference": "Psalm 84:10"
+  },
+  {
+    "day": 301,
+    "verse": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+    "reference": "Matthew 6:33"
+  },
+  {
+    "day": 302,
+    "verse": "Not that I speak in respect of want: for I have learned, in whatsoever state I am, therewith to be content. I know both how to be abased, and I know how to abound: every where and in all things I am instructed both to be full and to be hungry, both to abound and to suffer need.",
+    "reference": "Philippians 4:11-12"
+  },
+  {
+    "day": 303,
+    "verse": "But godliness with contentment is great gain.",
+    "reference": "1 Timothy 6:6"
+  },
+  {
+    "day": 304,
+    "verse": "Let your conversation be without covetousness; and be content with such things as ye have: for he hath said, I will never leave thee, nor forsake thee.",
+    "reference": "Hebrews 13:5"
+  },
+  {
+    "day": 305,
+    "verse": "And he said unto them, Take heed, and beware of covetousness: for a man's life consisteth not in the abundance of the things which he possesseth.",
+    "reference": "Luke 12:15"
+  },
+  {
+    "day": 306,
+    "verse": "Better is little with the fear of the Lord than great treasure and trouble therewith.",
+    "reference": "Proverbs 15:16"
+  },
+  {
+    "day": 307,
+    "verse": "Delight thyself also in the Lord: and he shall give thee the desires of thine heart.",
+    "reference": "Psalm 37:4"
+  },
+  {
+    "day": 308,
+    "verse": "For what is a man profited, if he shall gain the whole world, and lose his own soul? or what shall a man give in exchange for his soul?",
+    "reference": "Matthew 16:26"
+  },
+  {
+    "day": 309,
+    "verse": "Set your affection on things above, not on things on the earth.",
+    "reference": "Colossians 3:2"
+  },
+  {
+    "day": 310,
+    "verse": "So teach us to number our days, that we may apply our hearts unto wisdom.",
+    "reference": "Psalm 90:12"
+  },
+  {
+    "day": 311,
+    "verse": "To every thing there is a season, and a time to every purpose under the heaven:",
+    "reference": "Ecclesiastes 3:1"
+  },
+  {
+    "day": 312,
+    "verse": "Let thine eyes look right on, and let thine eyelids look straight before thee. Ponder the path of thy feet, and let all thy ways be established. Turn not to the right hand nor to the left: remove thy foot from evil.",
+    "reference": "Proverbs 4:25-27"
+  },
+  {
+    "day": 313,
+    "verse": "And Jesus answered and said unto her, Martha, Martha, thou art careful and troubled about many things: But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her.",
+    "reference": "Luke 10:41-42"
+  },
+  {
+    "day": 314,
+    "verse": "Yea doubtless, and I count all things but loss for the excellency of the knowledge of Christ Jesus my Lord: for whom I have suffered the loss of all things, and do count them but dung, that I may win Christ,",
+    "reference": "Philippians 3:8"
+  },
+  {
+    "day": 315,
+    "verse": "Lord, make me to know mine end, and the measure of my days, what it is: that I may know how frail I am.",
+    "reference": "Psalm 39:4"
+  },
+  {
+    "day": 316,
+    "verse": "Remember ye not the former things, neither consider the things of old. Behold, I will do a new thing; now it shall spring forth; shall ye not know it? I will even make a way in the wilderness, and rivers in the desert.",
+    "reference": "Isaiah 43:18-19"
+  },
+  {
+    "day": 317,
+    "verse": "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+    "reference": "2 Corinthians 5:17"
+  },
+  {
+    "day": 318,
+    "verse": "And I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.",
+    "reference": "Joel 2:25"
+  },
+  {
+    "day": 319,
+    "verse": "Create in me a clean heart, O God; and renew a right spirit within me.",
+    "reference": "Psalm 51:10"
+  },
+  {
+    "day": 320,
+    "verse": "It is of the Lord's mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness.",
+    "reference": "Lamentations 3:22-23"
+  },
+  {
+    "day": 321,
+    "verse": "Brethren, I count not myself to have apprehended: but this one thing I do, forgetting those things which are behind, and reaching forth unto those things which are before, I press toward the mark for the prize of the high calling of God in Christ Jesus.",
+    "reference": "Philippians 3:13-14"
+  },
+  {
+    "day": 322,
+    "verse": "A new heart also will I give you, and a new spirit will I put within you: and I will take away the stony heart out of your flesh, and I will give you an heart of flesh.",
+    "reference": "Ezekiel 36:26"
+  },
+  {
+    "day": 323,
+    "verse": "I waited patiently for the Lord; and he inclined unto me, and heard my cry. He brought me up also out of an horrible pit, out of the miry clay, and set my feet upon a rock, and established my goings. And he hath put a new song in my mouth, even praise unto our God: many shall see it, and fear, and shall trust in the Lord.",
+    "reference": "Psalm 40:1-3"
+  },
+  {
+    "day": 324,
+    "verse": "But they that wait upon the Lord shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+    "reference": "Isaiah 40:31"
+  },
+  {
+    "day": 325,
+    "verse": "Therefore we are buried with him by baptism into death: that like as Christ was raised up from the dead by the glory of the Father, even so we also should walk in newness of life.",
+    "reference": "Romans 6:4"
+  },
+  {
+    "day": 326,
+    "verse": "He healeth the broken in heart, and bindeth up their wounds.",
+    "reference": "Psalm 147:3"
+  },
+  {
+    "day": 327,
+    "verse": "For I will restore health unto thee, and I will heal thee of thy wounds, saith the Lord; because they called thee an Outcast, saying, This is Zion, whom no man seeketh after.",
+    "reference": "Jeremiah 30:17"
+  },
+  {
+    "day": 328,
+    "verse": "Come, and let us return unto the Lord: for he hath torn, and he will heal us; he hath smitten, and he will bind us up.",
+    "reference": "Hosea 6:1"
+  },
+  {
+    "day": 329,
+    "verse": "Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness;",
+    "reference": "Psalm 30:11"
+  },
+  {
+    "day": 330,
+    "verse": "And he that sat upon the throne said, Behold, I make all things new. And he said unto me, Write: for these words are true and faithful.",
+    "reference": "Revelation 21:5"
+  },
+  {
+    "day": 331,
+    "verse": "I will lift up mine eyes unto the hills, from whence cometh my help. My help cometh from the Lord, which made heaven and earth.",
+    "reference": "Psalm 121:1-2"
+  },
+  {
+    "day": 332,
+    "verse": "The name of the Lord is a strong tower: the righteous runneth into it, and is safe.",
+    "reference": "Proverbs 18:10"
+  },
+  {
+    "day": 333,
+    "verse": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.",
+    "reference": "Romans 8:38-39"
+  },
+  {
+    "day": 334,
+    "verse": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+    "reference": "Matthew 11:28"
+  },
+  {
+    "day": 335,
+    "verse": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty. I will say of the Lord, He is my refuge and my fortress: my God; in him will I trust.",
+    "reference": "Psalm 91:1-2"
+  },
+  {
+    "day": 336,
+    "verse": "If ye abide in me, and my words abide in you, ye shall ask what ye will, and it shall be done unto you.",
+    "reference": "John 15:7"
+  },
+  {
+    "day": 337,
+    "verse": "No weapon that is formed against thee shall prosper; and every tongue that shall rise against thee in judgment thou shalt condemn. This is the heritage of the servants of the Lord, and their righteousness is of me, saith the Lord.",
+    "reference": "Isaiah 54:17"
+  },
+  {
+    "day": 338,
+    "verse": "Be not wise in thine own eyes: fear the Lord, and depart from evil.",
+    "reference": "Proverbs 3:7"
+  },
+  {
+    "day": 339,
+    "verse": "Let the words of my mouth, and the meditation of my heart, be acceptable in thy sight, O Lord, my strength, and my redeemer.",
+    "reference": "Psalm 19:14"
+  },
+  {
+    "day": 340,
+    "verse": "Be not overcome of evil, but overcome evil with good.",
+    "reference": "Romans 12:21"
+  },
+  {
+    "day": 341,
+    "verse": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us,",
+    "reference": "Ephesians 3:20"
+  },
+  {
+    "day": 342,
+    "verse": "The steps of a good man are ordered by the Lord: and he delighteth in his way. Though he fall, he shall not be utterly cast down: for the Lord upholdeth him with his hand.",
+    "reference": "Psalm 37:23-24"
+  },
+  {
+    "day": 343,
+    "verse": "Blessed are the pure in heart: for they shall see God.",
+    "reference": "Matthew 5:8"
+  },
+  {
+    "day": 344,
+    "verse": "The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly.",
+    "reference": "John 10:10"
+  },
+  {
+    "day": 345,
+    "verse": "For a just man falleth seven times, and riseth up again: but the wicked shall fall into mischief.",
+    "reference": "Proverbs 24:16"
+  },
+  {
+    "day": 346,
+    "verse": "Order my steps in thy word: and let not any iniquity have dominion over me.",
+    "reference": "Psalm 119:133"
+  },
+  {
+    "day": 347,
+    "verse": "For I reckon that the sufferings of this present time are not worthy to be compared with the glory which shall be revealed in us.",
+    "reference": "Romans 8:18"
+  },
+  {
+    "day": 348,
+    "verse": "For my thoughts are not your thoughts, neither are your ways my ways, saith the Lord. For as the heavens are higher than the earth, so are my ways higher than your ways, and my thoughts than your thoughts.",
+    "reference": "Isaiah 55:8-9"
+  },
+  {
+    "day": 349,
+    "verse": "The Lord will perfect that which concerneth me: thy mercy, O Lord, endureth for ever: forsake not the works of thine own hands.",
+    "reference": "Psalm 138:8"
+  },
+  {
+    "day": 350,
+    "verse": "For where your treasure is, there will your heart be also.",
+    "reference": "Matthew 6:21"
+  },
+  {
+    "day": 351,
+    "verse": "I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me: and the life which I now live in the flesh I live by the faith of the Son of God, who loved me, and gave himself for me.",
+    "reference": "Galatians 2:20"
+  },
+  {
+    "day": 352,
+    "verse": "The sacrifices of God are a broken spirit: a broken and a contrite heart, O God, thou wilt not despise.",
+    "reference": "Psalm 51:17"
+  },
+  {
+    "day": 353,
+    "verse": "Rejoicing in hope; patient in tribulation; continuing instant in prayer;",
+    "reference": "Romans 12:12"
+  },
+  {
     "day": 354,
-    "verse": "And I baptized also the household of Stephanas: besides, I know not whether I baptized any other.",
-    "reference": "1 Corinthians 1:16"
+    "verse": "If the Son therefore shall make you free, ye shall be free indeed.",
+    "reference": "John 8:36"
   },
   {
     "day": 355,
-    "verse": "And to pass by you into Macedonia, and to come again out of Macedonia unto you, and of you to be brought on my way toward Judaea.",
-    "reference": "2 Corinthians 1:16"
+    "verse": "Arise, shine; for thy light is come, and the glory of the Lord is risen upon thee.",
+    "reference": "Isaiah 60:1"
   },
   {
     "day": 356,
-    "verse": "Neither went I up to Jerusalem to them which were apostles before me; but I went into Arabia, and returned again unto Damascus.",
-    "reference": "Galatians 1:17"
+    "verse": "Great peace have they which love thy law: and nothing shall offend them.",
+    "reference": "Psalm 119:165"
   },
   {
     "day": 357,
-    "verse": "Cease not to give thanks for you, making mention of you in my prayers;",
-    "reference": "Ephesians 1:16"
+    "verse": "Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.",
+    "reference": "Proverbs 27:17"
   },
   {
     "day": 358,
-    "verse": "The one preach Christ of contention, not sincerely, supposing to add affliction to my bonds:",
-    "reference": "Philippians 1:16"
+    "verse": "Let no corrupt communication proceed out of your mouth, but that which is good to the use of edifying, that it may minister grace unto the hearers.",
+    "reference": "Ephesians 4:29"
   },
   {
     "day": 359,
-    "verse": "For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether they be thrones, or dominions, or principalities, or powers: all things were created by him, and for him:",
-    "reference": "Colossians 1:16"
+    "verse": "Behold, how good and how pleasant it is for brethren to dwell together in unity!",
+    "reference": "Psalm 133:1"
   },
   {
     "day": 360,
-    "verse": "Nor of men sought we glory, neither of you, nor yet of others, when we might have been burdensome, as the apostles of Christ.",
-    "reference": "1 Thessalonians 2:6"
+    "verse": "The night is far spent, the day is at hand: let us therefore cast off the works of darkness, and let us put on the armour of light.",
+    "reference": "Romans 13:12"
   },
   {
     "day": 361,
-    "verse": "Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God.",
-    "reference": "2 Thessalonians 2:4"
-  }, 
+    "verse": "Except the Lord build the house, they labour in vain that build it: except the Lord keep the city, the watchman waketh but in vain.",
+    "reference": "Psalm 127:1"
+  },
   {
     "day": 362,
-    "verse": "Howbeit for this cause I obtained mercy, that in me first Jesus Christ might shew forth all longsuffering, for a pattern to them which should hereafter believe on him to life everlasting.",
-    "reference": "1 Timothy 1:16"
+    "verse": "Being confident of this very thing, that he which hath begun a good work in you will perform it until the day of Jesus Christ:",
+    "reference": "Philippians 1:6"
   },
   {
     "day": 363,
-    "verse": "The Lord give mercy unto the house of Onesiphorus; for he oft refreshed me, and was not ashamed of my chain:",
-    "reference": "2 Timothy 1:16"
+    "verse": "Grant thee according to thine own heart, and fulfil all thy counsel.",
+    "reference": "Psalm 20:4"
   },
   {
     "day": 364,
-    "verse": "For if the word spoken by angels was stedfast, and every transgression and disobedience received a just recompence of reward;",
-    "reference": "Hebrews 2:2"
+    "verse": "Now unto him that is able to keep you from falling, and to present you faultless before the presence of his glory with exceeding joy,",
+    "reference": "Jude 1:24"
   },
   {
     "day": 365,
-    "verse": "Every good gift and every perfect gift is from above, and cometh down from the Father of lights, with whom is no variableness, neither shadow of turning.",
-    "reference": "James 1:17"
+    "verse": "And let the beauty of the Lord our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it.",
+    "reference": "Psalm 90:17"
   }
 ];

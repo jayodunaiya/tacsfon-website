@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import { Sermon } from "@/types/sermon.types";
+import { useSermonPlayer } from "@/app/providers/sermon-player-provider";
 
 import {
   motion,
@@ -14,9 +15,11 @@ import {
 import {
   FiArrowRight,
   FiArrowUpRight,
+  FiDownload,
   FiPlay,
   FiPause,
 } from "react-icons/fi";
+
 
 interface LatestSermonHomeProps {
   sermon: Sermon | null;
@@ -25,23 +28,115 @@ interface LatestSermonHomeProps {
 const LatestSermonHome = ({
   sermon,
 }: LatestSermonHomeProps) => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const audioRef = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const sectionRef =
+  useRef<HTMLElement>(null);
 
-  const toggleAudio = async () => {
-  const audio = audioRef.current;
+const {
+  currentTrack,
+  isPlaying: globalIsPlaying,
+  playSermon,
+  togglePlay,
+} = useSermonPlayer();
 
-  if (!audio) return;
+const isCurrentSermon =
+  currentTrack?.audioUrl ===
+  sermon?.audio_url;
+
+const isPlaying =
+  isCurrentSermon &&
+  globalIsPlaying;
+
+const toggleAudio = async () => {
+  if (!sermon?.audio_url) {
+    return;
+  }
 
   try {
-    if (audio.paused) {
-      await audio.play();
-    } else {
-      audio.pause();
+    if (isCurrentSermon) {
+      await togglePlay();
+      return;
     }
+
+    await playSermon({
+      title: sermon.title,
+      audioUrl:
+        sermon.audio_url,
+    });
   } catch (error) {
-    console.error("Unable to play sermon:", error);
+    console.error(
+      "Unable to play sermon:",
+      error
+    );
+  }
+};
+
+const handleDownload = async () => {
+  if (!sermon?.audio_url) return;
+
+  try {
+    const response = await fetch(
+      sermon.audio_url
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        "Unable to download sermon."
+      );
+    }
+
+    const blob =
+      await response.blob();
+
+    const objectUrl =
+      URL.createObjectURL(blob);
+
+    const safeTitle =
+      sermon.title
+        .trim()
+        .replace(
+          /[^a-zA-Z0-9-_ ]/g,
+          ""
+        )
+        .replace(/\s+/g, "-");
+
+    const extension =
+      blob.type.includes("mpeg")
+        ? "mp3"
+        : blob.type.includes("wav")
+          ? "wav"
+          : blob.type.includes("ogg")
+            ? "ogg"
+            : "mp3";
+
+    const link =
+      document.createElement("a");
+
+    link.href = objectUrl;
+
+    link.download =
+      `TACSFON-LAUTECH-${safeTitle || "Sermon"}.${extension}`;
+
+    document.body.appendChild(
+      link
+    );
+
+    link.click();
+    link.remove();
+
+    URL.revokeObjectURL(
+      objectUrl
+    );
+  } catch (error) {
+    console.error(
+      "Download failed:",
+      error
+    );
+
+    window.open(
+      sermon.audio_url,
+      "_blank",
+      "noopener,noreferrer"
+    );
   }
 };
 
@@ -84,14 +179,7 @@ const sermonImage =
       ref={sectionRef}
       className="relative overflow-hidden bg-white text-black"
     >
-      <audio
-      ref={audioRef}
-      src={sermon.audio_url}
-      preload="metadata"
-      onPlay={() => setIsPlaying(true)}
-      onPause={() => setIsPlaying(false)}
-      onEnded={() => setIsPlaying(false)}
-    />
+      
       {/* Decorative Background Text */}
       <motion.div
         style={{
@@ -539,23 +627,120 @@ const sermonImage =
                     through God&apos;s Word.
                   </p>
 
-                  <button
-                      type="button"
-                      onClick={toggleAudio}
-                      className="group/listen flex shrink-0 items-center gap-4"
+                  <div
+                      className="
+                        flex flex-wrap
+                        items-center
+                        gap-x-6 gap-y-4
+                        sm:gap-x-8
+                      "
                     >
-                      <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                        {isPlaying ? "Pause Message" : "Listen Now"}
-                      </span>
+                      {/* LISTEN */}
 
-                      <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 group-hover/listen:border-green-500 group-hover/listen:bg-green-700">
-                        {isPlaying ? (
-                          <FiPause />
-                        ) : (
-                          <FiPlay className="ml-0.5" />
-                        )}
-                      </span>
-                    </button>
+                      <button
+                        type="button"
+                        onClick={toggleAudio}
+                        className="
+                          group/listen
+                          flex shrink-0
+                          items-center
+                          gap-3
+                          sm:gap-4
+                        "
+                      >
+                        <span
+                          className="
+                            text-[10px]
+                            font-semibold
+                            uppercase
+                            tracking-[0.12em]
+                            text-white
+                            sm:text-xs
+                            sm:tracking-[0.14em]
+                          "
+                        >
+                          {isPlaying
+                            ? "Pause Message"
+                            : "Listen Now"}
+                        </span>
+
+                        <span
+                          className="
+                            flex h-10 w-10
+                            items-center
+                            justify-center
+                            rounded-full
+                            border border-white/20
+                            text-white
+                            transition-all
+                            duration-300
+                            group-hover/listen:border-green-500
+                            group-hover/listen:bg-green-700
+                            sm:h-12 sm:w-12
+                          "
+                        >
+                          {isPlaying ? (
+                            <FiPause />
+                          ) : (
+                            <FiPlay className="ml-0.5" />
+                          )}
+                        </span>
+                      </button>
+
+                      {/* DOWNLOAD */}
+
+                      <button
+                        type="button"
+                        onClick={handleDownload}
+                        className="
+                          group/download
+                          flex shrink-0
+                          items-center
+                          gap-2.5
+                          text-white/65
+                          transition-colors
+                          duration-300
+                          hover:text-white
+                          sm:gap-3
+                        "
+                      >
+                        <span
+                          className="
+                            flex h-9 w-9
+                            items-center
+                            justify-center
+                            rounded-full
+                            border border-white/15
+                            transition-all
+                            duration-300
+                            group-hover/download:border-green-500
+                            group-hover/download:bg-green-700
+                            sm:h-10 sm:w-10
+                          "
+                        >
+                          <FiDownload
+                            className="
+                              text-sm
+                              sm:text-base
+                            "
+                          />
+                        </span>
+
+                        <span
+                          className="
+                            text-[9px]
+                            font-semibold
+                            uppercase
+                            tracking-[0.12em]
+                            sm:text-[10px]
+                            sm:tracking-[0.14em]
+                          "
+                        >
+                          Download
+                        </span>
+                      </button>
+                    </div>
+
                 </div>
               </motion.div>
             </div>

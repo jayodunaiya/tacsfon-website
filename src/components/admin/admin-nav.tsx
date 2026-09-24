@@ -1,8 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import {
+  usePathname,
+  useRouter,
+} from "next/navigation";
+import {
+  useEffect,
+  useState,
+} from "react";
+
 import {
   FiBookOpen,
   FiCalendar,
@@ -11,14 +18,15 @@ import {
   FiGrid,
   FiImage,
   FiLogOut,
-  FiMenu,
-  FiX,
   FiMail,
+  FiMenu,
+  FiSettings,
+  FiX,
 } from "react-icons/fi";
 
 import { supabase } from "@/lib/supabase/client";
 
-const adminLinks = [
+const managementLinks = [
   {
     name: "Dashboard",
     href: "/admin",
@@ -45,33 +53,48 @@ const adminLinks = [
     icon: FiImage,
   },
   {
-  name: "Messages",
-  href: "/admin/messages",
-  icon: FiMail,
-},
+    name: "Messages",
+    href: "/admin/messages",
+    icon: FiMail,
+  },
+];
+
+const systemLinks = [
+  {
+    name: "Account & Security",
+    href: "/admin/account",
+    icon: FiSettings,
+  },
 ];
 
 const AdminNav = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] =
+    useState(false);
+
+  const [
+    isLoggingOut,
+    setIsLoggingOut,
+  ] = useState(false);
 
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen
-      ? "hidden"
-      : "";
+    document.body.style.overflow =
+      isOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
-  const isActive = (href: string) => {
+  const isActive = (
+    href: string
+  ) => {
     if (href === "/admin") {
       return pathname === "/admin";
     }
@@ -79,63 +102,155 @@ const AdminNav = () => {
     return pathname.startsWith(href);
   };
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
+  const handleLogout =
+    async () => {
+      if (isLoggingOut) return;
 
-    router.push("/admin/login");
-    router.refresh();
-  };
+      try {
+        setIsLoggingOut(true);
+
+        await supabase.auth.signOut();
+
+        router.replace(
+          "/admin/login"
+        );
+
+        router.refresh();
+      } catch (error) {
+        console.error(
+          "Unable to logout:",
+          error
+        );
+
+        setIsLoggingOut(false);
+      }
+    };
+
+  const renderLinks = (
+    links: typeof managementLinks
+  ) =>
+    links.map((link) => {
+      const Icon = link.icon;
+      const active =
+        isActive(link.href);
+
+      return (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={`
+            group flex items-center gap-3
+            px-3 py-3.5
+            text-sm
+            transition-all duration-300
+            ${
+              active
+                ? "bg-green-700 text-white"
+                : "text-black/55 hover:bg-black hover:text-white"
+            }
+          `}
+        >
+          <Icon
+            className={`
+              shrink-0 text-base
+              ${
+                active
+                  ? "text-white"
+                  : "text-black/40 group-hover:text-white"
+              }
+            `}
+          />
+
+          <span>
+            {link.name}
+          </span>
+        </Link>
+      );
+    });
+
+  const renderMobileLinks = (
+    links: typeof managementLinks
+  ) =>
+    links.map((link) => {
+      const Icon = link.icon;
+      const active =
+        isActive(link.href);
+
+      return (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={`
+            flex items-center gap-4
+            px-4 py-4
+            text-sm
+            transition-colors
+            ${
+              active
+                ? "bg-green-700 text-white"
+                : "border border-black/10 bg-white text-black/60"
+            }
+          `}
+        >
+          <Icon className="shrink-0" />
+
+          <span>
+            {link.name}
+          </span>
+        </Link>
+      );
+    });
 
   return (
     <>
-      {/* ==============================
-          DESKTOP SIDEBAR
-      ============================== */}
-      <aside className="fixed left-0 top-0 z-50 hidden h-screen w-[250px] flex-col border-r border-black/10 bg-[#F7F7F3] lg:flex">
+      {/* DESKTOP SIDEBAR */}
+      <aside
+        className="
+          fixed left-0 top-0 z-50
+          hidden h-screen w-[250px]
+          flex-col
+          border-r border-black/10
+          bg-[#F7F7F3]
+          lg:flex
+        "
+      >
         <div className="border-b border-black/10 px-7 py-7">
           <Link href="/admin">
             <p className="text-[9px] font-semibold uppercase tracking-[0.28em] text-green-700">
               TACSFON LAUTECH
             </p>
 
-            <h1 className="mt-2 text-xl font-medium tracking-[-0.04em]">
-              Admin
-            </h1>
+            <div className="mt-2 flex items-center justify-between">
+              <h1 className="text-xl font-medium tracking-[-0.04em]">
+                Admin
+              </h1>
+
+              <span className="h-2 w-2 rounded-full bg-green-600" />
+            </div>
           </Link>
         </div>
 
-        <nav className="flex-1 px-4 py-6">
+        <nav className="flex-1 overflow-y-auto px-4 py-6">
           <p className="mb-4 px-3 text-[8px] font-semibold uppercase tracking-[0.24em] text-black/30">
             Management
           </p>
 
           <div className="space-y-1">
-            {adminLinks.map((link) => {
-              const Icon = link.icon;
-              const active = isActive(link.href);
+            {renderLinks(
+              managementLinks
+            )}
+          </div>
 
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`group flex items-center gap-3 px-3 py-3.5 text-sm transition-all ${
-                    active
-                      ? "bg-green-700 text-white"
-                      : "text-black/55 hover:bg-black hover:text-white"
-                  }`}
-                >
-                  <Icon
-                    className={`text-base ${
-                      active
-                        ? "text-white"
-                        : "text-black/40 group-hover:text-white"
-                    }`}
-                  />
+          <div className="my-6 border-t border-black/10" />
 
-                  <span>{link.name}</span>
-                </Link>
-              );
-            })}
+          <p className="mb-4 px-3 text-[8px] font-semibold uppercase tracking-[0.24em] text-black/30">
+            Settings
+          </p>
+
+          <div className="space-y-1">
+            {renderLinks(
+              systemLinks
+            )}
           </div>
         </nav>
 
@@ -144,29 +259,63 @@ const AdminNav = () => {
             href="/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between px-3 py-3 text-xs text-black/50 transition-colors hover:text-green-700"
+            className="
+              flex items-center justify-between
+              px-3 py-3
+              text-xs text-black/50
+              transition-colors
+              hover:text-green-700
+            "
           >
-            <span>View Website</span>
+            <span>
+              View Website
+            </span>
 
             <FiExternalLink />
           </Link>
 
           <button
             type="button"
-            onClick={handleLogout}
-            className="mt-1 flex w-full items-center gap-3 px-3 py-3 text-xs text-black/50 transition-colors hover:bg-black hover:text-white"
+            onClick={
+              handleLogout
+            }
+            disabled={
+              isLoggingOut
+            }
+            className="
+              mt-1 flex w-full
+              items-center gap-3
+              px-3 py-3
+              text-xs text-black/50
+              transition-colors
+              hover:bg-black hover:text-white
+              disabled:cursor-wait
+              disabled:opacity-50
+            "
           >
             <FiLogOut />
 
-            Logout
+            {isLoggingOut
+              ? "Logging out..."
+              : "Logout"}
           </button>
         </div>
       </aside>
 
-      {/* ==============================
-          MOBILE HEADER
-      ============================== */}
-      <header className="fixed left-0 right-0 top-0 z-50 flex h-[70px] items-center justify-between border-b border-black/10 bg-[#F7F7F3]/95 px-5 backdrop-blur-md lg:hidden">
+      {/* MOBILE HEADER */}
+      <header
+        className="
+          fixed left-0 right-0 top-0
+          z-50
+          flex h-[70px]
+          items-center justify-between
+          border-b border-black/10
+          bg-[#F7F7F3]/95
+          px-5
+          backdrop-blur-md
+          lg:hidden
+        "
+      >
         <Link href="/admin">
           <p className="text-[8px] font-semibold uppercase tracking-[0.22em] text-green-700">
             TACSFON LAUTECH
@@ -179,37 +328,72 @@ const AdminNav = () => {
 
         <button
           type="button"
-          onClick={() => setIsOpen(true)}
+          onClick={() =>
+            setIsOpen(true)
+          }
           aria-label="Open admin navigation"
-          className="flex h-10 w-10 items-center justify-center border border-black/10"
+          aria-expanded={
+            isOpen
+          }
+          className="
+            flex h-10 w-10
+            items-center justify-center
+            border border-black/10
+            transition-colors
+            hover:bg-black hover:text-white
+          "
         >
           <FiMenu />
         </button>
       </header>
 
-      {/* ==============================
-          MOBILE MENU
-      ============================== */}
+      {/* MOBILE NAVIGATION */}
       <div
-        className={`fixed inset-0 z-[100] transition ${
-          isOpen
-            ? "pointer-events-auto"
-            : "pointer-events-none"
-        } lg:hidden`}
+        className={`
+          fixed inset-0 z-[100]
+          transition
+          ${
+            isOpen
+              ? "pointer-events-auto"
+              : "pointer-events-none"
+          }
+          lg:hidden
+        `}
       >
         <button
           type="button"
           aria-label="Close navigation"
-          onClick={() => setIsOpen(false)}
-          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
-            isOpen ? "opacity-100" : "opacity-0"
-          }`}
+          onClick={() =>
+            setIsOpen(false)
+          }
+          className={`
+            absolute inset-0
+            bg-black/50
+            transition-opacity duration-300
+            ${
+              isOpen
+                ? "opacity-100"
+                : "opacity-0"
+            }
+          `}
         />
 
         <div
-          className={`absolute right-0 top-0 flex h-full w-[85%] max-w-[360px] flex-col bg-[#F7F7F3] transition-transform duration-500 ease-out ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`
+            absolute right-0 top-0
+            flex h-full
+            w-[88%] max-w-[360px]
+            flex-col
+            bg-[#F7F7F3]
+            shadow-2xl
+            transition-transform
+            duration-500 ease-out
+            ${
+              isOpen
+                ? "translate-x-0"
+                : "translate-x-full"
+            }
+          `}
         >
           <div className="flex items-center justify-between border-b border-black/10 px-6 py-6">
             <div>
@@ -224,9 +408,19 @@ const AdminNav = () => {
 
             <button
               type="button"
-              onClick={() => setIsOpen(false)}
+              onClick={() =>
+                setIsOpen(
+                  false
+                )
+              }
               aria-label="Close menu"
-              className="flex h-10 w-10 items-center justify-center border border-black/10"
+              className="
+                flex h-10 w-10
+                items-center justify-center
+                border border-black/10
+                transition-colors
+                hover:bg-black hover:text-white
+              "
             >
               <FiX />
             </button>
@@ -238,26 +432,21 @@ const AdminNav = () => {
             </p>
 
             <div className="space-y-2">
-              {adminLinks.map((link) => {
-                const Icon = link.icon;
-                const active = isActive(link.href);
+              {renderMobileLinks(
+                managementLinks
+              )}
+            </div>
 
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`flex items-center gap-4 px-4 py-4 text-sm ${
-                      active
-                        ? "bg-green-700 text-white"
-                        : "border border-black/10 bg-white text-black/60"
-                    }`}
-                  >
-                    <Icon />
+            <div className="my-7 border-t border-black/10" />
 
-                    {link.name}
-                  </Link>
-                );
-              })}
+            <p className="mb-4 text-[8px] font-semibold uppercase tracking-[0.24em] text-black/30">
+              Settings
+            </p>
+
+            <div className="space-y-2">
+              {renderMobileLinks(
+                systemLinks
+              )}
             </div>
           </nav>
 
@@ -266,7 +455,13 @@ const AdminNav = () => {
               href="/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between border border-black/10 bg-white px-4 py-4 text-xs"
+              className="
+                flex items-center justify-between
+                border border-black/10
+                bg-white
+                px-4 py-4
+                text-xs
+              "
             >
               View Website
 
@@ -275,12 +470,29 @@ const AdminNav = () => {
 
             <button
               type="button"
-              onClick={handleLogout}
-              className="mt-2 flex w-full items-center gap-3 bg-black px-4 py-4 text-xs text-white"
+              onClick={
+                handleLogout
+              }
+              disabled={
+                isLoggingOut
+              }
+              className="
+                mt-2 flex w-full
+                items-center gap-3
+                bg-black
+                px-4 py-4
+                text-xs text-white
+                transition-colors
+                hover:bg-green-700
+                disabled:cursor-wait
+                disabled:opacity-50
+              "
             >
               <FiLogOut />
 
-              Logout
+              {isLoggingOut
+                ? "Logging out..."
+                : "Logout"}
             </button>
           </div>
         </div>

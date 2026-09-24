@@ -7,6 +7,8 @@ import {
 } from "react-icons/fi";
 import type { Metadata } from "next";
 
+import DownloadPublication from "./download-publication";
+
 
 
 import {
@@ -396,7 +398,13 @@ const EditorialArticlePage = async ({
                     {formatDate(editorial.published_at)}
                   </p>
                 </div>
+
+
               </div>
+              <DownloadPublication
+                slug={editorial.slug}
+                title={editorial.title}
+              />
             </div>
           </aside>
 

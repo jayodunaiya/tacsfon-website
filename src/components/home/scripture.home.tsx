@@ -14,74 +14,64 @@ const ScriptureHome = () => {
   );
 
   const diff =
-    today.getTime() - startOfYear.getTime();
+    today.getTime() -
+    startOfYear.getTime();
 
   const oneDay =
     1000 * 60 * 60 * 24;
 
-  const dayOfYear = Math.floor(
-    diff / oneDay
-  );
+  const dayOfYear =
+    Math.floor(diff / oneDay);
 
-  const scriptureIndex = Math.min(
-    Math.max(dayOfYear - 1, 0),
-    364
-  );
+  const scriptureIndex =
+    Math.min(
+      Math.max(
+        dayOfYear - 1,
+        0
+      ),
+      dailyScriptures.length - 1
+    );
 
   const scripture =
-    dailyScriptures[scriptureIndex];
+    dailyScriptures[
+      scriptureIndex
+    ];
 
   const formattedDate =
-    today.toLocaleDateString("en-NG", {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-    });
+    today.toLocaleDateString(
+      "en-NG",
+      {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+      }
+    );
+
+  if (!scripture) {
+    return null;
+  }
 
   return (
     <section
       className="
-        relative overflow-hidden bg-black
-        px-5 py-16 text-white
+        relative overflow-hidden
+        bg-black px-5
+        py-12 text-white
         min-[375px]:px-6
-        sm:py-20
-        md:py-28
-        lg:px-10 lg:py-44
+        sm:py-14
+        md:py-16
+        lg:px-10
+        lg:py-20
       "
     >
-      {/* Large Decorative Scripture Mark */}
-      <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0.9,
-        }}
-        whileInView={{
-          opacity: 1,
-          scale: 1,
-        }}
-        viewport={{
-          once: true,
-        }}
-        transition={{
-          duration: 1,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        className="
-          pointer-events-none absolute
-          -right-6 top-0 hidden
-          select-none text-[18rem]
-          font-serif leading-none
-          text-white/[0.025]
-          lg:block
-        "
-      >
-        ”
-      </motion.div>
-
-      {/* Subtle Green Atmosphere */}
+      {/* Ambient green */}
       <motion.div
         animate={{
-          opacity: [0.02, 0.06, 0.02],
+          opacity: [
+            0.02,
+            0.055,
+            0.02,
+          ],
         }}
         transition={{
           duration: 8,
@@ -89,7 +79,8 @@ const ScriptureHome = () => {
           ease: "easeInOut",
         }}
         className="
-          pointer-events-none absolute inset-0
+          pointer-events-none
+          absolute inset-0
           bg-gradient-to-br
           from-green-700/20
           via-transparent
@@ -97,27 +88,48 @@ const ScriptureHome = () => {
         "
       />
 
-      <div className="relative z-10 mx-auto max-w-[1400px]">
+      {/* Decorative quote */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-4 -top-10
+          hidden select-none
+          font-serif
+          text-[16rem]
+          leading-none
+          text-white/[0.025]
+          lg:block
+        "
+      >
+        ”
+      </div>
 
-        {/* ==========================================
-            TOP
-        ========================================== */}
+      <div
+        className="
+          relative z-10
+          mx-auto
+          max-w-[1400px]
+        "
+      >
+        {/* TOP */}
+
         <div
           className="
-            grid gap-5
-            border-b border-white/15
-            pb-6
-            sm:gap-6 sm:pb-8
-            md:gap-8 md:pb-10
-            lg:grid-cols-[0.7fr_1.3fr]
-            lg:items-end lg:gap-12
+            flex flex-col
+            gap-3
+            border-b
+            border-white/15
+            pb-5
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
           "
         >
-          {/* Label */}
           <motion.div
             initial={{
               opacity: 0,
-              y: 20,
+              y: 12,
             }}
             whileInView={{
               opacity: 1,
@@ -127,250 +139,223 @@ const ScriptureHome = () => {
               once: true,
             }}
             transition={{
-              duration: 0.7,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-          >
-            <p
-              className="
-                flex items-center gap-3
-                text-[9px] font-semibold
-                uppercase tracking-[0.24em]
-                text-green-500
-                min-[375px]:text-[10px]
-                min-[375px]:tracking-[0.3em]
-              "
-            >
-              <span
-                className="
-                  relative h-px w-8
-                  shrink-0 overflow-hidden
-                  bg-green-500/50
-                  min-[375px]:w-10
-                "
-              >
-                <motion.span
-                  animate={{
-                    x: ["-120%", "220%"],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatDelay: 2.5,
-                    ease: "easeInOut",
-                  }}
-                  className="
-                    absolute inset-y-0 left-0
-                    w-1/2 bg-green-400
-                  "
-                />
-              </span>
-
-              Scripture for Today
-            </p>
-          </motion.div>
-
-          {/* Date */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              x: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.7,
-              delay: 0.1,
-            }}
-            className="lg:text-right"
-          >
-            <p
-              className="
-                text-[9px] font-medium
-                uppercase tracking-[0.18em]
-                text-white/35
-                min-[375px]:text-[10px]
-                min-[375px]:tracking-[0.25em]
-              "
-            >
-              {formattedDate}
-            </p>
-          </motion.div>
-        </div>
-
-        {/* ==========================================
-            SCRIPTURE
-        ========================================== */}
-        <div
-          className="
-            py-10
-            min-[375px]:py-12
-            sm:py-14
-            md:py-20
-            lg:py-28
-          "
-        >
-          <motion.blockquote
-            key={scripture.day}
-            initial={{
-              opacity: 0,
-              y: 45,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.35,
-            }}
-            transition={{
-              duration: 0.9,
-              ease: [0.22, 1, 0.36, 1],
+              duration: 0.6,
             }}
             className="
-              max-w-6xl
-              break-words
-              text-[clamp(2rem,9.5vw,3rem)]
-              font-medium
-              leading-[1.06]
-              tracking-[-0.045em]
-              text-white
-              sm:text-5xl
-              md:text-6xl
-              lg:text-[5.8rem]
-              lg:leading-[1.05]
-            "
-          >
-            “{scripture.verse}”
-          </motion.blockquote>
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.7,
-              delay: 0.25,
-            }}
-            className="
-              mt-7 flex items-center gap-3
-              min-[375px]:mt-8
-              sm:mt-10 sm:gap-4
+              flex items-center
+              gap-3
             "
           >
             <span
               className="
-                h-px w-8 shrink-0
+                h-px w-8
                 bg-green-500
-                sm:w-10
               "
             />
 
             <p
               className="
-                text-[10px] font-semibold
-                uppercase tracking-[0.16em]
+                text-[9px]
+                font-semibold
+                uppercase
+                tracking-[0.25em]
                 text-green-500
-                min-[375px]:text-xs
-                min-[375px]:tracking-[0.2em]
+                sm:text-[10px]
               "
             >
-              {scripture.reference}
+              Scripture for Today
             </p>
           </motion.div>
-        </div>
 
-        {/* ==========================================
-            BOTTOM DETAIL
-        ========================================== */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.7,
-            delay: 0.3,
-          }}
-          className="
-            flex flex-col justify-between
-            gap-5 border-t border-white/15
-            pt-6
-            sm:pt-8
-            md:flex-row md:items-center
-          "
-        >
-          <p
+          <motion.p
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.6,
+              delay: 0.1,
+            }}
             className="
-              max-w-md
-              text-xs leading-5
-              text-white/40
-              min-[375px]:text-sm
-              min-[375px]:leading-6
+              text-[9px]
+              font-medium
+              uppercase
+              tracking-[0.18em]
+              text-white/35
+              sm:text-[10px]
             "
           >
-            Take a moment. Read it again. Carry it with you today.
-          </p>
+            {formattedDate}
+          </motion.p>
+        </div>
 
-          <div className="flex items-center gap-3">
-            <span
+        {/* SCRIPTURE */}
+
+        <div
+          className="
+            grid gap-8
+            py-8
+            sm:py-10
+            md:grid-cols-[1.35fr_0.65fr]
+            md:items-end
+            md:gap-12
+            lg:py-12
+          "
+        >
+          <div>
+            <motion.blockquote
+              key={
+                scripture.day
+              }
+              initial={{
+                opacity: 0,
+                y: 25,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
+              transition={{
+                duration: 0.75,
+                ease: [
+                  0.22,
+                  1,
+                  0.36,
+                  1,
+                ],
+              }}
               className="
-                text-[8px] font-semibold
-                uppercase tracking-[0.2em]
+                max-w-5xl
+                text-[clamp(1.85rem,7vw,2.6rem)]
+                font-medium
+                leading-[1.08]
+                tracking-[-0.04em]
+                text-white
+                sm:text-4xl
+                md:text-5xl
+                lg:text-[3.7rem]
+              "
+            >
+              “
+              {
+                scripture.verse
+              }
+              ”
+            </motion.blockquote>
+
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 10,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+              }}
+              className="
+                mt-6
+                flex items-center
+                gap-3
+              "
+            >
+              <span
+                className="
+                  h-px w-8
+                  bg-green-500
+                "
+              />
+
+              <p
+                className="
+                  text-[10px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.18em]
+                  text-green-500
+                  sm:text-xs
+                "
+              >
+                {
+                  scripture.reference
+                }
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Small reflection */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 15,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.65,
+              delay: 0.25,
+            }}
+            className="
+              border-t
+              border-white/15
+              pt-5
+              md:border-l
+              md:border-t-0
+              md:pl-8
+              md:pt-0
+            "
+          >
+            <p
+              className="
+                mb-2
+                text-[8px]
+                font-semibold
+                uppercase
+                tracking-[0.22em]
                 text-white/30
-                min-[375px]:text-[9px]
-                min-[375px]:tracking-[0.25em]
               "
             >
               Daily Word
-            </span>
+            </p>
 
-            <span
+            <p
               className="
-                relative h-px w-10
-                overflow-hidden bg-white/15
-                min-[375px]:w-12
+                max-w-sm
+                text-xs
+                leading-5
+                text-white/45
+                sm:text-sm
+                sm:leading-6
               "
             >
-              <motion.span
-                animate={{
-                  x: ["-100%", "220%"],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatDelay: 2,
-                  ease: "easeInOut",
-                }}
-                className="
-                  absolute inset-y-0 left-0
-                  w-1/2 bg-green-500
-                "
-              />
-            </span>
-          </div>
-        </motion.div>
+              Take a moment.
+              Read it again.
+              Carry it with you
+              today.
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

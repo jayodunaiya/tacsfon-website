@@ -46,162 +46,235 @@ const FooterCommon = () => {
         <div
           className="
             border-b border-white/10
-            py-14
+            py-12
+            min-[375px]:py-14
             sm:py-16
             md:py-20
+
             lg:grid
             lg:grid-cols-[1.2fr_0.8fr_0.8fr_1fr]
             lg:gap-12
             lg:py-24
           "
         >
+        
           {/* ======================================
-              BRAND
-          ====================================== */}
+                BRAND
+              ====================================== */}
 
-          <div>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-3 sm:gap-4"
-            >
-              <img
-                src="/images/church-logo.jpg"
-                alt="TACSFON LAUTECH"
-                className="
-                  h-11 w-auto object-cover
-                  min-[375px]:h-12
-                  sm:h-13
-                "
-              />
+              <div className="min-w-0">
+                {/* Logo / identity + tagline */}
+                
+                  <div
+                    className="
+                      grid
+                      grid-cols-[minmax(90px,0.42fr)_minmax(0,0.58fr)]
+                      items-start
+                      gap-x-4
+                      min-[375px]:grid-cols-[minmax(105px,0.4fr)_minmax(0,0.6fr)]
+                      min-[375px]:gap-x-5
+                      sm:grid-cols-[150px_minmax(0,1fr)]
+                      sm:gap-x-8
 
-              <div>
+                      lg:block
+                    "
+                  >
+                    {/* LEFT — Logo + TACSFON */}
+
+                    <Link
+                      href="/"
+                      className="
+                        flex min-w-0
+                        flex-col
+                        items-start
+                      "
+                    >
+                      <img
+                        src="/images/church-logo.jpg"
+                        alt="TACSFON LAUTECH"
+                        className="
+                          h-10 w-auto
+                          object-cover
+                          min-[375px]:h-11
+                          sm:h-13
+                          lg:h-12
+                        "
+                      />
+
+                      {/* Reduced spacing here */}
+
+                      <div className="mt-1.5 sm:mt-2">
+                        <p
+                          className="
+                            text-[10px]
+                            font-semibold
+                            uppercase
+                            leading-none
+                            tracking-[0.08em]
+                            min-[375px]:text-[11px]
+                            sm:text-sm
+                          "
+                        >
+                          TACSFON
+                        </p>
+
+                        <p
+                          className="
+                            mt-1
+                            whitespace-nowrap
+                            text-[6.5px]
+                            uppercase
+                            leading-none
+                            tracking-[0.12em]
+                            text-white/35
+                            min-[375px]:text-[7px]
+                            min-[375px]:tracking-[0.15em]
+                            sm:text-[8px]
+                            sm:tracking-[0.18em]
+                          "
+                        >
+                          LAUTECH Chapter
+                        </p>
+                      </div>
+                    </Link>
+
+                    {/* RIGHT — Tagline */}
+
+                    <div
+                      className="
+                        flex h-full
+                        min-w-0
+                        items-center
+                        border-l border-white/10
+                        pl-4
+                        min-[375px]:pl-5
+                        sm:pl-8
+
+                        lg:mt-7
+                        lg:block
+                        lg:h-auto
+                        lg:border-l-0
+                        lg:pl-0
+                      "
+                    >
+                      <p
+                        className="
+                          min-w-0
+                          text-[1.35rem]
+                          font-medium
+                          leading-[1.02]
+                          tracking-[-0.04em]
+                          text-white/90
+                          min-[375px]:text-[1.55rem]
+                          sm:text-3xl
+                          lg:max-w-sm
+                        "
+                      >
+                        Where love rises
+
+                        <span className="block text-green-500">
+                          and never sets.
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+                {/* Description */}
+
                 <p
                   className="
-                    text-xs font-semibold
-                    uppercase tracking-[0.08em]
-                    min-[375px]:text-sm
+                    mt-7 max-w-md
+                    text-[11px]
+                    leading-5
+                    text-white/40
+                    min-[375px]:text-xs
+                    min-[375px]:leading-6
+                    sm:mt-8
+                    sm:text-sm
+                    sm:leading-7
+                    lg:max-w-sm
                   "
                 >
-                  TACSFON
+                  A family of believers committed to knowing God,
+                  growing together and making His love known.
                 </p>
 
-                <p
-                  className="
-                    mt-1 text-[8px]
-                    uppercase tracking-[0.18em]
-                    text-white/35
-                    min-[375px]:text-[9px]
-                    min-[375px]:tracking-[0.22em]
-                  "
-                >
-                  LAUTECH Chapter
-                </p>
+                {/* Socials */}
+
+                <div className="mt-6 flex items-center gap-2.5 sm:mt-8 sm:gap-3">
+                  <a
+                    href="https://www.youtube.com/@tacsfonlautech3547"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    className="
+                      flex h-9 w-9
+                      items-center justify-center
+                      rounded-full
+                      border border-white/15
+                      text-sm text-white/70
+                      transition-all duration-300
+                      hover:border-green-500
+                      hover:bg-green-700
+                      hover:text-white
+                      min-[375px]:h-10
+                      min-[375px]:w-10
+                      sm:h-11
+                      sm:w-11
+                    "
+                  >
+                    <FiYoutube />
+                  </a>
+
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61585499125020"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    className="
+                      flex h-9 w-9
+                      items-center justify-center
+                      rounded-full
+                      border border-white/15
+                      text-sm text-white/70
+                      transition-all duration-300
+                      hover:border-green-500
+                      hover:bg-green-700
+                      hover:text-white
+                      min-[375px]:h-10
+                      min-[375px]:w-10
+                      sm:h-11
+                      sm:w-11
+                    "
+                  >
+                    <FiFacebook />
+                  </a>
+
+                  <a
+                    href="https://instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                    className="
+                      flex h-9 w-9
+                      items-center justify-center
+                      rounded-full
+                      border border-white/15
+                      text-sm text-white/70
+                      transition-all duration-300
+                      hover:border-green-500
+                      hover:bg-green-700
+                      hover:text-white
+                      min-[375px]:h-10
+                      min-[375px]:w-10
+                      sm:h-11
+                      sm:w-11
+                    "
+                  >
+                    <FiInstagram />
+                  </a>
+                </div>
               </div>
-            </Link>
-
-            <p
-              className="
-                mt-7 max-w-sm
-                text-[1.75rem] font-medium
-                leading-[1.05]
-                tracking-[-0.04em]
-                text-white/90
-                min-[375px]:text-3xl
-                sm:mt-8
-              "
-            >
-              Where love rises
-
-              <span className="block text-green-500">
-                and never sets.
-              </span>
-            </p>
-
-            <p
-              className="
-                mt-4 max-w-sm
-                text-xs leading-6
-                text-white/40
-                min-[375px]:mt-5
-                min-[375px]:text-sm
-                min-[375px]:leading-7
-                sm:mt-6
-              "
-            >
-              A family of believers committed to knowing God, growing
-              together and making His love known.
-            </p>
-
-            {/* Socials */}
-
-            <div className="mt-6 flex items-center gap-2.5 sm:mt-8 sm:gap-3">
-              <a
-                href="https://www.youtube.com/@tacsfonlautech3547"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="
-                  flex h-10 w-10
-                  items-center justify-center
-                  rounded-full
-                  border border-white/15
-                  text-sm text-white/70
-                  transition-all duration-300
-                  hover:border-green-500
-                  hover:bg-green-700
-                  hover:text-white
-                  sm:h-11 sm:w-11
-                  sm:text-base
-                "
-              >
-                <FiYoutube />
-              </a>
-
-              <a
-                href="https://www.facebook.com/profile.php?id=61585499125020"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="
-                  flex h-10 w-10
-                  items-center justify-center
-                  rounded-full
-                  border border-white/15
-                  text-sm text-white/70
-                  transition-all duration-300
-                  hover:border-green-500
-                  hover:bg-green-700
-                  hover:text-white
-                  sm:h-11 sm:w-11
-                  sm:text-base
-                "
-              >
-                <FiFacebook />
-              </a>
-
-              <a
-                href="https://instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="
-                  flex h-10 w-10
-                  items-center justify-center
-                  rounded-full
-                  border border-white/15
-                  text-sm text-white/70
-                  transition-all duration-300
-                  hover:border-green-500
-                  hover:bg-green-700
-                  hover:text-white
-                  sm:h-11 sm:w-11
-                  sm:text-base
-                "
-              >
-                <FiInstagram />
-              </a>
-            </div>
-          </div>
 
           {/* ======================================
               MOBILE NAVIGATION + MINISTRIES
@@ -211,107 +284,170 @@ const FooterCommon = () => {
               four-column footer grid.
           ====================================== */}
 
-          <div
-            className="
-              mt-12 grid
-              grid-cols-2 gap-x-6 gap-y-10
-              border-t border-white/10
-              pt-10
-              min-[375px]:gap-x-8
-              sm:mt-14 sm:pt-12
-              md:gap-x-16
-              lg:contents
-            "
-          >
-            {/* Navigation */}
+          {/* ======================================
+              EXPLORE + MINISTRIES
+              ====================================== */}
 
-            <div className="min-w-0">
-              <p
-                className="
-                  mb-5 text-[9px]
-                  font-semibold uppercase
-                  tracking-[0.23em]
-                  text-green-500
-                  sm:mb-6
-                  sm:text-[10px]
-                  sm:tracking-[0.28em]
-                "
-              >
-                Explore
-              </p>
+        <div
+          className="
+            mt-10
+            border-t border-white/10
+            pt-9
+            sm:mt-12
+            sm:pt-10
 
-              <div className="flex flex-col gap-3.5 sm:gap-4">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="
-                      group inline-flex w-fit
-                      max-w-full items-center gap-2
-                      text-xs text-white/50
-                      transition-colors duration-300
-                      hover:text-white
-                      sm:text-sm
-                    "
-                  >
-                    <span className="break-words">
-                      {item.label}
-                    </span>
+            lg:contents
+          "
+        >
+          {/* ======================================
+              EXPLORE
+          ====================================== */}
 
-                    <FiArrowUpRight
-                      className="
-                        hidden shrink-0 text-xs
-                        opacity-0
-                        transition-all duration-300
-                        group-hover:-translate-y-0.5
-                        group-hover:translate-x-0.5
-                        group-hover:opacity-100
-                        sm:block
-                      "
-                    />
-                  </Link>
-                ))}
-              </div>
-            </div>
+          <div className="min-w-0">
+            <p
+              className="
+                mb-5
+                text-[9px]
+                font-semibold
+                uppercase
+                tracking-[0.23em]
+                text-green-500
+                sm:mb-6
+                sm:text-[10px]
+                sm:tracking-[0.28em]
+              "
+            >
+              Explore
+            </p>
 
-            {/* Ministries */}
+            <div
+              className="
+                grid
+                grid-cols-3
+                gap-x-3
+                gap-y-4
+                min-[375px]:gap-x-4
+                min-[375px]:gap-y-5
+                sm:gap-x-8
+                sm:gap-y-5
 
-            <div className="min-w-0">
-              <p
-                className="
-                  mb-5 text-[9px]
-                  font-semibold uppercase
-                  tracking-[0.23em]
-                  text-green-500
-                  sm:mb-6
-                  sm:text-[10px]
-                  sm:tracking-[0.28em]
-                "
-              >
-                Ministries
-              </p>
-
-              <div className="flex flex-col gap-3.5 sm:gap-4">
-                {ministries.map((item) => (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className="
-                      w-fit max-w-full
-                      break-words
-                      text-xs leading-5
-                      text-white/50
-                      transition-colors duration-300
-                      hover:text-white
-                      sm:text-sm
-                    "
-                  >
+                lg:flex
+                lg:flex-col
+                lg:gap-4
+              "
+            >
+              {navigation.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="
+                    group
+                    min-w-0
+                    text-[11px]
+                    leading-5
+                    text-white/50
+                    transition-colors
+                    duration-300
+                    hover:text-white
+                    min-[375px]:text-xs
+                    sm:text-sm
+                  "
+                >
+                  <span className="break-words">
                     {item.label}
-                  </Link>
-                ))}
-              </div>
+                  </span>
+
+                  <FiArrowUpRight
+                    className="
+                      ml-2 hidden
+                      shrink-0
+                      text-xs
+                      opacity-0
+                      transition-all
+                      duration-300
+                      group-hover:-translate-y-0.5
+                      group-hover:translate-x-0.5
+                      group-hover:opacity-100
+                      lg:inline-block
+                    "
+                  />
+                </Link>
+              ))}
             </div>
           </div>
+
+          {/* ======================================
+              MINISTRIES
+          ====================================== */}
+
+          <div
+            className="
+              mt-9
+              border-t border-white/[0.07]
+              pt-8
+              sm:mt-10
+              sm:pt-9
+
+              lg:mt-0
+              lg:border-0
+              lg:pt-0
+            "
+          >
+            <p
+              className="
+                mb-5
+                text-[9px]
+                font-semibold
+                uppercase
+                tracking-[0.23em]
+                text-green-500
+                sm:mb-6
+                sm:text-[10px]
+                sm:tracking-[0.28em]
+              "
+            >
+              Ministries
+            </p>
+
+            <div
+              className="
+                grid
+                grid-cols-3
+                gap-x-3
+                gap-y-4
+                min-[375px]:gap-x-4
+                min-[375px]:gap-y-5
+                sm:gap-x-8
+                sm:gap-y-5
+
+                lg:flex
+                lg:flex-col
+                lg:gap-4
+              "
+            >
+              {ministries.map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="
+                    min-w-0
+                    break-words
+                    text-[11px]
+                    leading-5
+                    text-white/50
+                    transition-colors
+                    duration-300
+                    hover:text-white
+                    min-[375px]:text-xs
+                    sm:text-sm
+                  "
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
 
           {/* ======================================
               JOIN US

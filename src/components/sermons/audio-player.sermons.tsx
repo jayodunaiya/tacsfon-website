@@ -1,15 +1,15 @@
 "use client";
 
-import {
-  useRef,
-  useState,
-} from "react";
+import { useState } from "react";
 
 import {
+  FiDownload,
   FiPause,
   FiPlay,
   FiVolume2,
 } from "react-icons/fi";
+
+import { useSermonPlayer } from "@/app/providers/sermon-player-provider";
 
 interface AudioPlayerProps {
   audioUrl: string;
@@ -20,20 +20,39 @@ const AudioPlayer = ({
   audioUrl,
   title = "Sermon audio",
 }: AudioPlayerProps) => {
-  const audioRef =
-    useRef<HTMLAudioElement>(null);
+  const {
+    currentTrack,
+    isPlaying: globalIsPlaying,
+    currentTime: globalCurrentTime,
+    duration: globalDuration,
+    hasError,
+    playSermon,
+    togglePlay,
+    seek,
+  } = useSermonPlayer();
 
-  const [isPlaying, setIsPlaying] =
+  const [isDownloading, setIsDownloading] =
     useState(false);
 
-  const [currentTime, setCurrentTime] =
-    useState(0);
+  // ==========================================
+  // IS THIS THE ACTIVE SERMON?
+  // ==========================================
 
-  const [duration, setDuration] =
-    useState(0);
+  const isCurrentSermon =
+    currentTrack?.audioUrl === audioUrl;
 
-  const [hasError, setHasError] =
-    useState(false);
+  const isPlaying =
+    isCurrentSermon && globalIsPlaying;
+
+  const currentTime =
+    isCurrentSermon
+      ? globalCurrentTime
+      : 0;
+
+  const duration =
+    isCurrentSermon
+      ? globalDuration
+      : 0;
 
   // ==========================================
   // FORMAT TIME
@@ -42,9 +61,7 @@ const AudioPlayer = ({
   const formatTime = (
     seconds: number
   ) => {
-    if (
-      !Number.isFinite(seconds)
-    ) {
+    if (!Number.isFinite(seconds)) {
       return "0:00";
     }
 
@@ -63,76 +80,24 @@ const AudioPlayer = ({
   // PLAY / PAUSE
   // ==========================================
 
-  const togglePlay = async () => {
-    const audio = audioRef.current;
-
-    if (!audio) return;
-
+  const handlePlay = async () => {
     try {
-      if (audio.paused) {
-        setHasError(false);
-
-        await audio.play();
-      } else {
-        audio.pause();
+      if (isCurrentSermon) {
+        await togglePlay();
+        return;
       }
+
+      await playSermon({
+        title,
+        audioUrl,
+      });
     } catch (error) {
       console.error(
         "Playback failed:",
         error
       );
-
-      setHasError(true);
     }
   };
-
-  // ==========================================
-  // METADATA
-  // ==========================================
-
-  const handleLoadedMetadata =
-    () => {
-      const audio =
-        audioRef.current;
-
-      if (!audio) return;
-
-      if (
-        Number.isFinite(
-          audio.duration
-        )
-      ) {
-        setDuration(
-          audio.duration
-        );
-      }
-    };
-
-  // ==========================================
-  // TIME
-  // ==========================================
-
-  const handleTimeUpdate =
-    () => {
-      const audio =
-        audioRef.current;
-
-      if (!audio) return;
-
-      setCurrentTime(
-        audio.currentTime
-      );
-
-      if (
-        Number.isFinite(
-          audio.duration
-        )
-      ) {
-        setDuration(
-          audio.duration
-        );
-      }
-    };
 
   // ==========================================
   // SEEK
@@ -141,64 +106,109 @@ const AudioPlayer = ({
   const handleSeek = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const audio =
-      audioRef.current;
+    if (!isCurrentSermon) {
+      return;
+    }
 
-    if (!audio) return;
-
-    const newTime = Number(
-      event.target.value
+    seek(
+      Number(
+        event.target.value
+      )
     );
+  };
 
-    audio.currentTime =
-      newTime;
+  // ==========================================
+  // DOWNLOAD
+  // ==========================================
 
-    setCurrentTime(newTime);
+  const handleDownload = async () => {
+    if (
+      !audioUrl ||
+      isDownloading
+    ) {
+      return;
+    }
+
+    try {
+      setIsDownloading(true);
+
+      const response =
+        await fetch(audioUrl);
+
+      if (!response.ok) {
+        throw new Error(
+          "Unable to download sermon."
+        );
+      }
+
+      const blob =
+        await response.blob();
+
+      const objectUrl =
+        URL.createObjectURL(blob);
+
+      const safeTitle = title
+        .trim()
+        .replace(
+          /[^a-zA-Z0-9-_ ]/g,
+          ""
+        )
+        .replace(/\s+/g, "-");
+
+      const extension =
+        blob.type.includes("mpeg")
+          ? "mp3"
+          : blob.type.includes("wav")
+            ? "wav"
+            : blob.type.includes("ogg")
+              ? "ogg"
+              : "mp3";
+
+      const link =
+        document.createElement("a");
+
+      link.href = objectUrl;
+
+      link.download =
+        `TACSFON-LAUTECH-${safeTitle || "Sermon"}.${extension}`;
+
+      document.body.appendChild(
+        link
+      );
+
+      link.click();
+      link.remove();
+
+      URL.revokeObjectURL(
+        objectUrl
+      );
+    } catch (error) {
+      console.error(
+        "Download failed:",
+        error
+      );
+
+      window.open(
+        audioUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   return (
     <div className="min-w-0 w-full">
+      {/*
+        IMPORTANT:
 
-      {/* ======================================
-          ACTUAL BROWSER AUDIO ELEMENT
-      ====================================== */}
+        There is intentionally NO <audio>
+        element in this component anymore.
 
-      <audio
-        ref={audioRef}
-        src={audioUrl}
-        preload="metadata"
-        playsInline
-        onPlay={() =>
-          setIsPlaying(true)
-        }
-        onPause={() =>
-          setIsPlaying(false)
-        }
-        onEnded={() => {
-          setIsPlaying(false);
-          setCurrentTime(0);
-        }}
-        onLoadedMetadata={
-          handleLoadedMetadata
-        }
-        onDurationChange={
-          handleLoadedMetadata
-        }
-        onTimeUpdate={
-          handleTimeUpdate
-        }
-        onCanPlay={() =>
-          setHasError(false)
-        }
-        onError={() => {
-          setHasError(true);
-          setIsPlaying(false);
-        }}
-      />
-
-      {/* ======================================
-          PLAYER
-      ====================================== */}
+        The actual audio element now lives
+        inside SermonPlayerProvider.
+      */}
 
       <div
         className="
@@ -219,14 +229,11 @@ const AudioPlayer = ({
             sm:gap-5
           "
         >
-
-          {/* ==================================
-              PLAY
-          ================================== */}
+          {/* PLAY */}
 
           <button
             type="button"
-            onClick={togglePlay}
+            onClick={handlePlay}
             aria-label={
               isPlaying
                 ? `Pause ${title}`
@@ -266,14 +273,9 @@ const AudioPlayer = ({
             )}
           </button>
 
-          {/* ==================================
-              PLAYER INFO
-          ================================== */}
+          {/* PLAYER INFO */}
 
           <div className="min-w-0 flex-1">
-
-            {/* STATUS + TIME */}
-
             <div
               className="
                 mb-2.5 flex min-w-0
@@ -295,11 +297,14 @@ const AudioPlayer = ({
                   sm:text-xs
                 "
               >
-                {hasError
+                {isCurrentSermon &&
+                hasError
                   ? "Unable to play audio"
                   : isPlaying
                     ? "Now Playing"
-                    : "Listen"}
+                    : isCurrentSermon
+                      ? "Paused"
+                      : "Listen"}
               </p>
 
               <p
@@ -316,16 +321,14 @@ const AudioPlayer = ({
                 {formatTime(
                   currentTime
                 )}
+
                 {" / "}
+
                 {formatTime(
                   duration
                 )}
               </p>
             </div>
-
-            {/* ==================================
-                PROGRESS
-            ================================== */}
 
             <input
               type="range"
@@ -336,14 +339,15 @@ const AudioPlayer = ({
                   : 0
               }
               step={0.1}
-              value={
-                Math.min(
-                  currentTime,
-                  duration || 0
-                )
-              }
+              value={Math.min(
+                currentTime,
+                duration || 0
+              )}
               onChange={
                 handleSeek
+              }
+              disabled={
+                !isCurrentSermon
               }
               aria-label={`${title} playback position`}
               className="
@@ -351,23 +355,90 @@ const AudioPlayer = ({
                 w-full min-w-0
                 cursor-pointer
                 accent-green-700
+                disabled:cursor-default
+                disabled:opacity-40
               "
             />
           </div>
 
-          {/* ==================================
-              VOLUME ICON
-              Tablet/Desktop only
-          ================================== */}
+          {/* VOLUME INDICATOR */}
 
           <FiVolume2
             className="
               hidden shrink-0
               text-lg
               text-black/35
-              sm:block
+              md:block
             "
           />
+
+          {/* DOWNLOAD */}
+
+          <button
+            type="button"
+            onClick={
+              handleDownload
+            }
+            disabled={
+              isDownloading
+            }
+            aria-label={`Download ${title}`}
+            title={`Download ${title}`}
+            className="
+              group flex
+              h-9 w-9
+              shrink-0
+              items-center
+              justify-center
+              rounded-full
+              border border-black/10
+              bg-white
+              text-black/55
+              transition-all
+              duration-300
+              hover:border-green-700
+              hover:bg-green-700
+              hover:text-white
+              disabled:cursor-wait
+              disabled:opacity-50
+              min-[375px]:h-10
+              min-[375px]:w-10
+              sm:h-11
+              sm:w-auto
+              sm:gap-2
+              sm:rounded-full
+              sm:px-4
+            "
+          >
+            <FiDownload
+              className={`
+                shrink-0
+                text-sm
+                min-[375px]:text-base
+
+                ${
+                  isDownloading
+                    ? "animate-bounce"
+                    : ""
+                }
+              `}
+            />
+
+            <span
+              className="
+                hidden
+                text-[9px]
+                font-semibold
+                uppercase
+                tracking-[0.12em]
+                sm:inline
+              "
+            >
+              {isDownloading
+                ? "Saving"
+                : "Download"}
+            </span>
+          </button>
         </div>
       </div>
     </div>

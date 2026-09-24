@@ -1,14 +1,15 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+
 import {
   FiArrowUpRight,
   FiCheck,
   FiClock,
   FiMail,
   FiMapPin,
-  FiSend,
   FiPhone,
+  FiSend,
 } from "react-icons/fi";
 
 import FadeUp from "@/components/motion/fade-up.motion";
@@ -18,11 +19,21 @@ import StaggerItem from "@/components/motion/stagger-item.motion";
 
 import { supabase } from "@/lib/supabase/client";
 
+const GMAIL_URL =
+  "https://mail.google.com/mail/?view=cm&fs=1&to=tacsfonlautech@gmail.com";
+
+const MAP_URL =
+  "http://google.com/maps/@8.1581908,4.2681945,17z/data=!4m2!29m1!3s268101df-3025-4528-8f05-2ce673c3d758?entry=ttu&g_ep=EgoyMDI2MDkyMS4wIKXMDSoASAFQAw%3D%3D";
+
 const ContactPage = () => {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] =
     useState(false);
   const [error, setError] = useState("");
+
+  /* ==========================================
+     CONTACT FORM
+  ========================================== */
 
   const handleSubmit = async (
     event: FormEvent<HTMLFormElement>
@@ -101,18 +112,20 @@ const ContactPage = () => {
   };
 
   return (
-    <main className="overflow-hidden bg-white text-black">
+    <main className="overflow-x-hidden bg-white text-black">
       {/* ==========================================
           HERO
       ========================================== */}
 
       <section
         className="
-          relative overflow-hidden bg-[#F7F7F3]
-          px-5 pb-14 pt-28
-          min-[375px]:px-6
-          min-[375px]:pb-16
-          min-[375px]:pt-32
+          relative overflow-hidden
+          bg-[#F7F7F3]
+          px-4 pb-12 pt-24
+          min-[375px]:px-5
+          min-[375px]:pb-14
+          min-[375px]:pt-28
+          sm:px-6
           sm:pb-20
           sm:pt-36
           md:pb-28
@@ -125,10 +138,11 @@ const ContactPage = () => {
         <div
           aria-hidden="true"
           className="
-            pointer-events-none absolute
-            -right-5 top-20
+            pointer-events-none
+            absolute
+            -right-4 top-20
             select-none
-            text-[31vw]
+            text-[34vw]
             font-semibold
             leading-none
             tracking-[-0.09em]
@@ -145,8 +159,8 @@ const ContactPage = () => {
         <div className="relative z-10 mx-auto max-w-[1400px]">
           <div
             className="
-              grid gap-8
-              min-[375px]:gap-9
+              grid gap-7
+              min-[375px]:gap-8
               sm:gap-10
               lg:grid-cols-[0.55fr_1.45fr]
               lg:items-end
@@ -157,9 +171,12 @@ const ContactPage = () => {
               <div>
                 <p
                   className="
-                    flex items-center gap-2.5
-                    text-[8px] font-semibold
-                    uppercase tracking-[0.22em]
+                    flex items-center
+                    gap-2.5
+                    text-[8px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.22em]
                     text-green-700
                     min-[375px]:gap-3
                     min-[375px]:text-[9px]
@@ -167,18 +184,20 @@ const ContactPage = () => {
                   "
                 >
                   <span className="h-px w-7 shrink-0 bg-green-700 min-[375px]:w-10" />
+
                   Plan Your Visit
                 </p>
 
                 <p
                   className="
                     mt-4 max-w-xs
-                    text-[13px] leading-6
+                    text-[12px]
+                    leading-6
                     text-black/45
-                    min-[375px]:mt-5
-                    min-[375px]:text-sm
-                    min-[375px]:leading-7
+                    min-[375px]:text-[13px]
                     sm:mt-6
+                    sm:text-sm
+                    sm:leading-7
                   "
                 >
                   Whether it&apos;s your first Sunday or
@@ -192,7 +211,7 @@ const ContactPage = () => {
               <h1
                 className="
                   max-w-5xl
-                  text-[clamp(3.15rem,15vw,4.5rem)]
+                  text-[clamp(2.8rem,14vw,4.5rem)]
                   font-medium
                   leading-[0.9]
                   tracking-[-0.06em]
@@ -221,12 +240,13 @@ const ContactPage = () => {
       <section
         className="
           bg-black
-          px-5 py-16
+          px-4 py-12
           text-white
-          min-[375px]:px-6
-          min-[375px]:py-20
-          sm:py-24
-          md:py-28
+          min-[375px]:px-5
+          min-[375px]:py-14
+          sm:px-6
+          sm:py-20
+          md:py-24
           lg:px-10
           lg:py-32
         "
@@ -235,8 +255,10 @@ const ContactPage = () => {
           <FadeUp>
             <p
               className="
-                text-[8px] font-semibold
-                uppercase tracking-[0.2em]
+                text-[8px]
+                font-semibold
+                uppercase
+                tracking-[0.2em]
                 text-green-400
                 min-[375px]:text-[9px]
                 min-[375px]:tracking-[0.28em]
@@ -248,10 +270,12 @@ const ContactPage = () => {
 
           <Stagger
             className="
-              mt-7 grid gap-px
+              mt-6 grid
+              grid-cols-1
+              gap-px
               bg-white/10
-              min-[375px]:mt-8
-              sm:mt-10
+              min-[375px]:mt-7
+              sm:mt-9
               sm:grid-cols-2
               lg:grid-cols-3
             "
@@ -272,11 +296,13 @@ const ContactPage = () => {
 
                 <p
                   className="
-                    mt-8
-                    text-[8px] font-semibold
-                    uppercase tracking-[0.16em]
+                    mt-7
+                    text-[8px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.16em]
                     text-white/35
-                    min-[375px]:mt-10
+                    min-[375px]:mt-9
                     min-[375px]:text-[9px]
                     min-[375px]:tracking-[0.2em]
                     lg:mt-12
@@ -288,17 +314,17 @@ const ContactPage = () => {
                 <h2
                   className="
                     mt-2.5
-                    text-[1.65rem]
+                    text-[1.55rem]
                     font-medium
                     tracking-[-0.035em]
-                    min-[375px]:mt-3
-                    min-[375px]:text-3xl
+                    min-[375px]:text-[1.7rem]
+                    sm:text-3xl
                   "
                 >
                   Sundays
                 </h2>
 
-                <p className="mt-1.5 text-base text-white/50 min-[375px]:mt-2 min-[375px]:text-lg">
+                <p className="mt-1.5 text-sm text-white/50 min-[375px]:text-base sm:text-lg">
                   9:00 AM
                 </p>
               </div>
@@ -307,10 +333,20 @@ const ContactPage = () => {
             {/* LOCATION */}
 
             <StaggerItem>
-              <div
+              <a
+                href={MAP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
-                  h-full bg-black
+                  group
+                  flex h-full
+                  min-w-0
+                  flex-col
+                  bg-black
                   p-5
+                  transition-colors
+                  duration-300
+                  hover:bg-[#080f08]
                   min-[375px]:p-6
                   sm:p-7
                   lg:p-10
@@ -320,11 +356,13 @@ const ContactPage = () => {
 
                 <p
                   className="
-                    mt-8
-                    text-[8px] font-semibold
-                    uppercase tracking-[0.16em]
+                    mt-7
+                    text-[8px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.16em]
                     text-white/35
-                    min-[375px]:mt-10
+                    min-[375px]:mt-9
                     min-[375px]:text-[9px]
                     min-[375px]:tracking-[0.2em]
                     lg:mt-12
@@ -335,13 +373,14 @@ const ContactPage = () => {
 
                 <h2
                   className="
-                    mt-2.5 max-w-xs
-                    text-[1.65rem]
+                    mt-2.5
+                    max-w-xs
+                    text-[1.55rem]
                     font-medium
                     leading-tight
                     tracking-[-0.035em]
-                    min-[375px]:mt-3
-                    min-[375px]:text-3xl
+                    min-[375px]:text-[1.7rem]
+                    sm:text-3xl
                   "
                 >
                   TACSFON Family House
@@ -349,16 +388,38 @@ const ContactPage = () => {
 
                 <p
                   className="
-                    mt-2.5 max-w-xs
-                    text-[13px] leading-6
+                    mt-2.5
+                    max-w-xs
+                    break-words
+                    text-[12px]
+                    leading-6
                     text-white/50
-                    min-[375px]:mt-3
-                    min-[375px]:text-sm
+                    min-[375px]:text-[13px]
+                    sm:text-sm
                   "
                 >
                   New GEN. Area, Under G, Ogbomoso.
                 </p>
-              </div>
+
+                <div
+                  className="
+                    mt-5 flex
+                    flex-wrap
+                    items-center
+                    gap-2
+                    text-[8px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.16em]
+                    text-green-400
+                    min-[375px]:tracking-[0.18em]
+                  "
+                >
+                  <span>Get directions</span>
+
+                  <FiArrowUpRight className="shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </div>
+              </a>
             </StaggerItem>
 
             {/* FIRST TIME */}
@@ -366,7 +427,8 @@ const ContactPage = () => {
             <StaggerItem>
               <div
                 className="
-                  flex h-full flex-col
+                  flex h-full
+                  flex-col
                   bg-green-700
                   p-5
                   min-[375px]:p-6
@@ -380,11 +442,13 @@ const ContactPage = () => {
 
                 <p
                   className="
-                    mt-8
-                    text-[8px] font-semibold
-                    uppercase tracking-[0.16em]
+                    mt-7
+                    text-[8px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.16em]
                     text-white/60
-                    min-[375px]:mt-10
+                    min-[375px]:mt-9
                     min-[375px]:text-[9px]
                     min-[375px]:tracking-[0.2em]
                     lg:mt-12
@@ -396,12 +460,12 @@ const ContactPage = () => {
                 <h2
                   className="
                     mt-2.5
-                    text-[1.65rem]
+                    text-[1.55rem]
                     font-medium
                     leading-tight
                     tracking-[-0.035em]
-                    min-[375px]:mt-3
-                    min-[375px]:text-3xl
+                    min-[375px]:text-[1.7rem]
+                    sm:text-3xl
                   "
                 >
                   Come as you are.
@@ -409,11 +473,13 @@ const ContactPage = () => {
 
                 <p
                   className="
-                    mt-2.5 max-w-md
-                    text-[13px] leading-6
+                    mt-2.5
+                    max-w-md
+                    text-[12px]
+                    leading-6
                     text-white/70
-                    min-[375px]:mt-3
-                    min-[375px]:text-sm
+                    min-[375px]:text-[13px]
+                    sm:text-sm
                     lg:max-w-xs
                   "
                 >
@@ -434,31 +500,36 @@ const ContactPage = () => {
       <section
         className="
           bg-white
-          px-5 py-16
-          min-[375px]:px-6
-          min-[375px]:py-20
-          sm:py-24
-          md:py-32
+          px-4 py-12
+          min-[375px]:px-5
+          min-[375px]:py-14
+          sm:px-6
+          sm:py-20
+          md:py-24
           lg:px-10
-          lg:py-40
+          lg:py-32
         "
       >
         <div className="mx-auto max-w-[1400px]">
           <div
             className="
-              grid gap-10
-              min-[375px]:gap-12
-              sm:gap-14
+              grid gap-9
+              min-[375px]:gap-10
+              sm:gap-12
               lg:grid-cols-[0.75fr_1.25fr]
+              lg:gap-14
             "
           >
             <FadeUp>
               <div className="lg:sticky lg:top-32 lg:self-start">
                 <p
                   className="
-                    flex items-center gap-2.5
-                    text-[8px] font-semibold
-                    uppercase tracking-[0.2em]
+                    flex items-center
+                    gap-2.5
+                    text-[8px]
+                    font-semibold
+                    uppercase
+                    tracking-[0.2em]
                     text-green-700
                     min-[375px]:gap-3
                     min-[375px]:text-[9px]
@@ -466,18 +537,18 @@ const ContactPage = () => {
                   "
                 >
                   <span className="h-px w-7 bg-green-700 min-[375px]:w-9" />
+
                   What To Expect
                 </p>
 
                 <h2
                   className="
                     mt-5 max-w-md
-                    text-[clamp(2.7rem,12vw,3.6rem)]
+                    text-[clamp(2.35rem,11vw,3.6rem)]
                     font-medium
                     leading-[0.96]
                     tracking-[-0.05em]
                     min-[375px]:mt-6
-                    sm:mt-7
                     sm:text-6xl
                     sm:leading-[0.94]
                   "
@@ -515,18 +586,17 @@ const ContactPage = () => {
                 <StaggerItem key={item.number}>
                   <div
                     className="
-                      group grid
-                      grid-cols-[34px_1fr]
-                      gap-x-3 gap-y-3
+                      grid
+                      grid-cols-[32px_minmax(0,1fr)]
+                      gap-x-3 gap-y-2
                       border-b border-black/10
-                      py-6
-                      transition-colors
-                      min-[375px]:grid-cols-[40px_1fr]
+                      py-5
+                      min-[375px]:grid-cols-[38px_minmax(0,1fr)]
                       min-[375px]:gap-x-4
-                      min-[375px]:py-7
-                      sm:grid-cols-[50px_1fr]
+                      min-[375px]:py-6
+                      sm:grid-cols-[50px_minmax(0,1fr)]
                       sm:py-8
-                      md:grid-cols-[100px_0.7fr_1fr]
+                      md:grid-cols-[80px_0.7fr_1fr]
                       md:items-start
                       md:gap-6
                       md:py-9
@@ -548,10 +618,12 @@ const ContactPage = () => {
 
                     <h3
                       className="
-                        text-xl
+                        min-w-0
+                        text-lg
                         font-medium
                         tracking-[-0.03em]
-                        min-[375px]:text-2xl
+                        min-[375px]:text-xl
+                        sm:text-2xl
                       "
                     >
                       {item.title}
@@ -560,12 +632,14 @@ const ContactPage = () => {
                     <p
                       className="
                         col-start-2
+                        min-w-0
                         max-w-lg
-                        text-[13px]
+                        text-[12px]
                         leading-6
                         text-black/45
-                        min-[375px]:text-sm
-                        min-[375px]:leading-7
+                        min-[375px]:text-[13px]
+                        sm:text-sm
+                        sm:leading-7
                         md:col-start-auto
                       "
                     >
@@ -597,13 +671,13 @@ const ContactPage = () => {
           <div
             className="
               relative mx-auto
-              h-[390px]
+              h-[320px]
               max-w-[1600px]
               overflow-hidden
               bg-black
-              min-[375px]:h-[430px]
-              sm:h-[500px]
-              md:h-[620px]
+              min-[375px]:h-[360px]
+              sm:h-[460px]
+              md:h-[560px]
               lg:h-[720px]
             "
           >
@@ -613,7 +687,7 @@ const ContactPage = () => {
               className="h-full w-full object-cover"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent sm:from-black/65 sm:via-black/15" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/25 to-transparent sm:from-black/65 sm:via-black/15" />
 
             <div
               className="
@@ -628,8 +702,10 @@ const ContactPage = () => {
             >
               <p
                 className="
-                  text-[8px] font-semibold
-                  uppercase tracking-[0.2em]
+                  text-[8px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.2em]
                   text-green-400
                   min-[375px]:text-[9px]
                   min-[375px]:tracking-[0.28em]
@@ -641,7 +717,7 @@ const ContactPage = () => {
               <h2
                 className="
                   mt-4
-                  text-[clamp(2.7rem,12vw,3.8rem)]
+                  text-[clamp(2.3rem,11vw,3.8rem)]
                   font-medium
                   leading-[0.96]
                   tracking-[-0.045em]
@@ -669,22 +745,23 @@ const ContactPage = () => {
       <section
         className="
           bg-[#F7F7F3]
-          px-5 py-16
-          min-[375px]:px-6
-          min-[375px]:py-20
-          sm:py-24
-          md:py-32
+          px-4 py-12
+          min-[375px]:px-5
+          min-[375px]:py-14
+          sm:px-6
+          sm:py-20
+          md:py-24
           lg:px-10
-          lg:py-40
+          lg:py-32
         "
       >
         <div
           className="
             mx-auto grid
+            min-w-0
             max-w-[1400px]
             gap-10
-            min-[375px]:gap-12
-            sm:gap-14
+            sm:gap-12
             lg:grid-cols-[0.75fr_1.25fr]
             lg:gap-16
           "
@@ -692,31 +769,34 @@ const ContactPage = () => {
           {/* LEFT */}
 
           <FadeUp>
-            <div>
+            <div className="min-w-0">
               <p
                 className="
-                  flex items-center gap-2.5
-                  text-[8px] font-semibold
-                  uppercase tracking-[0.2em]
+                  flex items-center
+                  gap-2.5
+                  text-[8px]
+                  font-semibold
+                  uppercase
+                  tracking-[0.2em]
                   text-green-700
                   min-[375px]:gap-3
                   min-[375px]:text-[9px]
                   min-[375px]:tracking-[0.28em]
                 "
               >
-                <span className="h-px w-7 bg-green-700 min-[375px]:w-9" />
+                <span className="h-px w-7 shrink-0 bg-green-700 min-[375px]:w-9" />
+
                 Get In Touch
               </p>
 
               <h2
                 className="
                   mt-5 max-w-lg
-                  text-[clamp(2.8rem,12vw,3.7rem)]
+                  text-[clamp(2.4rem,11vw,3.7rem)]
                   font-medium
                   leading-[0.95]
                   tracking-[-0.05em]
                   min-[375px]:mt-6
-                  sm:mt-7
                   sm:text-6xl
                   sm:leading-[0.93]
                 "
@@ -731,35 +811,35 @@ const ContactPage = () => {
               <p
                 className="
                   mt-5 max-w-md
-                  text-[13px] leading-6
+                  text-[12px]
+                  leading-6
                   text-black/45
-                  min-[375px]:mt-6
-                  min-[375px]:text-sm
-                  min-[375px]:leading-7
+                  min-[375px]:text-[13px]
                   sm:mt-7
+                  sm:text-sm
+                  sm:leading-7
                 "
               >
                 Send us a message and someone from the
                 fellowship will get back to you.
               </p>
 
-              <div
-                className="
-                  mt-8
-                  border-t border-black/10
-                  min-[375px]:mt-10
-                  sm:mt-12
-                "
-              >
+              <div className="mt-8 border-t border-black/10 sm:mt-10">
                 {/* EMAIL */}
 
                 <a
-                  href="mailto:tacsfonlautech@gmail.com"
+                  href={GMAIL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
-                    flex items-center
-                    gap-3.5
+                    group flex
+                    min-w-0
+                    items-center
+                    gap-3
                     border-b border-black/10
                     py-4
+                    transition-colors
+                    hover:text-green-700
                     min-[375px]:gap-4
                     min-[375px]:py-5
                     sm:gap-5
@@ -775,6 +855,9 @@ const ContactPage = () => {
                       rounded-full
                       bg-white
                       text-sm
+                      transition-colors
+                      group-hover:bg-green-700
+                      group-hover:text-white
                       min-[375px]:h-10
                       min-[375px]:w-10
                       sm:h-11
@@ -784,15 +867,21 @@ const ContactPage = () => {
                     <FiMail />
                   </span>
 
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <p className="text-[7px] font-semibold uppercase tracking-[0.16em] text-black/35 min-[375px]:text-[8px] min-[375px]:tracking-[0.2em]">
                       Email
                     </p>
 
-                    <p className="mt-1 text-[13px] min-[375px]:text-sm">
+                    <p className="mt-1 break-all text-[12px] leading-5 min-[375px]:text-[13px] sm:text-sm">
                       tacsfonlautech@gmail.com
                     </p>
+
+                    <p className="mt-1 text-[7px] font-semibold uppercase tracking-[0.14em] text-green-700">
+                      Compose in Gmail
+                    </p>
                   </div>
+
+                  <FiArrowUpRight className="shrink-0 text-black/25 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-green-700" />
                 </a>
 
                 {/* PHONE */}
@@ -800,8 +889,10 @@ const ContactPage = () => {
                 <a
                   href="tel:+2348060851562"
                   className="
-                    group flex items-center
-                    gap-3.5
+                    group flex
+                    min-w-0
+                    items-center
+                    gap-3
                     border-b border-black/10
                     py-4
                     transition-colors
@@ -833,35 +924,34 @@ const ContactPage = () => {
                     <FiPhone />
                   </span>
 
-                  <div className="min-w-0">
-                    <p
-                      className="
-                        text-[7px]
-                        font-semibold
-                        uppercase
-                        tracking-[0.16em]
-                        text-black/35
-                        min-[375px]:text-[8px]
-                        min-[375px]:tracking-[0.2em]
-                      "
-                    >
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[7px] font-semibold uppercase tracking-[0.16em] text-black/35 min-[375px]:text-[8px] min-[375px]:tracking-[0.2em]">
                       Call
                     </p>
 
-                    <p className="mt-1 text-[13px] min-[375px]:text-sm">
+                    <p className="mt-1 text-[12px] min-[375px]:text-[13px] sm:text-sm">
                       +234 806 085 1562
                     </p>
                   </div>
+
+                  <FiArrowUpRight className="shrink-0 text-black/25 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-green-700" />
                 </a>
 
                 {/* LOCATION */}
 
-                <div
+                <a
+                  href={MAP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="
-                    flex items-center
-                    gap-3.5
+                    group flex
+                    min-w-0
+                    items-center
+                    gap-3
                     border-b border-black/10
                     py-4
+                    transition-colors
+                    hover:text-green-700
                     min-[375px]:gap-4
                     min-[375px]:py-5
                     sm:gap-5
@@ -877,6 +967,9 @@ const ContactPage = () => {
                       rounded-full
                       bg-white
                       text-sm
+                      transition-colors
+                      group-hover:bg-green-700
+                      group-hover:text-white
                       min-[375px]:h-10
                       min-[375px]:w-10
                       sm:h-11
@@ -886,16 +979,23 @@ const ContactPage = () => {
                     <FiMapPin />
                   </span>
 
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <p className="text-[7px] font-semibold uppercase tracking-[0.16em] text-black/35 min-[375px]:text-[8px] min-[375px]:tracking-[0.2em]">
                       Visit
                     </p>
 
-                    <p className="mt-1 break-words text-[13px] leading-5 min-[375px]:text-sm">
-                      TACSFON Family House, Ogbomoso
+                    <p className="mt-1 break-words text-[12px] leading-5 min-[375px]:text-[13px] sm:text-sm">
+                      TACSFON Family House, New GEN. Area,
+                      Under G, Ogbomoso
+                    </p>
+
+                    <p className="mt-1 text-[7px] font-semibold uppercase tracking-[0.14em] text-green-700">
+                      Get directions
                     </p>
                   </div>
-                </div>
+
+                  <FiArrowUpRight className="shrink-0 text-black/25 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-green-700" />
+                </a>
               </div>
             </div>
           </FadeUp>
@@ -907,10 +1007,12 @@ const ContactPage = () => {
           <FadeUp delay={0.1}>
             <div
               className="
+                min-w-0
                 bg-white
-                p-5
-                min-[375px]:p-6
-                sm:p-9
+                p-4
+                min-[375px]:p-5
+                sm:p-7
+                md:p-9
                 lg:p-12
               "
             >
@@ -919,23 +1021,25 @@ const ContactPage = () => {
 
                 <div
                   className="
-                    flex min-h-[360px]
-                    items-center justify-center
+                    flex min-h-[320px]
+                    items-center
+                    justify-center
                     py-8
-                    min-[375px]:min-h-[400px]
-                    sm:min-h-[500px]
-                    sm:py-0
+                    min-[375px]:min-h-[360px]
+                    sm:min-h-[460px]
                   "
                 >
-                  <div className="max-w-md text-center">
+                  <div className="max-w-md px-2 text-center">
                     <span
                       className="
                         mx-auto flex
                         h-12 w-12
-                        items-center justify-center
+                        items-center
+                        justify-center
                         rounded-full
                         bg-green-700
-                        text-lg text-white
+                        text-lg
+                        text-white
                         min-[375px]:h-14
                         min-[375px]:w-14
                         min-[375px]:text-xl
@@ -950,7 +1054,7 @@ const ContactPage = () => {
                         text-2xl
                         font-medium
                         tracking-[-0.035em]
-                        min-[375px]:mt-7
+                        min-[375px]:mt-6
                         min-[375px]:text-3xl
                       "
                     >
@@ -960,11 +1064,12 @@ const ContactPage = () => {
                     <p
                       className="
                         mt-3
-                        text-[13px] leading-6
+                        text-[12px]
+                        leading-6
                         text-black/45
-                        min-[375px]:mt-4
-                        min-[375px]:text-sm
-                        min-[375px]:leading-7
+                        min-[375px]:text-[13px]
+                        sm:text-sm
+                        sm:leading-7
                       "
                     >
                       Thank you for reaching out to TACSFON
@@ -980,10 +1085,13 @@ const ContactPage = () => {
                       }}
                       className="
                         mt-6
-                        text-[8px] font-semibold
-                        uppercase tracking-[0.16em]
+                        text-[8px]
+                        font-semibold
+                        uppercase
+                        tracking-[0.16em]
                         text-green-700
-                        transition hover:text-black
+                        transition
+                        hover:text-black
                         min-[375px]:mt-8
                         min-[375px]:text-[9px]
                         min-[375px]:tracking-[0.2em]
@@ -998,11 +1106,11 @@ const ContactPage = () => {
 
                 <form
                   onSubmit={handleSubmit}
-                  className="w-full"
+                  className="w-full min-w-0"
                 >
                   {/* NAME + EMAIL */}
 
-                  <div className="grid gap-6 sm:grid-cols-2 sm:gap-8">
+                  <div className="grid gap-6 md:grid-cols-2 md:gap-8">
                     {/* NAME */}
 
                     <label className="block min-w-0">
@@ -1017,7 +1125,8 @@ const ContactPage = () => {
                         autoComplete="name"
                         placeholder="Full name"
                         className="
-                          mt-2.5 w-full
+                          mt-2.5
+                          w-full min-w-0
                           border-b border-black/15
                           bg-transparent
                           py-3
@@ -1046,7 +1155,8 @@ const ContactPage = () => {
                         autoComplete="email"
                         placeholder="you@example.com"
                         className="
-                          mt-2.5 w-full
+                          mt-2.5
+                          w-full min-w-0
                           border-b border-black/15
                           bg-transparent
                           py-3
@@ -1074,7 +1184,8 @@ const ContactPage = () => {
                       defaultValue=""
                       required
                       className="
-                        mt-2.5 w-full
+                        mt-2.5
+                        w-full min-w-0
                         border-b border-black/15
                         bg-transparent
                         py-3
@@ -1125,7 +1236,8 @@ const ContactPage = () => {
                       rows={6}
                       placeholder="Tell us how we can help..."
                       className="
-                        mt-2.5 w-full
+                        mt-2.5
+                        w-full min-w-0
                         resize-none
                         border-b border-black/15
                         bg-transparent
@@ -1149,7 +1261,8 @@ const ContactPage = () => {
                       role="alert"
                       className="
                         mt-6
-                        border-l-2 border-black
+                        border-l-2
+                        border-black
                         bg-[#F7F7F3]
                         px-3.5 py-3
                         min-[375px]:px-4
@@ -1170,25 +1283,30 @@ const ContactPage = () => {
                     className="
                       group mt-8
                       flex w-full
+                      min-w-0
                       items-center
                       justify-between
+                      gap-4
                       bg-black
-                      px-5 py-4
+                      px-4 py-4
                       text-left
-                      text-[9px]
+                      text-[8px]
                       font-semibold
                       uppercase
-                      tracking-[0.16em]
+                      tracking-[0.14em]
                       text-white
                       transition
                       hover:bg-green-700
                       disabled:cursor-not-allowed
                       disabled:opacity-50
-                      min-[375px]:px-6
-                      min-[375px]:py-5
-                      min-[375px]:text-[10px]
-                      min-[375px]:tracking-[0.2em]
+                      min-[375px]:px-5
+                      min-[375px]:text-[9px]
+                      min-[375px]:tracking-[0.16em]
                       sm:mt-10
+                      sm:px-6
+                      sm:py-5
+                      sm:text-[10px]
+                      sm:tracking-[0.2em]
                     "
                   >
                     <span>
@@ -1201,7 +1319,7 @@ const ContactPage = () => {
                       className={`shrink-0 transition-transform duration-300 ${
                         isSubmitting
                           ? ""
-                          : "group-hover:translate-x-1 group-hover:-translate-y-1"
+                          : "group-hover:-translate-y-1 group-hover:translate-x-1"
                       }`}
                     />
                   </button>
@@ -1220,13 +1338,15 @@ const ContactPage = () => {
         className="
           relative overflow-hidden
           bg-green-700
-          px-5 py-16
+          px-4 py-12
           text-white
-          min-[375px]:px-6
-          min-[375px]:py-20
-          sm:py-24
-          md:py-32
+          min-[375px]:px-5
+          min-[375px]:py-14
+          sm:px-6
+          sm:py-20
+          md:py-24
           lg:px-10
+          lg:py-32
         "
       >
         <div
@@ -1236,7 +1356,7 @@ const ContactPage = () => {
             absolute
             -bottom-3 right-0
             select-none
-            text-[35vw]
+            text-[38vw]
             font-semibold
             leading-none
             tracking-[-0.09em]
@@ -1253,8 +1373,10 @@ const ContactPage = () => {
           <FadeUp>
             <p
               className="
-                text-[8px] font-semibold
-                uppercase tracking-[0.2em]
+                text-[8px]
+                font-semibold
+                uppercase
+                tracking-[0.2em]
                 text-white/55
                 min-[375px]:text-[9px]
                 min-[375px]:tracking-[0.28em]
@@ -1266,12 +1388,11 @@ const ContactPage = () => {
             <h2
               className="
                 mt-5 max-w-5xl
-                text-[clamp(3rem,13vw,4.25rem)]
+                text-[clamp(2.45rem,11vw,4.25rem)]
                 font-medium
                 leading-[0.94]
                 tracking-[-0.055em]
                 min-[375px]:mt-6
-                sm:mt-7
                 sm:text-6xl
                 lg:text-8xl
                 lg:leading-[0.9]
